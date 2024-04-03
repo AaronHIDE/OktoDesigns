@@ -16,4 +16,11 @@ public class AdministradorController {
 		return "administrador/home";
 	}
 
+	@GetMapping("/formatoSena")
+	public String formatoSena(Model model) {
+
+		return "administrador/formatoSena";
+	}
+
+	
 }
