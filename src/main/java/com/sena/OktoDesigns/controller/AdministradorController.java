@@ -12,8 +12,13 @@ public class AdministradorController {
 	
 	@GetMapping("")
 	public String home(Model model) {
-
 		return "administrador/home";
 	}
+	
+	@GetMapping("/email")
+	public String email(Model model) {
+		return "administrador/email";
+	}
+	
 
 }
