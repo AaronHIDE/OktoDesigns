@@ -20,7 +20,7 @@
 /* Colors */
 :root {
   --color-default: #212529;
-  --color-primary: #ce1212;
+  --color-primary: rgb(128, 0, 255);
   --color-secondary: #37373f;
 }
 
@@ -43,7 +43,7 @@ a {
 }
 
 a:hover {
-  color: #ec2727;
+  color: rgb(255, 255, 255); /*Color del seleccionar el boton del nombre de la pagina, para ir al home*/
   text-decoration: none;
 }
 
@@ -67,7 +67,7 @@ section {
 }
 
 .section-bg {
-  background-color: #eee;
+  background-color: rgb(255, 255, 255);
 }
 
 .section-header {
@@ -247,7 +247,7 @@ section {
 # Header
 --------------------------------------------------------------*/
 .header {
-  background: rgb(0, 0, 0);
+  background: rgb(0, 0, 0); /*color de todo el navbar*/
   transition: all 0.5s;
   z-index: 997;
   height: 90px;
@@ -266,7 +266,7 @@ section {
 }
 
 .header .logo img {
-  max-height: 40px;
+  max-height: 80px;
   margin-right: 6px;
 }
 
@@ -288,15 +288,15 @@ section {
   color: #fff;
   background: var(--color-primary);
   padding: 8px 20px;
-  margin-left: 30px;
-  border-radius: 50px;
+  margin-left: 50px;
+  border-radius: 30px;
   transition: 0.3s;
 }
 
 .header .btn-book-a-table:hover,
 .header .btn-book-a-table:focus:hover {
   color: #fff;
-  background: rgba(206, 18, 18, 0.8);
+
 }
 
 /*--------------------------------------------------------------
@@ -333,7 +333,7 @@ section {
     font-family: var(--font-secondary);
     font-size: 16px;
     font-weight: 600;
-    color: #7f7f90;
+    color: rgb(255, 255, 255); /*Color de las letras del navbar*/
     white-space: nowrap;
     transition: 0.3s;
     position: relative;
@@ -370,21 +370,21 @@ section {
   .navbar .active,
   .navbar .active:focus,
   .navbar li:hover>a {
-    color: #000;
+    color: rgb(128, 0, 255); /*Color de la barra opcion de deslizamiento del navbar*/
   }
 
   .navbar .dropdown ul {
     display: block;
     position: absolute;
     left: 28px;
-    top: calc(100% + 30px);
+    top: calc(100% + 50px);
     margin: 0;
     padding: 10px 0;
     z-index: 99;
     opacity: 0;
     visibility: hidden;
-    background: #fff;
-    box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+    background: rgb(0, 0, 0);
+    box-shadow: 0px 0px 30px rgb(128, 0, 255);
     transition: 0.3s;
     border-radius: 4px;
   }
