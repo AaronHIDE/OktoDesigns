@@ -13,4 +13,9 @@ public class HomeUserController {
 	public String home(Model model) {
 		return "usuario/home";
 	}
+
+	@GetMapping("/admin")
+	public String admin(Model model) {
+		return "redirect:/administrador";
+	}
 }

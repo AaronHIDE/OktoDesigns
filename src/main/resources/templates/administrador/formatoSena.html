@@ -26,6 +26,7 @@
 
 	<!-- Template Main CSS File -->
 	<link th:href="@{/assetsADMIN/css/main.css}" rel="stylesheet">
+	<link th:href="@{/assetsADMIN/css/formatoSena.css}" rel="stylesheet">
 
 	<!-- =======================================================
   * Template Name: Yummy
@@ -34,6 +35,39 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
+  
+  
+    <!-- BOTCITO KOKO -->
+    <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
+    <script>
+    window.addEventListener('DOMContentLoaded', (event) => {
+        var currentURL = 'http://localhost:8080/administrador/formatoSena'; // Cambia esta URL por la deseada
+        var botpressWebChatConfig = {
+            "composerPlaceholder": "Chat with Okti",
+            "botConversationDescription": "Soy Okti, espero poder ayudarte en tu estancia",
+            "botId": "a8ef7b89-d65f-48c1-ac21-097a9a9fbe2a",
+            "hostUrl": "https://cdn.botpress.cloud/webchat/v1",
+            "messagingUrl": "https://messaging.botpress.cloud",
+            "clientId": "a8ef7b89-d65f-48c1-ac21-097a9a9fbe2a",
+            "webhookId": "6e424e6d-5f6a-4d86-8a52-451ec8ae66be",
+            "lazySocket": true,
+            "themeName": "prism",
+            "botName": "Okti",
+            "phoneNumber": "3124836422",
+            "emailAddress": "OktoDesigns@gmail.com",
+            "frontendVersion": "v1",
+            "useSessionStorage": true,
+            "enableConversationDeletion": true,
+            "theme": "prism",
+            "themeColor": "#7F2AA7"
+        };
+
+        if (window.location.href.includes(currentURL)) {
+            window.botpressWebChat.init(botpressWebChatConfig);
+        }
+    });
+    </script>
+  
 </head>
 
 <body>
@@ -84,59 +118,168 @@
 				<a class="btn-book-a-table" href="#book-a-table">Book a Table</a>
 				<i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
 				<i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
-
 			</div>
 		</header><!-- End Header -->
+	</div>
 
-		<!-- ======= Hero Section ======= -->
-		<section id="hero" class="hero d-flex align-items-center section-bg">
-			<div class="container">
-				<div class="row justify-content-between gy-5">
-					<div
-						class="col-lg-5 order-2 order-lg-1 d-flex flex-column justify-content-center align-items-center align-items-lg-start text-center text-lg-start">
-						<h2 data-aos="fade-up">Enjoy Your Healthy<br>Delicious Food</h2>
-						<p data-aos="fade-up" data-aos-delay="100">Sed autem laudantium dolores. Voluptatem itaque ea
-							consequatur eveniet. Eum quas beatae cumque eum quaerat.</p>
-						<div class="d-flex" data-aos="fade-up" data-aos-delay="200">
-							<a href="#book-a-table" class="btn-book-a-table">Book a Table</a>
-							<a href="https://www.youtube.com/watch?v=LXb3EKWsInQ"
-								class="glightbox btn-watch-video d-flex align-items-center"><i
-									class="bi bi-play-circle"></i><span>Watch Video</span></a>
-						</div>
-					</div>
-					<div class="col-lg-5 order-1 order-lg-2 text-center text-lg-start">
-						<img src="assets/img/hero-img.png" class="img-fluid" alt="" data-aos="zoom-out"
-							data-aos-delay="300">
-					</div>
-				</div>
-			</div>
-		</section><!-- End Hero Section -->
+	<!-- ======= Hero Section ======= -->
+	<section id="sectionH" class="hero d-flex align-items-center">
+	</section><!-- End Hero Section -->
 
-		<main id="main">
-			<div id=formatoSenaCss>
+	<main id="main">
 
+		<div class="row col-md-3 offset-md-1">
+			<a href="#">
+				<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+					class="bi bi-arrow-left-circle-fill" viewBox="0 0 16 16">
+					<path
+						d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0m3.5 7.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1.708.708L5.707 7.5z" />
+				</svg>
+			</a>
+		</div>
 
-				<div class="container" style="background-color: white;">
-					<div class="row">
-						<div class="col-md-11" style="margin:auto">
-							<br><br>
-							<form id="aggFormatoSena">
+		<div id=formatoSenaCss>
+			<div class="container" style="background-color: white;">
+				<div class="row">
+					<div class="col-md-11" style="margin:auto">
+						<br><br>
+						<form id="aggFormatoSena">
+							<div class="section-content">
+								<table class="data-table">
+									<tr>
+										<th colspan="10">
+											<div class="title h4">HOJA DE VIDA APRENDICES EN PROGRAMAS DE FORMACIÓN
+												TITULADA
+											</div>
+											<h6>F04-9124-002/ 06-10</h6>
+											<h6>Ejecución de la Formación Profesional</h6>
+											<h6>Desarrollo Curricular</h6>
+										</th>
+										<td>
+											<center>
+												<img th:src="@{/assetsADMIN/img/sena.jpg}" alt="Logo SENA"
+													style="width: 150px; height: 150px;">
+											</center>
+										</td>
+									</tr>
+
+								</table>
+							</div>
+
+							<br><br><br>
+
+							<div class="section">
+								<div class="bubble-number h2 text-white">1</div>
+								<div class="section-title h4 bubble text-white">INFORMACIÓN GENERAL DEL APRENDÍZ
+								</div>
+								<h6>Informacion personal del aprendíz. Usted como empleador podra solicitar
+									aplicacion de esta.
+								</h6>
 								<div class="section-content">
 									<table class="data-table">
+
 										<tr>
-											<th colspan="10">
-												<div class="title h4">HOJA DE VIDA APRENDICES EN PROGRAMAS DE FORMACIÓN
-													TITULADA
+											<th>NOMBRES Y APELLIDOS</th>
+											<td class="input-cell" colspan="10">
+												<div class="inputboxfs">
+													<input type="text" class="form-control" id="nombres_apellidos"
+														name="nombres_apellidos" required>
+													</imput>
 												</div>
-												<h6>F04-9124-002/ 06-10</h6>
-												<h6>Ejecución de la Formación Profesional</h6>
-												<h6>Desarrollo Curricular</h6>
-											</th>
-											<td>
-												<center>
-													<img src="vista/imagenes/sena.png" alt="Logo SENA"
-														style="width: 150px; height: 150px;">
-												</center>
+											</td>
+										</tr>
+
+										<tr>
+											<th>DOCUMENTO DE IDENTIDAD</th>
+											<td class="input-cell" colspan="10">
+												<div class="inputboxfs">
+													<input type="text" class="form-control" id="documento"
+														name="documento" required>
+												</div>
+											</td>
+										</tr>
+
+										<tr>
+											<th>FECHA DE NACIMIENTO</th>
+											<td class="input-cell" colspan="7">
+												<div class="inputboxfs">
+													<input type="date" class="form-control" id="fecha_nacimiento"
+														name="fecha_nacimiento" required>
+												</div>
+											</td>
+
+											<th>EDAD</th>
+											<td class="input-cell" colspan="3">
+												<div class="inputboxfs">
+													<input type="number" class="form-control" id="edad" name="edad"
+														required>
+												</div>
+											</td>
+										</tr>
+
+										<tr>
+											<th>TELEFONO</th>
+											<td class="input-cell" colspan="10">
+												<div class="inputboxfs">
+													<input type="number" class="form-control" id="telefono_aprendiz"
+														name="telefono_aprendiz" required>
+												</div>
+											</td>
+										</tr>
+
+										<tr>
+											<th>CORREO ELECTRONICO MISENA</th>
+											<td class="input-cell" colspan="10">
+												<div class="inputboxfs">
+													<input type="email" class="form-control" id="email_misena"
+														name="email_misena" required>
+												</div>
+											</td>
+										</tr>
+
+										<tr>
+											<th>LIBRETA MILITAR</th>
+											<td class="input-cell" colspan="10">
+												<div class="inputboxfs">
+													<input type="text" class="form-control" id="libreta_militar"
+														name="libreta_militar">
+												</div>
+											</td>
+										</tr>
+
+										<tr>
+											<th>DIRECCIÓN DOMICILIO</th>
+											<td class="input-cell" colspan="10">
+												<div class="inputboxfs">
+													<input type="point" class="form-control" id="direccion"
+														name="direccion" required>
+												</div>
+											</td>
+										</tr>
+
+										<tr>
+											<th>ESTRATO</th>
+											<td colspan="10">
+												<select id="estrato" name="estrato"
+													class="form-control-select inputboxfs opciones" required>
+													<option value="">Seleccione una opción</option>
+													<option value="1">Estrato 1</option>
+													<option value="2">Estrato 2</option>
+													<option value="3">Estrato 3</option>
+													<option value="4">Estrato 4</option>
+													<option value="5">Estrato 5</option>
+													<option value="6">Estrato 6</option>
+												</select>
+											</td>
+										</tr>
+
+										<tr>
+											<th>CIUDAD</th>
+											<td colspan="10">
+												<div class="inputboxfs">
+													<input type="point" class="form-control" id="ciudad" name="ciudad"
+														required>
+												</div>
 											</td>
 										</tr>
 
@@ -146,202 +289,19 @@
 								<br><br><br>
 
 								<div class="section">
-									<div class="bubble-number h2 text-white">1</div>
-									<div class="section-title h4 bubble text-white">INFORMACIÓN GENERAL DEL APRENDÍZ
-									</div>
-									<h6>Informacion personal del aprendíz. Usted como empleador podra solicitar
-										aplicacion de esta.
-									</h6>
-									<div class="section-content">
-										<table class="data-table">
-
-											<tr>
-												<th>NOMBRES Y APELLIDOS</th>
-												<td class="input-cell" colspan="10">
-													<div class="inputboxfs">
-														<input type="text" class="form-control" id="nombres_apellidos"
-															name="nombres_apellidos" required>
-														</imput>
-													</div>
-												</td>
-											</tr>
-
-											<tr>
-												<th>DOCUMENTO DE IDENTIDAD</th>
-												<td class="input-cell" colspan="10">
-													<div class="inputboxfs">
-														<input type="text" class="form-control" id="documento"
-															name="documento" required>
-													</div>
-												</td>
-											</tr>
-
-											<tr>
-												<th>FECHA DE NACIMIENTO</th>
-												<td class="input-cell" colspan="7">
-													<div class="inputboxfs">
-														<input type="date" class="form-control" id="fecha_nacimiento"
-															name="fecha_nacimiento" required>
-													</div>
-												</td>
-
-												<th>EDAD</th>
-												<td class="input-cell" colspan="3">
-													<div class="inputboxfs">
-														<input type="number" class="form-control" id="edad" name="edad"
-															required>
-													</div>
-												</td>
-											</tr>
-
-											<tr>
-												<th>TELEFONO</th>
-												<td class="input-cell" colspan="10">
-													<div class="inputboxfs">
-														<input type="number" class="form-control" id="telefono_aprendiz"
-															name="telefono_aprendiz" required>
-													</div>
-												</td>
-											</tr>
-
-											<tr>
-												<th>CORREO ELECTRONICO MISENA</th>
-												<td class="input-cell" colspan="10">
-													<div class="inputboxfs">
-														<input type="email" class="form-control" id="email_misena"
-															name="email_misena" required>
-													</div>
-												</td>
-											</tr>
-
-											<tr>
-												<th>LIBRETA MILITAR</th>
-												<td class="input-cell" colspan="10">
-													<div class="inputboxfs">
-														<input type="text" class="form-control" id="libreta_militar"
-															name="libreta_militar">
-													</div>
-												</td>
-											</tr>
-
-											<tr>
-												<th>DIRECCIÓN DOMICILIO</th>
-												<td class="input-cell" colspan="10">
-													<div class="inputboxfs">
-														<input type="point" class="form-control" id="direccion"
-															name="direccion" required>
-													</div>
-												</td>
-											</tr>
-
-											<tr>
-												<th>ESTRATO</th>
-												<td colspan="10">
-													<select id="estrato" name="estrato"
-														class="form-control-select inputboxfs opciones" required>
-														<option value="">Seleccione una opción</option>
-														<option value="1">Estrato 1</option>
-														<option value="2">Estrato 2</option>
-														<option value="3">Estrato 3</option>
-														<option value="4">Estrato 4</option>
-														<option value="5">Estrato 5</option>
-														<option value="6">Estrato 6</option>
-													</select>
-												</td>
-											</tr>
-
-											<tr>
-												<th>CIUDAD</th>
-												<td colspan="10">
-													<div class="inputboxfs">
-														<input type="point" class="form-control" id="ciudad"
-															name="ciudad" required>
-													</div>
-												</td>
-											</tr>
-
-										</table>
-									</div>
-
-									<br><br><br>
-
-									<div class="section">
-										<div class="bubble-number h2 text-white">2</div>
-										<div class="section-title h4 bubble text-white">FORMACIÓN ACADÉMICA</div>
-										<h6>Digita la información referente al titulo obtenido en el grado 11
-											que corresponde a la educación media</h6>
-										<div class="section-content">
-											<table class="data-table" style="border-color: black;">
-
-												<tr>
-													<th>TÍTULO OBTENIDO</th>
-													<td class="input-cell" colspan="10">
-														<div class="inputboxfs">
-															<input type="text" class="form-control" id="titulo_obtenido"
-																name="titulo_obtenido" required>
-														</div>
-													</td>
-												</tr>
-
-												<tr>
-													<th>INSTITUCIÓN EDUCATIVA</th>
-													<td class="input-cell" colspan="10">
-														<div class="inputboxfs">
-															<input type="text" class="form-control"
-																id="institucion_educativa" name="institucion_educativa"
-																required>
-														</div>
-													</td>
-												</tr>
-
-												<tr>
-													<th>FECHA GRADO</th>
-													<td class="input-cell" colspan="10">
-														<div class="inputboxfs">
-															<input type="date" class="form-control" id="fecha_grado"
-																name="fecha_grado" required>
-														</div>
-													</td>
-												</tr>
-											</table>
-										</div>
-									</div>
-
-									<br><br>
-
-
-									<h6>Si usted ha realizado estudios de nivel superior como Técnico TC, Tecnólogo TL,
-										Especialización Tecnológica TE, Universitaria UN, Especialización ES, Maestría
-										MG,
-										Doctorado DOC, relaciónelos a continuación.
-									</h6>
+									<div class="bubble-number h2 text-white">2</div>
+									<div class="section-title h4 bubble text-white">FORMACIÓN ACADÉMICA</div>
+									<h6>Digita la información referente al titulo obtenido en el grado 11
+										que corresponde a la educación media</h6>
 									<div class="section-content">
 										<table class="data-table" style="border-color: black;">
 
 											<tr>
-												<th>NIVEL</th>
-												<td colspan="10">
-													<select id="nivel" name="nivel"
-														class="form-control-select inputboxfs opciones required">
-														<option value="">Seleccione una opción:</option>
-														<option value="1">TC: Técnico</option>
-														<option value="2">TL: Tecnélogo</option>
-														<option value="3">TE: Especialización Tecnológica</option>
-														<option value="4">UN: Universitaria</option>
-														<option value="5">ES: Especialización</option>
-														<option value="6">MG: Maestría</option>
-														<option value="7">DOC: Doctorado</option>
-														<option value="8">NO APLICA</option>
-													</select>
-												</td>
-											</tr>
-
-											<tr>
-												<th>NOMBRE DE LOS ESTUDIOS</th>
+												<th>TÍTULO OBTENIDO</th>
 												<td class="input-cell" colspan="10">
 													<div class="inputboxfs">
-														<input type="text" class="form-control" id="nombre_estudios"
-															name="nombre_estudios">
+														<input type="text" class="form-control" id="titulo_obtenido"
+															name="titulo_obtenido" required>
 													</div>
 												</td>
 											</tr>
@@ -351,521 +311,585 @@
 												<td class="input-cell" colspan="10">
 													<div class="inputboxfs">
 														<input type="text" class="form-control"
-															id="institucion_educativa2" name="institucion_educativa2">
+															id="institucion_educativa" name="institucion_educativa"
+															required>
 													</div>
 												</td>
 											</tr>
 
 											<tr>
-												<th>SEMESTRES APROBADOS</th>
+												<th>FECHA GRADO</th>
 												<td class="input-cell" colspan="10">
 													<div class="inputboxfs">
-														<input type="number" class="form-control"
-															id="semestres_aprobados" name="semestres_aprobados">
+														<input type="date" class="form-control" id="fecha_grado"
+															name="fecha_grado" required>
 													</div>
 												</td>
 											</tr>
 										</table>
 									</div>
+								</div>
+
+								<br><br>
 
 
-									<br><br><br>
+								<h6>Si usted ha realizado estudios de nivel superior como Técnico TC, Tecnólogo TL,
+									Especialización Tecnológica TE, Universitaria UN, Especialización ES, Maestría
+									MG,
+									Doctorado DOC, relaciónelos a continuación.
+								</h6>
+								<div class="section-content">
+									<table class="data-table" style="border-color: black;">
+
+										<tr>
+											<th>NIVEL</th>
+											<td colspan="10">
+												<select id="nivel" name="nivel"
+													class="form-control-select inputboxfs opciones required">
+													<option value="">Seleccione una opción:</option>
+													<option value="1">TC: Técnico</option>
+													<option value="2">TL: Tecnélogo</option>
+													<option value="3">TE: Especialización Tecnológica</option>
+													<option value="4">UN: Universitaria</option>
+													<option value="5">ES: Especialización</option>
+													<option value="6">MG: Maestría</option>
+													<option value="7">DOC: Doctorado</option>
+													<option value="8">NO APLICA</option>
+												</select>
+											</td>
+										</tr>
+
+										<tr>
+											<th>NOMBRE DE LOS ESTUDIOS</th>
+											<td class="input-cell" colspan="10">
+												<div class="inputboxfs">
+													<input type="text" class="form-control" id="nombre_estudios"
+														name="nombre_estudios">
+												</div>
+											</td>
+										</tr>
+
+										<tr>
+											<th>INSTITUCIÓN EDUCATIVA</th>
+											<td class="input-cell" colspan="10">
+												<div class="inputboxfs">
+													<input type="text" class="form-control" id="institucion_educativa2"
+														name="institucion_educativa2">
+												</div>
+											</td>
+										</tr>
+
+										<tr>
+											<th>SEMESTRES APROBADOS</th>
+											<td class="input-cell" colspan="10">
+												<div class="inputboxfs">
+													<input type="number" class="form-control" id="semestres_aprobados"
+														name="semestres_aprobados">
+												</div>
+											</td>
+										</tr>
+									</table>
+								</div>
+
+
+								<br><br><br>
+
+								<div class="section">
+									<div class="bubble-number h2 text-white">3</div>
+									<div class="section-title h4 bubble text-white">INFORMACION PROGRAMA DE
+										FORMACIÓN</div>
+									<h6>Información relevante del programa de formación, para más información podrá
+										contactar
+										al coordinador ácademico</h6>
+									<div class="section-content">
+										<table class="data-table">
+
+											<tr>
+												<th>NOMBRE DEL PROGRAMA</th>
+												<td class="input-cell" colspan="10">
+													<div class="inputboxfs">
+														<input type="text" class="form-control" id="nombre_programa"
+															name="nombre_programa" required>
+														</imput>
+													</div>
+												</td>
+											</tr>
+
+											<tr>
+												<th>CÓDIGO DE LA FICHA</th>
+												<td class="input-cell" colspan="10">
+													<div class="inputboxfs">
+														<input type="text" class="form-control" id="ficha" name="ficha"
+															required>
+													</div>
+												</td>
+											</tr>
+
+											<tr>
+												<th>PERFIL OCUPACIONAL</th>
+												<td class="input-cell" colspan="7">
+													<div class="inputboxfs">
+														<input type="text" class="form-control" id="perfil"
+															name="perfil" required>
+													</div>
+												</td>
+											</tr>
+
+											<tr>
+												<th>OCUPACIONES A DESEMPEÑAR</th>
+												<td class="input-cell" colspan="10">
+													<div class="inputboxfs">
+														<input type="text" class="form-control" id="ocupaciones"
+															name="ocupaciones" required>
+													</div>
+												</td>
+											</tr>
+
+											<tr>
+												<th>CENTRO DE FORMACIÓN</th>
+												<td class="input-cell" colspan="10">
+													<div class="inputboxfs">
+														<input type="text" class="form-control" id="centro_formacion"
+															name="centro_formacion" required>
+													</div>
+												</td>
+											</tr>
+
+											<tr>
+												<th>CIUDAD DE FORMACIÓN</th>
+												<td class="input-cell" colspan="10">
+													<div class="inputboxfs">
+														<input type="point" class="form-control" id="ciudad_formacion"
+															name="ciudad_formacion" required>
+													</div>
+												</td>
+											</tr>
+
+											<tr>
+												<th>FECHA DE INICIO</th>
+												<td class="input-cell" colspan="10">
+													<div class="inputboxfs">
+														<input type="date" class="form-control" id="fecha_inicio"
+															name="fecha_inicio" required>
+													</div>
+												</td>
+											</tr>
+
+											<tr>
+												<th>FECHA DE TERMINACIÓN</th>
+												<td class="input-cell" colspan="10">
+													<div class="inputboxfs">
+														<input type="date" class="form-control" id="fecha_final"
+															name="fecha_final" required>
+													</div>
+												</td>
+											</tr>
+
+											<tr>
+												<th>ETAPA</th>
+												<td colspan="10">
+													<select id="etapa" name="etapa"
+														class="form-control-select inputboxfs opciones" required>
+														<option value="">Seleccione una opción</option>
+														<option value="1">Lectiva</option>
+														<option value="2">Práctica</option>
+													</select>
+												</td>
+											</tr>
+
+											<tr>
+												<th>COORDINADOR ACADÉMICO</th>
+												<td colspan="10">
+													<div class="inputboxfs">
+														<input type="text" class="form-control"
+															id="coordinador_academico" name="coordinador_academico"
+															required>
+													</div>
+												</td>
+											</tr>
+
+											<tr>
+												<th>TELÉFONO</th>
+												<td colspan="10">
+													<div class="inputboxfs">
+														<input type="number" class="form-control"
+															id="telefono_coordinador" name="telefono_coordinador"
+															required>
+													</div>
+												</td>
+											</tr>
+
+											<tr>
+												<th>CORREO ELECTRÓNICO</th>
+												<td colspan="10">
+													<div class="inputboxfs">
+														<input type="email" class="form-control" id="email_coordinador"
+															name="email_coordinador" required>
+													</div>
+												</td>
+											</tr>
+
+										</table>
+									</div>
+
+									<br><br>
 
 									<div class="section">
-										<div class="bubble-number h2 text-white">3</div>
-										<div class="section-title h4 bubble text-white">INFORMACION PROGRAMA DE
-											FORMACIÓN</div>
-										<h6>Información relevante del programa de formación, para más información podrá
-											contactar
-											al coordinador ácademico</h6>
+										<div class="bubble-number h2 text-white">4</div>
+										<div class="section-title h4 bubble text-white">FIRMA DEL APRENDÍZ</div>
 										<div class="section-content">
+
 											<table class="data-table">
-
 												<tr>
-													<th>NOMBRE DEL PROGRAMA</th>
-													<td class="input-cell" colspan="10">
-														<div class="inputboxfs">
-															<input type="text" class="form-control" id="nombre_programa"
-																name="nombre_programa" required>
-															</imput>
-														</div>
+													<td colspan="10">
+														<p>
+														<h6>Manifiesto bajo la gravedad de juramento que no me
+															encuentro dentro
+															de
+															las
+															causales de
+															inhabilidad e incompatibilidad que contravengan el
+															reglamento
+															estudiantil o
+															términos legales, para
+															desarrollar la etapa práctica desempeñándome en una
+															empresa a través
+															del
+															contrato de aprendizaje, para
+															todos los efectos legales, certifico que los datos por
+															mí anotados
+															en el
+															presente formato de hoja de
+															vida, son veraces.</h6>
+														</p>
 													</td>
 												</tr>
 
-												<tr>
-													<th>CÓDIGO DE LA FICHA</th>
-													<td class="input-cell" colspan="10">
-														<div class="inputboxfs">
-															<input type="text" class="form-control" id="ficha"
-																name="ficha" required>
-														</div>
-													</td>
-												</tr>
-
-												<tr>
-													<th>PERFIL OCUPACIONAL</th>
-													<td class="input-cell" colspan="7">
-														<div class="inputboxfs">
-															<input type="text" class="form-control" id="perfil"
-																name="perfil" required>
-														</div>
-													</td>
-												</tr>
-
-												<tr>
-													<th>OCUPACIONES A DESEMPEÑAR</th>
-													<td class="input-cell" colspan="10">
-														<div class="inputboxfs">
-															<input type="text" class="form-control" id="ocupaciones"
-																name="ocupaciones" required>
-														</div>
-													</td>
-												</tr>
-
-												<tr>
-													<th>CENTRO DE FORMACIÓN</th>
-													<td class="input-cell" colspan="10">
+												<tr colspan="10">
+													<th>Ciudad y Fecha de Diligenciamiento:</th>
+													<td class="input-cell">
 														<div class="inputboxfs">
 															<input type="text" class="form-control"
-																id="centro_formacion" name="centro_formacion" required>
+																id="fecha_diligenciamiento"
+																name="fecha_diligenciamiento" required>
 														</div>
 													</td>
-												</tr>
 
-												<tr>
-													<th>CIUDAD DE FORMACIÓN</th>
-													<td class="input-cell" colspan="10">
+													<th>FIRMA:</th>
+													<td class="input-cell">
 														<div class="inputboxfs">
-															<input type="point" class="form-control"
-																id="ciudad_formacion" name="ciudad_formacion" required>
+															<input type="text" class="form-control" id="firma_aprendiz"
+																name="firma_aprendiz">
 														</div>
 													</td>
 												</tr>
-
-												<tr>
-													<th>FECHA DE INICIO</th>
-													<td class="input-cell" colspan="10">
-														<div class="inputboxfs">
-															<input type="date" class="form-control" id="fecha_inicio"
-																name="fecha_inicio" required>
-														</div>
-													</td>
-												</tr>
-
-												<tr>
-													<th>FECHA DE TERMINACIÓN</th>
-													<td class="input-cell" colspan="10">
-														<div class="inputboxfs">
-															<input type="date" class="form-control" id="fecha_final"
-																name="fecha_final" required>
-														</div>
-													</td>
-												</tr>
-
-												<tr>
-													<th>ETAPA</th>
-													<td colspan="10">
-														<select id="etapa" name="etapa"
-															class="form-control-select inputboxfs opciones" required>
-															<option value="">Seleccione una opción</option>
-															<option value="1">Lectiva</option>
-															<option value="2">Práctica</option>
-														</select>
-													</td>
-												</tr>
-
-												<tr>
-													<th>COORDINADOR ACADÉMICO</th>
-													<td colspan="10">
-														<div class="inputboxfs">
-															<input type="text" class="form-control"
-																id="coordinador_academico" name="coordinador_academico"
-																required>
-														</div>
-													</td>
-												</tr>
-
-												<tr>
-													<th>TELÉFONO</th>
-													<td colspan="10">
-														<div class="inputboxfs">
-															<input type="number" class="form-control"
-																id="telefono_coordinador" name="telefono_coordinador"
-																required>
-														</div>
-													</td>
-												</tr>
-
-												<tr>
-													<th>CORREO ELECTRÓNICO</th>
-													<td colspan="10">
-														<div class="inputboxfs">
-															<input type="email" class="form-control"
-																id="email_coordinador" name="email_coordinador"
-																required>
-														</div>
-													</td>
-												</tr>
-
 											</table>
 										</div>
 
-										<br><br>
+										<br><br><br>
 
 										<div class="section">
-											<div class="bubble-number h2 text-white">4</div>
-											<div class="section-title h4 bubble text-white">FIRMA DEL APRENDÍZ</div>
+											<div class="bubble-number h2 text-white">5</div>
+											<div class="section-title h4 bubble text-white">FIRMA FUNCIONARIO
+												PROMOCIÓN Y
+												RELACIONAMIENTO CORPORATIVO SENA</div>
+											<h6>Información del funcionario encargado en el Centro de Formación.
+												Contacte para
+												la legalización del contrato de aprendizaje
+											</h6>
 											<div class="section-content">
-
 												<table class="data-table">
+
 													<tr>
+														<th>NOMBRE FUNCIONARIO</th>
 														<td colspan="10">
-															<p>
-															<h6>Manifiesto bajo la gravedad de juramento que no me
-																encuentro dentro
-																de
-																las
-																causales de
-																inhabilidad e incompatibilidad que contravengan el
-																reglamento
-																estudiantil o
-																términos legales, para
-																desarrollar la etapa práctica desempeñándome en una
-																empresa a través
-																del
-																contrato de aprendizaje, para
-																todos los efectos legales, certifico que los datos por
-																mí anotados
-																en el
-																presente formato de hoja de
-																vida, son veraces.</h6>
-															</p>
+															<div class="inputboxfs">
+																<input type="text" class="form-control" id="funcionario"
+																	name="funcionario">
+															</div>
 														</td>
 													</tr>
 
-													<tr colspan="10">
-														<th>Ciudad y Fecha de Diligenciamiento:</th>
-														<td class="input-cell">
+													<tr>
+														<th>TELÉFONO</th>
+														<td colspan="10">
 															<div class="inputboxfs">
-																<input type="text" class="form-control"
-																	id="fecha_diligenciamiento"
-																	name="fecha_diligenciamiento" required>
+																<input type="number" class="form-control"
+																	id="telefono_funcionario"
+																	name="telefono_funcionario">
 															</div>
 														</td>
+													</tr>
 
-														<th>FIRMA:</th>
-														<td class="input-cell">
+													<tr>
+														<th>CORREO ELECTRÓNICO</th>
+														<td colspan="10">
 															<div class="inputboxfs">
-																<input type="text" class="form-control"
-																	id="firma_aprendiz" name="firma_aprendiz">
+																<input type="email" class="form-control"
+																	id="email_funcionario" name="email_funcionario">
 															</div>
 														</td>
 													</tr>
 												</table>
 											</div>
 
+
 											<br><br><br>
 
+
 											<div class="section">
-												<div class="bubble-number h2 text-white">5</div>
-												<div class="section-title h4 bubble text-white">FIRMA FUNCIONARIO
-													PROMOCIÓN Y
-													RELACIONAMIENTO CORPORATIVO SENA</div>
-												<h6>Información del funcionario encargado en el Centro de Formación.
-													Contacte para
-													la legalización del contrato de aprendizaje
-												</h6>
+												<div class="bubble-number h2 text-white">6</div>
+												<div class="section-title h4 bubble text-white">INFORMACIÓN SERVICIO
+													NACIONAL DE
+													APRENDIZAJE</div>
+
 												<div class="section-content">
 													<table class="data-table">
 
 														<tr>
-															<th>NOMBRE FUNCIONARIO</th>
-															<td colspan="10">
+															<th>NIT</th>
+															<td colspan="7">
 																<div class="inputboxfs">
-																	<input type="text" class="form-control"
-																		id="funcionario" name="funcionario">
+																	<input type="text" class="form-control" id="nit"
+																		name="nit">
 																</div>
 															</td>
 														</tr>
 
 														<tr>
-															<th>TELÉFONO</th>
-															<td colspan="10">
+															<th>CENTRO FORMACIÓN</th>
+															<td colspan="7">
 																<div class="inputboxfs">
-																	<input type="number" class="form-control"
-																		id="telefono_funcionario"
-																		name="telefono_funcionario">
+																	<input type="text" class="form-control"
+																		id="centro_formacion1" name="centro_formacion1">
+																</div>
+															</td>
+														</tr>
+
+														<tr>
+															<th>REPRESENTANTE LEGAL</th>
+															<td colspan="7">
+																<div class="inputboxfs">
+																	<input type="text" class="form-control"
+																		id="representante_legal"
+																		name="representante_legal">
 																</div>
 															</td>
 														</tr>
 
 														<tr>
 															<th>CORREO ELECTRÓNICO</th>
-															<td colspan="10">
+															<td colspan="7">
 																<div class="inputboxfs">
 																	<input type="email" class="form-control"
-																		id="email_funcionario" name="email_funcionario">
+																		id="email_representante"
+																		name="email_representante">
+																</div>
+															</td>
+														</tr>
+
+														<tr>
+															<th>TELÉFONO</th>
+															<td colspan="7">
+																<div class="inputboxfs">
+																	<input type="number" class="form-control"
+																		id="telefono_representante"
+																		name="telefono_representante">
 																</div>
 															</td>
 														</tr>
 													</table>
 												</div>
 
-
 												<br><br><br>
 
-
 												<div class="section">
-													<div class="bubble-number h2 text-white">6</div>
-													<div class="section-title h4 bubble text-white">INFORMACIÓN SERVICIO
-														NACIONAL DE
-														APRENDIZAJE</div>
-
+													<div class="bubble-number h2 text-white">7</div>
+													<div class="section-title h4 bubble text-white">OBSERVACIONES
+														DEL JEFE DE
+														RECURSOS
+														HUMANOS Y/O CONTRATOS</div>
 													<div class="section-content">
 														<table class="data-table">
 
 															<tr>
-																<th>NIT</th>
-																<td colspan="7">
-																	<div class="inputboxfs">
-																		<input type="text" class="form-control" id="nit"
-																			name="nit">
-																	</div>
-																</td>
-															</tr>
-
-															<tr>
-																<th>CENTRO FORMACIÓN</th>
-																<td colspan="7">
+																<th>EMPRESA</th>
+																<td colspan="10">
 																	<div class="inputboxfs">
 																		<input type="text" class="form-control"
-																			id="centro_formacion1"
-																			name="centro_formacion1">
+																			id="empresa" name="empresa">
 																	</div>
 																</td>
 															</tr>
 
 															<tr>
-																<th>REPRESENTANTE LEGAL</th>
-																<td colspan="7">
-																	<div class="inputboxfs">
-																		<input type="text" class="form-control"
-																			id="representante_legal"
-																			name="representante_legal">
-																	</div>
-																</td>
-															</tr>
-
-															<tr>
-																<th>CORREO ELECTRÓNICO</th>
-																<td colspan="7">
-																	<div class="inputboxfs">
-																		<input type="email" class="form-control"
-																			id="email_representante"
-																			name="email_representante">
-																	</div>
-																</td>
-															</tr>
-
-															<tr>
-																<th>TELÉFONO</th>
-																<td colspan="7">
+																<th>TELEFONO</th>
+																<td colspan="10">
 																	<div class="inputboxfs">
 																		<input type="number" class="form-control"
-																			id="telefono_representante"
-																			name="telefono_representante">
+																			id="telefono_empresa"
+																			name="telefono_empresa">
 																	</div>
 																</td>
 															</tr>
+
+															<tr>
+																<th>FUNCIONARIO</th>
+																<td colspan="10">
+																	<div class="inputboxfs">
+																		<input type="text" class="form-control"
+																			id="funcionario_empresa"
+																			name="funcionario_empresa">
+																	</div>
+																</td>
+															</tr>
+
+															<tr>
+																<th colspan="10">OBSERVACIONES</th>
+															</tr>
+
+															<tr>
+																<td colspan="10">
+																	<textarea name="observaciones" id="observaciones"
+																		rows="20"
+																		style="width: 100%; border: transparent;"></textarea>
+																</td>
+															</tr>
+
+															<tr>
+																<th>Marque con una X la desicion de contratar al
+																	aprendíz</th>
+
+																<td>
+																	<div>
+																		Seleccionado
+																	</div>
+																</td>
+
+																<td colspan="10">
+																	<div>
+																		No Seleccionado
+																	</div>
+																</td>
+															</tr>
+
+															<tr colspan="10">
+																<th>Ciudad y Fecha de Diligenciamiento:</th>
+																<td class="input-cell">
+																	<div class="inputboxfs">
+																		<input type="text" class="form-control"
+																			id="fecha_diligenciamiento1"
+																			name="fecha_diligenciamiento1">
+																	</div>
+																</td>
+
+																<th>FIRMA:</th>
+																<td class="input-cell">
+																	<div class="inputboxfs">
+																		<input type="text" class="form-control"
+																			id="firma" name="firma">
+																	</div>
+																</td>
+															</tr>
+
 														</table>
 													</div>
 
-													<br><br><br>
 
-													<div class="section">
-														<div class="bubble-number h2 text-white">7</div>
-														<div class="section-title h4 bubble text-white">OBSERVACIONES
-															DEL JEFE DE
-															RECURSOS
-															HUMANOS Y/O CONTRATOS</div>
-														<div class="section-content">
-															<table class="data-table">
+													<br>
 
-																<tr>
-																	<th>EMPRESA</th>
-																	<td colspan="10">
-																		<div class="inputboxfs">
-																			<input type="text" class="form-control"
-																				id="empresa" name="empresa">
-																		</div>
-																	</td>
-																</tr>
+													<h6>Solicitamos a la empresa imprimir y suministrar copia de
+														este documento
+														una vez
+														realizada la evaluación del aprendíz que será remitida a la
+														oficina de
+														Relacionamiento
+														Corporativo del Centro de Formación.
+													</h6>
 
-																<tr>
-																	<th>TELEFONO</th>
-																	<td colspan="10">
-																		<div class="inputboxfs">
-																			<input type="number" class="form-control"
-																				id="telefono_empresa"
-																				name="telefono_empresa">
-																		</div>
-																	</td>
-																</tr>
-
-																<tr>
-																	<th>FUNCIONARIO</th>
-																	<td colspan="10">
-																		<div class="inputboxfs">
-																			<input type="text" class="form-control"
-																				id="funcionario_empresa"
-																				name="funcionario_empresa">
-																		</div>
-																	</td>
-																</tr>
-
-																<tr>
-																	<th colspan="10">OBSERVACIONES</th>
-																</tr>
-
-																<tr>
-																	<td colspan="10">
-																		<textarea name="observaciones"
-																			id="observaciones" rows="20"
-																			style="width: 100%; border: transparent;"></textarea>
-																	</td>
-																</tr>
-
-																<tr>
-																	<th>Marque con una X la desicion de contratar al
-																		aprendíz</th>
-
-																	<td>
-																		<div>
-																			Seleccionado
-																		</div>
-																	</td>
-
-																	<td colspan="10">
-																		<div>
-																			No Seleccionado
-																		</div>
-																	</td>
-																</tr>
-
-																<tr colspan="10">
-																	<th>Ciudad y Fecha de Diligenciamiento:</th>
-																	<td class="input-cell">
-																		<div class="inputboxfs">
-																			<input type="text" class="form-control"
-																				id="fecha_diligenciamiento1"
-																				name="fecha_diligenciamiento1">
-																		</div>
-																	</td>
-
-																	<th>FIRMA:</th>
-																	<td class="input-cell">
-																		<div class="inputboxfs">
-																			<input type="text" class="form-control"
-																				id="firma" name="firma">
-																		</div>
-																	</td>
-																</tr>
-
-															</table>
-														</div>
-
-
-														<br>
-
-														<h6>Solicitamos a la empresa imprimir y suministrar copia de
-															este documento
-															una vez
-															realizada la evaluación del aprendíz que será remitida a la
-															oficina de
-															Relacionamiento
-															Corporativo del Centro de Formación.
-														</h6>
-
-													</div>
 												</div>
 											</div>
+										</div>
 
 
 
-											<br><br>
+										<br><br>
 
 
-											<!-- SECCION DE IMPRIMIR-->
+										<!-- SECCION DE IMPRIMIR-->
 
-											<style>
-												@media print {
-													body {
+										<style>
+											@media print {
+												body {
 
-														/* Elimina los márgenes del cuerpo */
+													/* Elimina los márgenes del cuerpo */
 
-														display: inline-block;
-														/* Cambia el comportamiento de la columna para permitir cambios de ancho */
-														margin-top: 12px;
-														/* Ajusta el margen superior para todas las páginas */
+													display: inline-block;
+													/* Cambia el comportamiento de la columna para permitir cambios de ancho */
+													margin-top: 12px;
+													/* Ajusta el margen superior para todas las páginas */
 
-													}
-
-													/* Estilos para el formato de impresión */
-													.row {
-														width: 172%;
-														/* Ajusta el ancho de la fila */
-
-													}
-
-													.container {
-														width: 100%;
-
-													}
-
-													@page {
-
-														/* Elimina los márgenes predeterminados de la página al imprimir */
-														page-break-before: always;
-														margin-top: 12px;
-														/* Ajusta el margen superior para todas las páginas */
-
-													}
-
-													br {
-														display: none;
-														/* Oculta los elementos <br> al imprimir */
-													}
 												}
-											</style>
 
-											<div class="row">
-												<div class="col-md-2 offset-md-8">
-													<button type="button" class="btn btn-danger"
-														onclick="imprimir()">Descargar
-														<i class="bi bi-filetype-pdf"></i></button>
-													<script>
-														function imprimir() {
-															window.print();
-														}
-													</script>
-												</div>
+												/* Estilos para el formato de impresión */
+												.row {
+													width: 172%;
+													/* Ajusta el ancho de la fila */
 
-												<div class="col-md-2" id="guardarFS">
-													<button type="submit" class="btn btn-info">Guardar
-														<i class=" bi bi-save"></i>
-												</div>
+												}
+
+												.container {
+													width: 100%;
+
+												}
+
+												@page {
+
+													/* Elimina los márgenes predeterminados de la página al imprimir */
+													page-break-before: always;
+													margin-top: 12px;
+													/* Ajusta el margen superior para todas las páginas */
+
+												}
+
+												br {
+													display: none;
+													/* Oculta los elementos <br> al imprimir */
+												}
+											}
+										</style>
+
+										<div class="row">
+											<div class="col-md-2 offset-md-8">
+												<button type="button" class="btn btn-danger"
+													onclick="imprimir()">Descargar
+													<i class="bi bi-filetype-pdf"></i></button>
+												<script>
+													function imprimir() {
+														window.print();
+													}
+												</script>
 											</div>
-							</form>
-						</div>
+
+											<div class="col-md-2" id="guardarFS">
+												<button type="submit" class="btn btn-info">Guardar
+													<i class=" bi bi-save"></i>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</form>
 					</div>
 				</div>
 			</div>
-	</div>
-	<br><br>
-	</div>
-	</div>
-
+		</div>
 	</main><!-- End #main -->
+
+	<!-- ======= Hero Section ======= -->
+	<section>
+	</section><!-- End Hero Section -->
+
 
 	<!-- ======= Footer ======= -->
 	<footer id="footer" class="footer">
