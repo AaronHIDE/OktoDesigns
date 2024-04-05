@@ -27,5 +27,10 @@ public class AdministradorController {
 		return "administrador/formatoSena";
 	}
 
+	@GetMapping("/formato")
+	public String formato(Model model) {
+
+		return "administrador/formato";
+	}
 	
 }

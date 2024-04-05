@@ -20,7 +20,7 @@
 /* Colors */
 :root {
   --color-default: #212529;
-  --color-primary: rgb(128, 0, 255);
+  --color-primary: #7F2AA7;
   --color-secondary: #37373f;
 }
 
@@ -370,7 +370,7 @@ section {
   .navbar .active,
   .navbar .active:focus,
   .navbar li:hover>a {
-    color: rgb(128, 0, 255); /*Color de la barra opcion de deslizamiento del navbar*/
+    color: #7F2AA7; /*Color de la barra opcion de deslizamiento del navbar*/
   }
 
   .navbar .dropdown ul {
@@ -384,7 +384,7 @@ section {
     opacity: 0;
     visibility: hidden;
     background: rgb(0, 0, 0);
-    box-shadow: 0px 0px 30px rgb(128, 0, 255);
+    box-shadow: 0px 0px 30px  #7F2AA7;
     transition: 0.3s;
     border-radius: 4px;
   }
