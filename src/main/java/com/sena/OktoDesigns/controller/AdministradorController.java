@@ -30,10 +30,5 @@ public class AdministradorController {
 		return "administrador/formato";
 	}
 
-	@GetMapping("/formato")
-	public String formato(Model model) {
-
-		return "administrador/formato";
-	}
 	
 }
