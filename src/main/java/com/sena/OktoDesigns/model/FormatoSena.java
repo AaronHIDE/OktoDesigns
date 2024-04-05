@@ -10,7 +10,7 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "formatoSena")
-public class HojaSena {
+public class FormatoSena {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -59,11 +59,11 @@ public class HojaSena {
 	private String firma;
 	
 	
-	public HojaSena() {
+	public FormatoSena() {
 		// TODO Auto-generated constructor stub
 	}
 	
-	public HojaSena(Integer id, String nombre_completo, String documento, Date fecha_nacimiento, String edad,
+	public FormatoSena(Integer id, String nombre_completo, String documento, Date fecha_nacimiento, String edad,
 			String telefono_aprendiz, String email_soysena, String libreta_militar, String direccion, String ciudad,
 			String titulo_obtenido, String institucion_educativa, Date fecha_grado, String nombre_estudios,
 			String institucion_educativa2, String semestres_aprobados, String nombre_programa, String ficha,

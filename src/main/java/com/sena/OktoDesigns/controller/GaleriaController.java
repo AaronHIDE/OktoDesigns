@@ -6,36 +6,31 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping("/")
-public class HomeUserController {
+@RequestMapping("/galeria")
+public class GaleriaController {
 
 	@GetMapping("")
 	public String home(Model model) {
-		return "usuario/home";
-	}
-
-	@GetMapping("/admin")
-	public String admin(Model model) {
-		return "redirect:/administrador";
+		return "galeria/home";
 	}
 	
 	@GetMapping("/hojasDeVida")
 	public String hojasDeVida(Model model) {
-		return "redirect:/galeria/hojasDeVida";
+		return "/galeria/hojasDeVida";
 	}
 	
 	@GetMapping("/formatosRegistraduria")
 	public String formatosRegistraduria(Model model) {
-		return "redirect:/galeria/formatosRegistraduria";
+		return "/galeria/formatosRegistraduria";
 	}
 	
 	@GetMapping("/formatosColegios")
 	public String formatosColegios(Model model) {
-		return "redirect:/galeria/formatosColegios";
+		return "/galeria/formatosColegios";
 	}
 	
 	@GetMapping("/formatosUniversidades")
 	public String formatosUniversidades(Model model) {
-		return "redirect:/galeria/formatosUniversidades";
+		return "/galeria/formatosUniversidades";
 	}
 }
