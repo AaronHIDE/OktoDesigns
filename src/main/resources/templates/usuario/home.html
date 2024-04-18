@@ -12,20 +12,17 @@
 		<header id="header" class="fixed-top ">
 			<div class="container d-flex align-items-center justify-content-lg-between">
 
-				<h1 class="logo me-auto me-lg-0"><a href="index.html">
-						<img th:src="@{/assets/img/logo.jpg}">
-					</a></h1>
+				<h1 class="logo me-auto me-lg-0">
+					<img th:src="@{/assets/img/logo.jpg}" title="OktoDesings">
+				</h1>
 				<h5 class="titulonav">OktoDesings</h5>
 				<!-- Uncomment below if you prefer to use an image logo -->
 				<!-- <a href="index.html" class="logo me-auto me-lg-0"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
 				<nav id="navbar" class="navbar order-last order-lg-0 titulos">
 					<ul>
-						<li><a class="nav-link scrollto active" href="#home">Home</a></li>
-						<li><a class="nav-link scrollto" href="#acerca">Acerca de...</a></li>
-						<li><a class="nav-link scrollto" href="#somos">¿Quiénes Somos?</a></li>
-						<li><a class="nav-link scrollto " href="#team">Team</a></li>
-						<li><a class="nav-link scrollto" href="#contactanos">Contactanos</a></li>
+						<li><a class="nav-link scrollto active titulos" href="#home">INICIO</a></li>
+
 					</ul>
 					</li>
 					<i class="bi bi-list mobile-nav-toggle"></i>
@@ -54,7 +51,7 @@
 					<div class="col-xl-2 col-md-4">
 						<div class="icon-box">
 							<i class="ri-store-line"></i>
-							<h3><a th:href="@{/hojasDeVida}">Hojas de vida</a></h3>
+							<h3><a th:href="@{/hojasDeVida}">Hojas de Vida</a></h3>
 						</div>
 					</div>
 					<div class="col-xl-2 col-md-4">
@@ -81,10 +78,6 @@
 			</div>
 		</section><!-- End Hero -->
 
-		<main id="main">
-
-
-		</main><!-- End #main -->
 	</div>
 
 	<main id="main" class="main">
@@ -95,188 +88,263 @@
 
 				<div class="row">
 					<div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left" data-aos-delay="100">
-						<img src="assets/img/foto1.png" class="img-fluid" alt="">
+						<div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+							<!-- Indicators/dots -->
+							<div class="carousel-indicators">
+								<button type="button" data-bs-target="#demo" data-bs-slide-to="0"
+									class="active"></button>
+								<button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+								<button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+<!--								<button type="button" data-bs-target="#demo" data-bs-slide-to="3"></button>-->
+							</div>
+
+							<!-- The slideshow/carousel -->
+							<div class="carousel-inner ">
+								<div class="carousel-item active c2">
+									<img src="assets/img/foto1.png" alt="cartel" class="d-block w-100">
+								</div>
+								<div class="carousel-item c2">
+									<img src="assets/img/imgFE.png" alt="cabalgata" class="d-block w-100">
+								</div>
+								<div class="carousel-item c1 c2">
+									<img src="assets/img/imgFS.png" alt="luces" class="d-block w-100">
+								</div>
+<!--								<div class="carousel-item c1 c2">-->
+<!--									<img src="vista/imagenes/img.jpg" alt="luces" class="d-block w-100">-->
+<!--								</div>-->
+							</div>
+
+							<!-- Left and right controls/icons -->
+							<button class="carousel-control-prev" type="button" data-bs-target="#demo"
+								data-bs-slide="prev">
+								<span class="carousel-control-prev-icon"></span>
+							</button>
+							<button class="carousel-control-next" type="button" data-bs-target="#demo"
+								data-bs-slide="next">
+								<span class="carousel-control-next-icon"></span>
+							</button>
+						</div>
 					</div>
+
 					<div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content" data-aos="fade-right"
 						data-aos-delay="100">
 						<br><br><br><br><br><br><br>
-						<h3>Usa Nuestras Plantillas</h3>
+						<h3>Usa Nuestros Formatos</h3>
 						<p class="fst-italic">
-							Puedes usar nuestras plantillas para generar
-							tu hoja de vida en el formato que requieras.
+							Prueba y genera formatos a tu gusto.
 						</p>
 
 						<h3>¡Descargalas como PDF!</h3>
 						<p class="fst-italic">
-							Descarga tu hoja de vida como PDF para que puedas
-							imprimirla o compartirla con nosotros.
+							Guarda tus formatos en tu dispositivo.
+						</p>
+						<h3>Con Nosotros Puedes Compartir Tu Información</h3>
+						<p class="fst-italic">
+							A través del correo de nuestra página we, podrás compartir tus formatos.
 						</p>
 					</div>
 				</div>
 				<br>
-				<div
-					style="display: flex; flex-direction: column; align-items: center; text-align: center; padding: 20px; border: 1px solid transparent; border-radius: 5px; background-color: transparent;">
-					<h3>Con Nosotros Puedes Compartir Tus Hojas de Vida</h3>
-					<p class="fst-italic">
-						Te porporcionamos nuestro correo OktoDesigns@gmail.com para que puedas compartir tus hojas
-						de vida al destinatario deseado.
-					</p>
-				</div>
+
 			</div>
 		</section><!-- End About Section -->
 
-		<!-- ======= Clients Section ======= -->
-		<section id="somos" class="somos">
-			<div class="container" data-aos="zoom-in" style="text-align: center; margin-top: 5rem;">
-				<p class="fst-italic"
-					style="font-style: italic; font-size: 1.1rem; line-height: 1.5; color: rgb(255, 255, 255);">
-					¡Saludos! Somos un entusiasta grupo de tres estudiantes dedicados a hacer que tu experiencia en
-					OktoDesigns sea excepcional. OktoDesigns es más que una simple página web; es un recurso
-					diseñado
-					para simplificar y mejorar tu vida diaria.
-				</p>
-				<p class="fst-italic"
-					style="font-style: italic; font-size: 1.1rem; line-height: 1.5; color: rgb(255, 255, 255);">
-					Cada miembro de nuestro equipo aporta habilidades únicas y una pasión compartida por la
-					innovación. Estamos comprometidos a ofrecerte contenido valioso, funciones intuitivas y un
-					diseño atractivo que se adapte a tus necesidades.
-				</p>
-				<p class="fst-italic"
-					style="font-style: italic; font-size: 1.1rem; line-height: 1.5; color: rgb(255, 255, 255);">
-					¿Tienes preguntas, sugerencias o simplemente deseas ponerte en contacto con nosotros? No dudes
-					en
-					escribirnos a nuestro correo electrónico
-				</p>
-				<p class="fst-italic"
-					style="font-style: italic; font-size: 1.1rem; line-height: 1.5; color: rgb(255, 255, 255);">
-					Estamos aquí para escucharte y mejorar continuamente OktoDesigns para que sea una herramienta
-					útil y valiosa para ti. ¡Gracias por ser parte de nuestra comunidad!
-				</p>
-			</div>
-		</section><!-- End Clients Section -->
+		<!-- ======= SECCION DE INFOMACION botones ======= -->
+		<section id="somos" class="somos d-flex justify-content-center">
 
-		<!-- ======= Team Section ======= -->
-		<section id="team" class="team">
-			<div class="container" data-aos="fade-up">
+			<br><br><br><br>
 
-				<div class="section-title">
-					<h2>Team</h2>
-					<p>Check our Team</p>
+			<button class="btn get-started-btn scrollto titulos" data-bs-toggle="modal" data-bs-target="#knowUsModal"
+				style="width: 60%;">
+				CONOCE QUIENES SOMOS
+			</button>
+
+			<!--informacion-->
+			<div class="modal fade" id="knowUsModal" tabindex="-1" aria-labelledby="knowUsModalLabel"
+				aria-hidden="true">
+				<div class="modal-dialog modal-dialog-centered">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title" id="knowUsModalLabel">¿Quiénes Somos?</h5>
+							<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+						</div>
+						<div class="modal-body">
+							<div class="container" data-aos="zoom-in" style="text-align: center; margin-top: 2rem;">
+								<p class="fst-italic"
+									style="font-style: italic; font-size: 1.1rem; line-height: 1.5; color: rgb(0, 0, 64);">
+									¡Saludos! Somos un entusiasta grupo de tres estudiantes dedicados a hacer que tu
+									experiencia en
+									OktoDesigns sea excepcional. OktoDesigns es más que una simple página web; es un
+									recurso
+									diseñado
+									para simplificar y mejorar tu vida diaria.
+								</p>
+								<p class="fst-italic"
+									style="font-style: italic; font-size: 1.1rem; line-height: 1.5; color: rgb(0, 0, 64);">
+									Cada miembro de nuestro equipo aporta habilidades únicas y una pasión compartida por
+									la
+									innovación. Estamos comprometidos a ofrecerte contenido valioso, funciones
+									intuitivas y un
+									diseño atractivo que se adapte a tus necesidades.
+								</p>
+								<p class="fst-italic"
+									style="font-style: italic; font-size: 1.1rem; line-height: 1.5; color: rgb(0, 0, 64);">
+									¿Tienes preguntas, sugerencias o simplemente deseas ponerte en contacto con
+									nosotros? No dudes
+									en
+									escribirnos a nuestro correo electrónico
+								</p>
+								<p class="fst-italic"
+									style="font-style: italic; font-size: 1.1rem; line-height: 1.5; color: rgb(0, 0, 64);">
+									Estamos aquí para escucharte y mejorar continuamente OktoDesigns para que sea una
+									herramienta
+									útil y valiosa para ti. ¡Gracias por ser parte de nuestra comunidad!
+								</p>
+								<br>
+							</div>
+						</div>
+					</div>
 				</div>
-
-				<div class="row" style="display: flex; justify-content: center;">
-
-					<div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-						<div class="member" data-aos="fade-up" data-aos-delay="100">
-							<div class="member-img">
-								<img src="assets/img/team/Aaron.jpg" class="img-fluid" alt="Aaron"
-									style="width: 400px; height: 350px;">
-								<div class="social">
-									<a href="mailto:aaron_ochoa@soy.sena.edu.co" target="_blank"><i
-											class="bi bi-envelope"></i></a>
-									<a href="https://wa.me/573112396890" target="_blank">
-										<i class="bi bi-whatsapp"></i>
-										<a href="https://github.com/AaronHIDE" target="_blank"><i
-												class="bi bi-github"></i></a>
-								</div>
-							</div>
-							<div class="member-info">
-								<h4>Aaron David Ochoa Hinestroza</h4>
-								<span>Developer</span>
-							</div>
-						</div>
-					</div>
-
-					<div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-						<div class="member" data-aos="fade-up" data-aos-delay="200">
-							<div class="member-img">
-								<img src="assets/img/team/Ginna.jpg" class="img-fluid" alt="Ginna"
-									style="width: 400px; height: 350px;">
-								<div class="social">
-									<a href="mailto:ginna_vargas@soy.sena.edu.co"><i class="bi bi-envelope"
-											target="_blank"></i></a>
-									<a href="https://wa.me/573124836422" target="_blank">
-										<i class="bi bi-whatsapp"></i>
-									</a>
-									<a href="https://github.com/XenaEstupinan" target="_blank"><i
-											class="bi bi-github"></i></a>
-								</div>
-							</div>
-							<div class="member-info">
-								<h4>Ginna Lizeth Vargas Estupiñán</h4>
-								<span>Product Owner</span>
-							</div>
-						</div>
-					</div>
-
-					<div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-						<div class="member" data-aos="fade-up" data-aos-delay="300">
-							<div class="member-img">
-								<img src="assets/img/team/Samuel.jpg" class="img-fluid" alt="Samuel"
-									style="width: 400px; height: 350px;">
-								<div class="social">
-									<a href="mailto:samunoz554@soy.sena.edu.co"><i class="bi bi-envelope"
-											target="_blank"></i></a>
-									<a href="https://wa.me/573157482933" target="_blank">
-										<i class="bi bi-whatsapp"></i>
-										<a href="https://github.com/DrZamus" target="_blank"><i
-												class="bi bi-github"></i></a>
-								</div>
-							</div>
-							<div class="member-info">
-								<h4>Samuel Antonio Muñoz Romero</h4>
-								<span>Developer</span>
-							</div>
-						</div>
-					</div>
-
-				</div>
-
 			</div>
-		</section><!-- End Team Section -->
+
+			<br><br><br>
+
+			<button type="button" class="btn get-started-btn scrollto titulos" data-bs-toggle="modal"
+				data-bs-target="#teamModal" style="width: 60%;">
+				EQUIPO DE TRABAJO
+			</button>
+			<div class="modal fade" id="teamModal" tabindex="-1" aria-labelledby="teamModalLabel" aria-hidden="true">
+				<div class="modal-dialog modal-dialog-centered modal-lg">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title" id="teamModalLabel">Miembros</h5>
+							<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+						</div>
+						<div class="modal-body">
+							<div class="container" data-aos="fade-up">
+								<div class="row" style="display: flex; justify-content: center;">
+
+									<div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+										<div class="member" data-aos="fade-up" data-aos-delay="100">
+											<div class="member-img">
+												<img src="assets/img/team/Aaron.jpg" class="img-fluid" alt="Aaron"
+													style="width: 400px; height: 200px;">
+												<div class="social">
+													<a href="mailto:aaron_ochoa@soy.sena.edu.co" target="_blank"><i
+															class="bi bi-envelope"></i></a>
+													<a href="https://wa.me/573112396890" target="_blank">
+														<i class="bi bi-whatsapp"></i>
+														<a href="https://github.com/AaronHIDE" target="_blank"><i
+																class="bi bi-github"></i></a>
+												</div>
+											</div>
+											<div class="member-info">
+												<h5>Aaron David Ochoa Hinestroza</h5>
+												<span>Developer</span>
+											</div>
+										</div>
+									</div>
+
+									<div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+										<div class="member" data-aos="fade-up" data-aos-delay="200">
+											<div class="member-img">
+												<img src="assets/img/team/Ginna.jpg" class="img-fluid" alt="Ginna"
+													style="width: 400px; height: 200px;">
+												<div class="social">
+													<a href="mailto:ginna_vargas@soy.sena.edu.co"><i
+															class="bi bi-envelope" target="_blank"></i></a>
+													<a href="https://wa.me/573124836422" target="_blank">
+														<i class="bi bi-whatsapp"></i>
+													</a>
+													<a href="https://github.com/XenaEstupinan" target="_blank"><i
+															class="bi bi-github"></i></a>
+												</div>
+											</div>
+											<div class="member-info">
+												<h5>Ginna Lizeth Vargas Estupiñán</h5>
+												<span>Product Owner</span>
+											</div>
+										</div>
+									</div>
+
+									<div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+										<div class="member" data-aos="fade-up" data-aos-delay="300">
+											<div class="member-img">
+												<img src="assets/img/team/Samuel.jpg" class="img-fluid" alt="Samuel"
+													style="width: 400px; height: 200px;">
+												<div class="social">
+													<a href="mailto:samunoz554@soy.sena.edu.co"><i
+															class="bi bi-envelope" target="_blank"></i></a>
+													<a href="https://wa.me/573157482933" target="_blank">
+														<i class="bi bi-whatsapp"></i>
+														<a href="https://github.com/DrZamus" target="_blank"><i
+																class="bi bi-github"></i></a>
+												</div>
+											</div>
+											<div class="member-info">
+												<h5>Samuel Antonio Muñoz Romero</h5>
+												<span>Developer</span>
+											</div>
+										</div>
+									</div>
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- End Team Section -->
+
+
 
 		<!-- ======= Contact Section ======= -->
-		<section id="contactanos" class="contact">
+		<section id="info" class="contact">
 			<div class="container" data-aos="fade-up">
 
-				<div class="section-title">
-					<h2>Contact</h2>
-					<p>Contact Us</p>
+				<div class="row mt-5 d-flex justify-content-center">
+					<button type="button" class="btn get-started-btn ubi" data-bs-toggle="modal"
+						data-bs-target="#mapModal" style="width: 20%;">
+						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+							class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+							::before
+							<path
+								d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6" />
+						</svg>
+						<path
+							d="M4.002 0a4 4 0 0 0-4 4v8a4 4 0 0 0 4 4h8a4 4 0 0 0 4-4V4a4 4 0 0 0-4-4zm1.06 12V3.545h3.399c1.587 0 2.543.809 2.543 2.11 0 .884-.65 1.675-1.483 1.816v.1c1.143.117 1.904.931 1.904 2.033 0 1.488-1.084 2.396-2.888 2.396z">
+						</path>
+						</svg>
+						NUESTRA UBICACION
 				</div>
+			</div>
 
-				<div
-					style="display: flex; justify-content: center; align-items: center; height: 450px; width: 1000px; margin: 0 auto;">
-					<iframe
-						src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15877.51865047878!2d-73.07044574510498!3d5.801934568806452!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e6a406d2162f375%3A0xfe568617cd9e1d0f!2sSENA!5e0!3m2!1ses!2sco!4v1711978726152!5m2!1ses!2sco"
-						width="1000" height="450" style="border:0;" allowfullscreen loading="lazy"
-						referrerpolicy="no-referrer-when-downgrade"></iframe>
-				</div>
-
-				<div class="row mt-5">
-					<div class="col-lg-4">
-						<div class="info">
-							<i class="bi bi-geo-alt"></i>
-							<h4>Ubicación:</h4>
-							<p>Centro Industrial de Mantenimiento y Manufactura</p>
+			<div class="modal fade" id="mapModal" tabindex="-1" aria-labelledby="mapModalLabel" aria-hidden="true">
+				<div class="modal-dialog modal-dialog-centered modal-lg">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title" id="mapModalLabel">Centro Industrial de Mantenimiento y Manufactura
+							</h5>
+							<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 						</div>
-					</div>
-					<div class="col-lg-4">
-						<div class="info">
-							<i class="bi bi-envelope"></i>
-							<h4>Email:</h4>
-							<p>OktoDesigns@gmail.com</p>
+						<br>
+						<div
+							style="display: flex; justify-content: center; align-items: center; height: 450px; width: 600px; margin: 0 auto;">
+							<iframe
+								src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15877.51865047878!2d-73.07044574510498!3d5.801934568806452!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e6a406d2162f375%3A0xfe568617cd9e1d0f!2sSENA!5e0!3m2!1ses!2sco!4v1711978726152!5m2!1ses!2sco"
+								width="1000" height="450" style="border:0;" allowfullscreen loading="lazy"
+								referrerpolicy="no-referrer-when-downgrade"></iframe>
 						</div>
-					</div>
-					<div class="col-lg-4">
-						<div class="info">
-							<i class="bi bi-phone"></i>
-							<h4>Llamanos:</h4>
-							<p>+57 3124836422</p>
-						</div>
+						<br>
 					</div>
 				</div>
 			</div>
-		</section><!-- End Contact Section -->
+		</section>
+		<!-- End Contact Section -->
+
+
 	</main><!-- End #main -->
 
 	<div th:insert="~{usuario/template_user.html::footer}"></div>

@@ -2,10 +2,13 @@ package com.sena.OktoDesigns.model;
 
 import java.sql.Date;
 
+//import com.sena.crudecommerce.model.Usuario;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+//import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
 @Entity
@@ -58,6 +61,8 @@ public class FormatoSena {
 	private String fecha_diligenciamiento1;
 	private String firma;
 	
+//	@ManyToOne
+//	private Usuario usuario;
 	
 	public FormatoSena() {
 		// TODO Auto-generated constructor stub
