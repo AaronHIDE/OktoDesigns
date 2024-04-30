@@ -9,18 +9,23 @@
 
 	<main id="main" class="main">
 		<!-- ======= Hero Section ======= -->
-		<section id="home" class="d-flex">
+		<section id="home" class="d-flex justify-content-center">
 			<div class="parent-container">
 				<div class="container">
 					<div class="box">
-						<img src="assets/img/imgFE.PNG" class="img-fluid" alt="formatoEstandar">
-						<span class="title">Hoja de Vida Estandar</span>
+						<a th:href="@{/infoFE}">
+							<!-- add the link URL and target attribute -->
+							<img src="assets/img/imgFE.PNG" class="img-fluid" alt="formatoEstandar">
+							<span class="title">Hoja de Vida Estandar</span>
+						</a>
 					</div>
 				</div>
 				<div class="container">
 					<div class="box">
-						<img src="assets/img/imgFS.PNG" class="img-fluid" alt="formatoEstandar">
-						<span class="title">Hoja de Vida SENA</span>
+						<a th:href="@{/infoFS}">
+							<img src="assets/img/imgFS.PNG" class="img-fluid" alt="formatoEstandar">
+							<span class="title">Hoja de Vida SENA</span>
+						</a>
 					</div>
 				</div>
 			</div>

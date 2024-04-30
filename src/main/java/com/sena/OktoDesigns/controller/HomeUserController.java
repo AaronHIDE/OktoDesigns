@@ -43,4 +43,14 @@ public class HomeUserController {
 	public String formatosUniversidades(Model model) {
 		return "usuario/formatosUniversidades";
 	}
+	
+	@GetMapping("/infoFS")
+	public String infoFS(Model model) {
+		return "usuario/infoFS";
+	}
+	
+	@GetMapping("/infoFE")
+	public String infoFE(Model model) {
+		return "usuario/infoFE";
+	}
 }

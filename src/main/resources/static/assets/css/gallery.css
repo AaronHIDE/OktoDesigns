@@ -13,8 +13,7 @@
 # DISEÑO CONTENEDOR
 --------------------------------------------------------------*/
 
-.container {
-	color: white;
+.container1{
 	position: relative;
 	font-family: sans-serif;
 	display: flex;
