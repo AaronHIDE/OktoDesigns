@@ -29,9 +29,9 @@ public class HomeUserController {
 		return "usuario/hojasDeVida";
 	}
 	
-	@GetMapping("/formatosRegistraduria")
-	public String formatosRegistraduria(Model model) {
-		return "usuario/formatosRegistraduria";
+	@GetMapping("/formatosCartas")
+	public String formatosCartas(Model model) {
+		return "usuario/formatosCartas";
 	}
 	
 	@GetMapping("/formatosColegios")
