@@ -7,23 +7,24 @@
 
 	<div th:insert="~{administrador/template_admin.html::header}"></div>
 
-	<main id="main" class="main">
+	<main id="main" class="main" style="display: flex; justify-content: center;">
 
+		<!-- Inicio Section -->
+		<section class="welcome">
+			<div class="overlay">
+				<h1>PLANTILLAS</h1>
+				<h3>Selecciona tu plantilla favorita para editar</h3>
+			</div>
+		</section>
 
 		<!-- ======= Menu Section ======= -->
 		<section id="menu" class="menu">
 			<div class="container" data-aos="fade-up">
 
-				<div class="section-header">
-					<br>
-					<h1>PLANTILLAS</h1>
-					<p>Selecciona tus <span>Plantillas</span></p>
-				</div>
-
 				<ul class="nav nav-tabs d-flex justify-content-center" data-aos="fade-up" data-aos-delay="200">
 
 					<li class="nav-item">
-						<a class="nav-link active show" data-bs-toggle="tab" data-bs-target="#menu-starters">
+						<a class="nav-link active show " data-bs-toggle="tab" data-bs-target="#menu-starters">
 							<h4>Hojas de Vida</h4>
 						</a>
 					</li><!-- End tab nav item -->
@@ -31,19 +32,19 @@
 					<li class="nav-item">
 						<a class="nav-link" data-bs-toggle="tab" data-bs-target="#menu-breakfast">
 							<h4>Formatos de la<br>
-							 Registraduria</h4>
+								Registraduria</h4>
 						</a><!-- End tab nav item -->
 
 					<li class="nav-item">
 						<a class="nav-link" data-bs-toggle="tab" data-bs-target="#menu-lunch">
 							<h4>Formatos de Matriculas<br>
-							 para Colegios</h4>
+								para Colegios</h4>
 						</a>
 					</li><!-- End tab nav item -->
 
 					<li class="nav-item">
 						<a class="nav-link" data-bs-toggle="tab" data-bs-target="#menu-dinner">
-							<h4>Formatos de Matriculas <br> 
+							<h4>Formatos de Matriculas <br>
 								para Universidades</h4>
 						</a>
 					</li><!-- End tab nav item -->
@@ -58,21 +59,21 @@
 							<p>PLANTILLAS</p>
 							<h3>Hojas de Vida</h3>
 						</div>
-
-						<div class="row gy-5">
-
-							<div class="col-lg-4 menu-item">
-								<a href="assets/img/menu/menu-item-1.png" class="glightbox"><img
-										src="assets/img/menu/menu-item-1.png" class="menu-img img-fluid" alt=""></a>
-								<h4>Magnam Tiste</h4>
-								<p class="ingredients">
-									Lorem, deren, trataro, filede, nerada
-								</p>
-								<p class="price">
-									$5.95
-								</p>
-							</div><!-- Menu Item -->
-
+						<div class="card-container">
+							<div class="card">
+								<div class="content">
+									<div class="back">
+										<div class="back-content">
+											<svg stroke="#ffffff"></svg>
+											<i class="bi bi-file-earmark-person"></i>
+											<strong>Deslizame</strong>
+										</div>
+									</div>
+									<div class="front">
+										<img src="ruta/a/tu/imagen.jpg" alt="Imagen en el reverso de la tarjeta">
+									</div>
+								</div>
+							</div>
 						</div>
 					</div><!-- End Starter Menu Content -->
 
@@ -82,46 +83,48 @@
 							<p>PLANTILLAS</p>
 							<h3>Formatos de la Registraduria</h3>
 						</div>
+						<div class="card-container">
+							<div class="card">
+								<div class="content">
+									<div class="back">
+										<div class="back-content">
+											<svg stroke="#ffffff"></svg>
+											<i class="bi bi-file-earmark-person"></i>
+											<strong>Deslizame</strong>
+										</div>
+									</div>
+									<div class="front">
 
-						<div class="row gy-5">
-
-							<div class="col-lg-4 menu-item">
-								<a href="assets/img/menu/menu-item-1.png" class="glightbox"><img
-										src="assets/img/menu/menu-item-1.png" class="menu-img img-fluid" alt=""></a>
-								<h4>Magnam Tiste</h4>
-								<p class="ingredients">
-									Lorem, deren, trataro, filede, nerada
-								</p>
-								<p class="price">
-									$5.95
-								</p>
-							</div><!-- Menu Item -->
-
+									</div>
+								</div>
+							</div>
 						</div>
-					</div><!-- End Breakfast Menu Content -->
+					</div><!-- End Lunch Menu Content -->
 
 					<div class="tab-pane fade" id="menu-lunch">
 
 						<div class="tab-header text-center">
 							<p>PLANTILLAS</p>
-							<h3>Formatos de Matriculas para Colegios</h3>
+							<h3>Formatos de Matriculs para Colegios</h3>
 						</div>
 
-						<div class="row gy-5">
+						<div class="card-container">
+							<div class="card">
+								<div class="content">
+									<div class="back">
+										<div class="back-content">
+											<svg stroke="#ffffff"></svg>
+											<i class="bi bi-file-earmark-person"></i>
+											<strong>Deslizame</strong>
+										</div>
+									</div>
+									<div class="front">
 
-							<div class="col-lg-4 menu-item">
-								<a href="assets/img/menu/menu-item-1.png" class="glightbox"><img
-										src="assets/img/menu/menu-item-1.png" class="menu-img img-fluid" alt=""></a>
-								<h4>Magnam Tiste</h4>
-								<p class="ingredients">
-									Lorem, deren, trataro, filede, nerada
-								</p>
-								<p class="price">
-									$5.95
-								</p>
-							</div><!-- Menu Item -->
-
+									</div>
+								</div>
+							</div>
 						</div>
+
 					</div><!-- End Lunch Menu Content -->
 
 					<div class="tab-pane fade" id="menu-dinner">
@@ -131,69 +134,27 @@
 							<h3>Formatos de Matriculas para Universidades</h3>
 						</div>
 
-						<div class="row gy-5">
+						<div class="card-container">
+							<div class="card">
+								<div class="content">
+									<div class="back">
+										<div class="back-content">
+											<svg stroke="#ffffff"></svg>
+											<i class="bi bi-file-earmark-person"></i>
+											<strong>Deslizame</strong>
+										</div>
+									</div>
+									<div class="front">
 
-							<div class="col-lg-4 menu-item">
-								<a href="assets/img/menu/menu-item-1.png" class="glightbox"><img
-										src="assets/img/menu/menu-item-1.png" class="menu-img img-fluid" alt=""></a>
-								<h4>Magnam Tiste</h4>
-								<p class="ingredients">
-									Lorem, deren, trataro, filede, nerada
-								</p>
-								<p class="price">
-									$5.95
-								</p>
-							</div><!-- Menu Item -->
+									</div>
+								</div>
+							</div>
+						</div><!-- End Dinner Menu Content -->
 
-						</div>
-					</div><!-- End Dinner Menu Content -->
-
-				</div>
-
-			</div>
-		</section><!-- End Menu Section -->
-
-		<!-- ======= Gallery Section ======= -->
-		<section id="gallery" class="gallery section-bg">
-			<div class="container" data-aos="fade-up">
-
-				<div class="section-header">
-					<h2>Referencias</h2>
-					<p>Dale un vistazo a nuestras <span>Referencias</span></p>
-				</div>
-
-				<div class="gallery-slider swiper">
-					<div class="swiper-wrapper align-items-center">
-						<div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery"
-								href="assets/img/gallery/gallery-1.jpg"><img src="assets/img/gallery/gallery-1.jpg"
-									class="img-fluid" alt=""></a></div>
-						<div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery"
-								href="assets/img/gallery/gallery-2.jpg"><img src="assets/img/gallery/gallery-2.jpg"
-									class="img-fluid" alt=""></a></div>
-						<div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery"
-								href="assets/img/gallery/gallery-3.jpg"><img src="assets/img/gallery/gallery-3.jpg"
-									class="img-fluid" alt=""></a></div>
-						<div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery"
-								href="assets/img/gallery/gallery-4.jpg"><img src="assets/img/gallery/gallery-4.jpg"
-									class="img-fluid" alt=""></a></div>
-						<div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery"
-								href="assets/img/gallery/gallery-5.jpg"><img src="assets/img/gallery/gallery-5.jpg"
-									class="img-fluid" alt=""></a></div>
-						<div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery"
-								href="assets/img/gallery/gallery-6.jpg"><img src="assets/img/gallery/gallery-6.jpg"
-									class="img-fluid" alt=""></a></div>
-						<div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery"
-								href="assets/img/gallery/gallery-7.jpg"><img src="assets/img/gallery/gallery-7.jpg"
-									class="img-fluid" alt=""></a></div>
-						<div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery"
-								href="assets/img/gallery/gallery-8.jpg"><img src="assets/img/gallery/gallery-8.jpg"
-									class="img-fluid" alt=""></a></div>
 					</div>
-					<div class="swiper-pagination"></div>
-				</div>
 
-			</div>
-		</section><!-- End Gallery Section -->
+				</div>
+		</section><!-- End Menu Section -->
 
 	</main><!-- End #main -->
 
