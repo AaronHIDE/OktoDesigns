@@ -103,6 +103,12 @@
 	color: white;
 }
 
+.preview {
+	width: 99%;
+	height: 99%;
+}
+
+
 /*Centrado de la section del perfil*/
 
 .main {

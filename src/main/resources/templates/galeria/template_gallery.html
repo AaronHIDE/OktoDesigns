@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en" xmlsn:th="http://thymeLeaf.org">
 
-<head th:fragment="head">
+<div th:fragment="head">
+<head >
 	<meta charset="utf-8">
 	<meta content="width=device-width, initial-scale=1.0" name="viewport">
 
@@ -10,8 +11,8 @@
 	<meta content="" name="keywords">
 
 	<!-- Favicons -->
-	<link th:href="@{assetsGalery/img/favicon.png}" rel="icon">
-	<link th:href="@{assetsGalery/img/apple-touch-icon.png}" rel="apple-touch-icon">
+	<link th:href="@{assetsGallery/img/favicon.png}" rel="icon">
+	<link th:href="@{assetsGallery/img/apple-touch-icon.png}" rel="apple-touch-icon">
 
 	<!-- Google Fonts -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,14 +22,15 @@
 		rel="stylesheet">
 
 	<!-- Vendor CSS Files -->
-	<link th:href="@{assetsGalery/vendor/bootstrap/css/bootstrap.min.css}" rel="stylesheet">
-	<link th:href="@{assetsGalery/vendor/bootstrap-icons/bootstrap-icons.css}" rel="stylesheet">
-	<link th:href="@{assetsGalery/vendor/swiper/swiper-bundle.min.css}" rel="stylesheet">
-	<link th:href="@{assetsGalery/vendor/glightbox/css/glightbox.min.css}" rel="stylesheet">
-	<link th:href="@{assetsGalery/vendor/aos/aos.css}" rel="stylesheet">
+	<link th:href="@{assetsGallery/vendor/bootstrap/css/bootstrap.min.css}" rel="stylesheet">
+	<link th:href="@{assetsGallery/vendor/bootstrap-icons/bootstrap-icons.css}" rel="stylesheet">
+	<link th:href="@{assetsGallery/vendor/swiper/swiper-bundle.min.css}" rel="stylesheet">
+	<link th:href="@{assetsGallery/vendor/glightbox/css/glightbox.min.css}" rel="stylesheet">
+	<link th:href="@{assetsGallery/vendor/aos/aos.css}" rel="stylesheet">
 
 	<!-- Template Main CSS File -->
-	<link th:href="@{assetsGalery/css/main.css}" rel="stylesheet">
+	<link th:href="@{assetsGallery/css/main.css}" rel="stylesheet">
+	<link th:href="@{assetsGallery/css/style.css}" rel="stylesheet">
 
 	<!-- =======================================================
   * Template Name: PhotoFolio
@@ -47,24 +49,22 @@
 		<header id="header" class="fixed-top ">
 			<div class="container d-flex align-items-center justify-content-lg-between">
 
-				<h1 class="logo me-auto me-lg-0"><a href="index.html">
-						<img th:src="@{/assetsGalery/img/logo.jpg}">						
+				<h1 class="logo me-auto me-lg-0"><a href="#">
+						<img th:src="@{/assetsGallery/img/logo.jpg}">
 					</a></h1>
 				<h5 class="titulonav">OktoDesings</h5>
 				<!-- Uncomment below if you prefer to use an image logo -->
 				<!-- <a href="index.html" class="logo me-auto me-lg-0"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
-				
+
 				<!-- Recordar corregir redireccionamiento-->
-				<a th:href="@{/admin}" class="get-started-btn scrollto titulos">Iniciar Sesión</a>
-				<a href="#" class="get-started-btn scrollto titulos">Registrarse</a>
+				<a th:href="@{/}" class="get-started-btn scrollto titulos">REGRESAR</a>
 
 			</div>
 		</header><!-- End Header -->
-</div>	
+	</div>
 
-		<main id="main">
-		</main><!-- End #main -->
-		
+	<main id="main">
+	</main><!-- End #main -->
 
 
 	<div th:fragment="footer">
@@ -79,7 +79,7 @@
 					<!-- You can delete the links only if you purchased the pro version. -->
 					<!-- Licensing information: https://bootstrapmade.com/license/ -->
 					<!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/photofolio-bootstrap-photography-website-template/ -->
-					Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+					Designed by <a href="https://bootstrapmade.com/" target="_blank">BootstrapMade</a>
 				</div>
 			</div>
 		</footer><!-- End Footer -->
@@ -94,14 +94,14 @@
 
 	<div th:fragment="js">
 		<!-- Vendor JS Files -->
-		<script th:src="@{assetsGalery/vendor/bootstrap/js/bootstrap.bundle.min.js}"></script>
-		<script th:src="@{assetsGalery/vendor/swiper/swiper-bundle.min.js}"></script>
-		<script th:src="@{assetsGalery/vendor/glightbox/js/glightbox.min.js}"></script>
-		<script th:src="@{assetsGalery/vendor/aos/aos.js}"></script>
-		<script th:src="@{assetsGalery/vendor/php-email-form/validate.js}"></script>
+		<script th:src="@{assetsGallery/vendor/bootstrap/js/bootstrap.bundle.min.js}"></script>
+		<script th:src="@{assetsGallery/vendor/swiper/swiper-bundle.min.js}"></script>
+		<script th:src="@{assetsGallery/vendor/glightbox/js/glightbox.min.js}"></script>
+		<script th:src="@{assetsGallery/vendor/aos/aos.js}"></script>
+		<script th:src="@{assetsGallery/vendor/php-email-form/validate.js}"></script>
 
 		<!-- Template Main JS File -->
-		<script th:src="@{assetsGalery/js/main.js}"></script>
+		<script th:src="@{assetsGallery/js/main.js}"></script>
 	</div>
 
 </body>
