@@ -25,7 +25,7 @@
 	<link th:href="@{/assets/vendor/swiper/swiper-bundle.min.css}" rel="stylesheet">
 
 	<!-- Template Main CSS File -->
-	<link th:href="@{/assets/css/main.css}" rel="stylesheet">
+		<link th:href="@{/assets/css/main.css}" rel="stylesheet">
 	<link th:href="@{/assets/css/interfazAdmin.css}" rel="stylesheet">
 	<link th:href="@{/assets/css/style.css}" rel="stylesheet">
 	<link th:href="@{/assets/css/formato.css}" rel="stylesheet">
@@ -42,14 +42,18 @@
 <div th:fragment="header">
 
 	<!-- ======= Header ======= -->
-
 	<header id="header" class="fixed-top">
 		<div class="container d-flex align-items-center justify-content-lg-between">
 
 			<h1 class="logo me-auto me-lg-0"><a href="index.html">
 					<img th:src="@{/assets/img/logo.jpg}">
 				</a></h1>
-			<h5 class="titulonav">OktoDesings</h5>
+			<!-- Uncomment below if you prefer to use an image logo -->
+			<!-- <a href="index.html" class="logo me-auto me-lg-0"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+			<nav id="navbar" class="navbar order-last order-lg-0">
+
+			</nav><!-- .navbar -->
 
 			<a class="bi bi-person-badge get-started-btn scrollto" th:href="@{/administrador/perfil}"> </a>
 
