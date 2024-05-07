@@ -110,6 +110,7 @@
     justify-content: center;
     align-items: center;
     min-height: 100vh; /* Ajusta la altura mínima para que ocupe toda la pantalla */
+    min-width: 100%;
 }
 
 

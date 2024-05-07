@@ -26,21 +26,31 @@ public class HomeUserController {
 	
 	@GetMapping("/hojasDeVida")
 	public String hojasDeVida(Model model) {
-		return "redirect:/galeria/hojasDeVida";
+		return "usuario/hojasDeVida";
 	}
 	
-	@GetMapping("/formatosRegistraduria")
-	public String formatosRegistraduria(Model model) {
-		return "redirect:/galeria/formatosRegistraduria";
+	@GetMapping("/formatosCartas")
+	public String formatosCartas(Model model) {
+		return "usuario/formatosCartas";
 	}
 	
 	@GetMapping("/formatosColegios")
 	public String formatosColegios(Model model) {
-		return "redirect:/galeria/formatosColegios";
+		return "usuario/formatosColegios";
 	}
 	
 	@GetMapping("/formatosUniversidades")
 	public String formatosUniversidades(Model model) {
-		return "redirect:/galeria/formatosUniversidades";
+		return "usuario/formatosUniversidades";
+	}
+	
+	@GetMapping("/infoFS")
+	public String infoFS(Model model) {
+		return "usuario/infoFS";
+	}
+	
+	@GetMapping("/infoFE")
+	public String infoFE(Model model) {
+		return "usuario/infoFE";
 	}
 }

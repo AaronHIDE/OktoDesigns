@@ -29,6 +29,7 @@
 
 	<!-- Template Main CSS File -->
 	<link th:href="@{assets/css/style.css}" rel="stylesheet">
+	<link th:href="@{assets/css/gallery.css}" rel="stylesheet">
 
 	<!-- =======================================================
   * Template Name: Gp
@@ -46,26 +47,26 @@
 		<header id="header" class="fixed-top">
 			<div class="container d-flex align-items-center justify-content-lg-between">
 
-				<h1 class="logo me-auto me-lg-0"><a href="index.html">
-						<img th:src="@{/assets/img/logo.jpg}">						
+				<h1 class="logo me-auto me-lg-0"><a href="#">
+						<img th:src="@{/assets/img/logo.jpg}">
 					</a></h1>
 				<h5 class="titulonav">OktoDesings</h5>
 				<!-- Uncomment below if you prefer to use an image logo -->
 				<!-- <a href="index.html" class="logo me-auto me-lg-0"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
-				
-				<!-- Recordar corregir redireccionamiento-->
-				<a th:href="@{/admin}" class="get-started-btn scrollto titulos">Iniciar Sesión</a>
-				<a href="#" class="get-started-btn scrollto titulos">Registrarse</a>
 
+				<!-- Redireccionamiento pagina anterior-->
+				<button onclick="goBack()" class="btn get-started-btn titulos">REGRESAR</button>
+
+				<script>
+					function goBack() {
+						window.history.back();
+					}
+				</script>
 			</div>
 		</header><!-- End Header -->
 
 
-		<!-- ======= Hero Section ======= -->
-		<section id="home" class="d-flex align-items-center justify-content-center">
-
-		</section><!-- End Hero -->
 
 		<main id="main">
 
@@ -90,14 +91,6 @@
 									<strong>Email: </strong>OktoDesigns@gmail.com<br>
 								</p>
 							</div>
-						</div>
-
-						<div class="col-lg-2 col-md-6 footer-links">
-							<h4>Links Página</h4>
-							<ul>
-								<li><i class="bx bx-chevron-right"></i> <a href="#home">Inicio</a></li>
-								<li><i class="bx bx-chevron-right"></i> <a href="#acerca">Acerca de...</a></li>
-							</ul>
 						</div>
 
 						<div class="col-lg-3 col-md-6 footer-links">
