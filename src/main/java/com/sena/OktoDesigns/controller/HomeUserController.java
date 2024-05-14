@@ -53,4 +53,9 @@ public class HomeUserController {
 	public String infoFE(Model model) {
 		return "usuario/infoFE";
 	}
+	
+	@GetMapping("/infoRefPersonal")
+	public String infoRefPersonal(Model model) {
+		return "usuario/infoRefPersonal";
+	}
 }

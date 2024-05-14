@@ -40,5 +40,4 @@ public class AdministradorController {
 		return "administrador/cartaRefPersonal";
 	}
 	
-	
 }
