@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en" xmlsn:th="http://thymeLeaf.org">
+
+<head th:fragment="head">
+	<meta charset="utf-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+	<title>OktoDesigns</title>
+	<meta content="" name="description">
+	<meta content="" name="keywords">
+
+	<!-- Favicons -->
+	<link th:href="@{assets/img/favicon.png}" rel="icon">
+	<link th:href="@{assets/img/apple-touch-icon.png}" rel="apple-touch-icon">
+
+	<!-- Google Fonts -->
+	<link
+		href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+		rel="stylesheet">
+
+	<!-- Vendor CSS Files -->
+	<link th:href="@{assets/vendor/aos/aos.css}" rel="stylesheet">
+	<link th:href="@{assets/vendor/bootstrap/css/bootstrap.min.css}" rel="stylesheet">
+	<link th:href="@{assets/vendor/bootstrap-icons/bootstrap-icons.css}" rel="stylesheet">
+	<link th:href="@{assets/vendor/boxicons/css/boxicons.min.css}" rel="stylesheet">
+	<link th:href="@{assets/vendor/glightbox/css/glightbox.min.css}" rel="stylesheet">
+	<link th:href="@{assets/vendor/remixicon/remixicon.css}" rel="stylesheet">
+	<link th:href="@{assets/vendor/swiper/swiper-bundle.min.css}" rel="stylesheet">
+
+	<!-- Template Main CSS File -->
+	<link th:href="@{assets/css/style.css}" rel="stylesheet">
+
+	<!-- =======================================================
+  * Template Name: Gp
+  * Updated: Mar 13 2024 with Bootstrap v5.3.3
+  * Template URL: https://bootstrapmade.com/gp-free-multipurpose-html-bootstrap-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+	<div th:fragment="header">
+		<!-- ======= Header ======= -->
+		<header id="header" class="fixed-top">
+			<div class="container d-flex align-items-center justify-content-lg-between">
+
+				<h1 class="logo me-auto me-lg-0"><a href="index.html">
+						<img th:src="@{/assets/img/logo.jpg}">						
+					</a></h1>
+				<h5 class="titulonav">OktoDesings</h5>
+				<!-- Uncomment below if you prefer to use an image logo -->
+				<!-- <a href="index.html" class="logo me-auto me-lg-0"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+				
+				<!-- Recordar corregir redireccionamiento-->
+				<a th:href="@{/admin}" class="get-started-btn scrollto titulos">Iniciar Sesión</a>
+				<a href="#" class="get-started-btn scrollto titulos">Registrarse</a>
+
+			</div>
+		</header><!-- End Header -->
+
+
+		<!-- ======= Hero Section ======= -->
+		<section id="home" class="d-flex align-items-center justify-content-center">
+
+		</section><!-- End Hero -->
+
+		<main id="main">
+
+
+		</main><!-- End #main -->
+	</div>
+
+	<div th:fragment="footer">
+		<!-- ======= Footer ======= -->
+		<footer id="footer">
+			<div class="footer-top">
+				<div class="container">
+					<div class="row">
+
+						<div class="col-lg-3 col-md-6">
+							<div class="footer-info">
+								<h3><img th:src="@{/assets/img/logo.jpg}" style="width:50%; height:auto;"></h3>
+								<p>
+									OktoDesigns <br>
+									Centro CIMM<br><br>
+									<strong>Télefono: </strong>+57 3124836422<br>
+									<strong>Email: </strong>OktoDesigns@gmail.com<br>
+								</p>
+							</div>
+						</div>
+
+						<div class="col-lg-2 col-md-6 footer-links">
+							<h4>Links Página</h4>
+							<ul>
+								<li><i class="bx bx-chevron-right"></i> <a href="#home">Inicio</a></li>
+								<li><i class="bx bx-chevron-right"></i> <a href="#acerca">Acerca de...</a></li>
+							</ul>
+						</div>
+
+						<div class="col-lg-3 col-md-6 footer-links">
+
+						</div>
+
+						<div class="col-lg-4 col-md-6 footer-newsletter">
+							<h4>Unete y usa OktoDesigns</h4>
+							<p>Empieza a usar las plantillas y diferentes diseños que te ofrecemos</p>
+							<form action="" method="post">
+								<input type="email" name="email"><input type="submit" value="Registrarse">
+							</form>
+
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+			<div class="container">
+				<div class="copyright">
+					&copy; Copyright <strong><span>Gp</span></strong>. All Rights Reserved
+				</div>
+				<div class="credits">
+					<!-- All the links in the footer should remain intact. -->
+					<!-- You can delete the links only if you purchased the pro version. -->
+					<!-- Licensing information: https://bootstrapmade.com/license/ -->
+					<!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/gp-free-multipurpose-html-bootstrap-template/ -->
+					Designed by <a href="https://bootstrapmade.com/" target="_blank">BootstrapMade</a>
+				</div>
+			</div>
+		</footer><!-- End Footer -->
+	</div>
+
+	<div id="preloader"></div>
+	<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+			class="bi bi-arrow-up-short"></i></a>
+
+
+	<div th:fragment="js">
+		<!-- Vendor JS Files -->
+		<script th:src="@{assets/vendor/purecounter/purecounter_vanilla.js}"></script>
+		<script th:src="@{assets/vendor/aos/aos.js}"></script>
+		<script th:src="@{assets/vendor/bootstrap/js/bootstrap.bundle.min.js}"></script>
+		<script th:src="@{assets/vendor/glightbox/js/glightbox.min.js}"></script>
+		<script th:src="@{assets/vendor/isotope-layout/isotope.pkgd.min.js}"></script>
+		<script th:src="@{assets/vendor/swiper/swiper-bundle.min.js}"></script>
+		<script th:src="@{assets/vendor/php-email-form/validate.js}"></script>
+
+		<!-- Template Main JS File -->
+		<script th:src="@{assets/js/main.js}"></script>
+	</div>
+
+</body>
+
+</html>
