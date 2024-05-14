@@ -1,0 +1,10 @@
+/* Estilos CSS para la tabla de datos */
+
+#cartaRefPersonal {
+  .data-table {
+    width: 100%;
+    border-collapse: collapse;
+    justify-content: center;
+  }
+
+}

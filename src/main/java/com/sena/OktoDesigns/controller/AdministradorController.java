@@ -35,5 +35,10 @@ public class AdministradorController {
 		return "administrador/perfil";
 	}
 
+	@GetMapping("/cartaRefPersonal")
+	public String cartaRefPersonal(Model model) {
+		return "administrador/cartaRefPersonal";
+	}
+	
 	
 }
