@@ -215,7 +215,7 @@ h6 {
 	font-family: 'Helvetica Neue';
 	font-size: 30px;
 	color: rgb(255, 255, 255);
-	margin-top: 10px;
+	margin-top: 15px;
 	/* reduce the margin-top value */
 	letter-spacing: 2px;
 	text-indent: 120px;
@@ -223,6 +223,11 @@ h6 {
 
 #header .titulos {
 	font-family: "Raleway", sans-serif;
+}
+
+#header .botones {
+	margin-bottom: 10px;
+	margin-right: 20px;
 }
 
 /*--------------------------------------------------------------
@@ -569,7 +574,7 @@ section {
 }
 
 /*--------------------------------------------------------------
-# About
+# Acerca
 --------------------------------------------------------------*/
 .about .content h3 {
 	font-weight: 700;
