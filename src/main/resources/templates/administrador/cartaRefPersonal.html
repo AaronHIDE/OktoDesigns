@@ -150,8 +150,20 @@
 								<p>Atentamente,</p>
 							</div>
 							<br><br><br><br>
-							<input type="file" name="image" accept="image/*" />							
-							<p>_________________________ <br><!--cambiar para firma-->
+
+
+							<div class="grid-container">
+								<div class="image-preview">
+									<img src="" alt="Vista Previa">									
+								</div>
+								<div>
+									<input type="file" id="image-input" accept="image/*">
+									<label for="image-input"></label>
+								</div>
+							</div>
+
+
+							<p><div class="line"></div><!--cambiar para firma-->
 								<label><input type="text" class="form-control" id="nombre3"
 										placeholder="Ingrese su nombre" name="nombre3" style="width: 350px;" required>
 									</imput></label>
@@ -171,7 +183,7 @@
 				</div>
 			</form>
 
-			<!-- SECCION DE IMPRIMIR-->
+			<!-- SECCION DE IMPRIMIR Y PDF (Falta agregar)-->
 
 		</section><!-- End Menu Section -->
 
@@ -183,6 +195,7 @@
 			class="bi bi-arrow-up-short"></i></a>
 
 	<div th:insert="~{administrador/template_admin.html::scripts_js}"></div>
+	<script th:src="@{/assets/js/firma.js}"></script>
 
 </body>
 
