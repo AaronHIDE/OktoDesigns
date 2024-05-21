@@ -15,20 +15,12 @@ public class Usuario {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-
 	private Integer id;
+	
 	private String nombre;
 	private String email;
 	private String password;
 
-//	@OneToMany(mappedBy = "usuario")
-//	private List<Producto> productos;
-//
-//	@OneToMany(mappedBy = "usuario")
-//	private List<Orden> ordenes;
-
-	// Contructor dentro de la clase: modelado, permitir crear el entorno dentro de
-	// nuestra base
 
 	public Usuario() {
 

@@ -14,10 +14,10 @@ public class HomeUserController {
 		return "usuario/home";
 	}
 	
-	@GetMapping("/login")
-	public String login(Model model) {
-		return "usuario/login";
-	}
+//	@GetMapping("/login")
+//	public String login(Model model) {
+//		return "usuario/login";
+//	}
 
 	@GetMapping("/admin")
 	public String admin(Model model) {
@@ -52,5 +52,10 @@ public class HomeUserController {
 	@GetMapping("/infoFE")
 	public String infoFE(Model model) {
 		return "usuario/infoFE";
+	}
+	
+	@GetMapping("/infoRefPersonal")
+	public String infoRefPersonal(Model model) {
+		return "usuario/infoRefPersonal";
 	}
 }
