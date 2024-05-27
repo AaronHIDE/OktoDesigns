@@ -1,54 +1,46 @@
 package com.sena.OktoDesigns.security;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
-import org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration;
+import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
-import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
-import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+import org.springframework.security.core.userdetails.UserDetailsService;
 
 @Configuration
-@EnableWebSecurity
 public class SecurityConfiguration {
 
-    private final UserDetailsService usuarioServicio;
+    private final UserDetailsService userDetailsService;
+    private final BCryptPasswordEncoder passwordEncoder;
 
-    public SecurityConfiguration(UserDetailsService usuarioServicio) {
-        this.usuarioServicio = usuarioServicio;
+    @Autowired
+    public SecurityConfiguration(UserDetailsService userDetailsService, BCryptPasswordEncoder passwordEncoder) {
+        this.userDetailsService = userDetailsService;
+        this.passwordEncoder = passwordEncoder;
     }
 
-    @Bean
-    public BCryptPasswordEncoder passwordEncoder() {
-        return new BCryptPasswordEncoder();
-    }
-
-    @Bean
-    public DaoAuthenticationProvider authenticationProvider() {
-        DaoAuthenticationProvider authProvider = new DaoAuthenticationProvider();
-        authProvider.setUserDetailsService(usuarioServicio);
-        authProvider.setPasswordEncoder(passwordEncoder());
-        return authProvider;
+    @Autowired
+    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
+        auth.userDetailsService(userDetailsService).passwordEncoder(passwordEncoder);
     }
 
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
-        http
-            .authorizeHttpRequests(authorize -> authorize
-                .requestMatchers("/registro**", "/js/**", "/css/**", "/img/**").permitAll()
+        http.authorizeHttpRequests(authorize -> authorize
+                .requestMatchers("/", "/registro/**", "assets/js/**", "assets/css/**", "/img/**", "templates/usuario/**").permitAll() // Permitir acceso público a estas rutas
                 .anyRequest().authenticated()
             )
+            .csrf(csrf -> csrf.disable())
             .formLogin(formLogin -> formLogin
                 .loginPage("/login")
                 .permitAll()
+                .defaultSuccessUrl("/administrador") // Opcional, redirigir a admin después del login exitoso
             )
             .logout(logout -> logout
-                .invalidateHttpSession(true)
-                .clearAuthentication(true)
-                .logoutSuccessUrl("/login?logout")
                 .permitAll()
+                .logoutSuccessUrl("/login?logout")
             );
         return http.build();
     }

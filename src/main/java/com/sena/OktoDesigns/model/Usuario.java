@@ -21,8 +21,6 @@ public class Usuario {
 	private String email;
 	private String password;
 
-	
-	// Contructor dentro de la clase: modelado, permitir crear el entorno dentro de nuestra base
 
 	public Usuario() {
 

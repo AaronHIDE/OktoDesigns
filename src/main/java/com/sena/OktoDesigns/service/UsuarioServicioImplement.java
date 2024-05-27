@@ -3,7 +3,6 @@ package com.sena.OktoDesigns.service;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Lazy;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
@@ -17,10 +16,7 @@ import com.sena.OktoDesigns.model.Usuario;
 @Service
 public class UsuarioServicioImplement implements UsuarioServicio {
 
-    private UsuarioRepositorio usuarioRepositorio;
-    
-    @Autowired
-    @Lazy
+    private final UsuarioRepositorio usuarioRepositorio;
     private final BCryptPasswordEncoder passwordEncoder;
 
     @Autowired
