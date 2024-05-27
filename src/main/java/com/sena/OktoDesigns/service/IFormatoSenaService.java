@@ -5,7 +5,6 @@ import java.util.Optional;
 
 import com.sena.OktoDesigns.model.FormatoSena;
 
-
 public interface IFormatoSenaService {
 	// create
 	public FormatoSena save(FormatoSena hojaSena);
