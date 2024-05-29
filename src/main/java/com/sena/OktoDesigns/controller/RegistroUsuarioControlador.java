@@ -27,7 +27,7 @@ public class RegistroUsuarioControlador {
 	
 	@GetMapping
 	public String mostrarFormularioDeRegistro() {
-	return "registro";
+	return "usuario/registro";
 }
 	@PostMapping
 	public String registrarCuentaDeUsuario(@ModelAttribute("usuario") UsuarioRegistroDTO registroDTO) {
