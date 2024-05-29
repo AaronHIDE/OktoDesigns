@@ -30,6 +30,8 @@
 	<link th:href="@{/assets/css/style.css}" rel="stylesheet">
 	<link th:href="@{/assets/css/formato.css}" rel="stylesheet">
 	<link th:href="@{/assets/css/print.css}" type="text/css" rel="stylesheet" media="print">
+	<link th:href="@{/assets/css/email.css}" rel="stylesheet">
+	<link th:href="@{/assets/css/cartaRenuncia.css}" rel="stylesheet">
 
 	<!-- =======================================================
   * Template Name: Gp
@@ -40,25 +42,36 @@
   ======================================================== -->
 </head>
 
-
 <div th:fragment="header">
 	<!-- ======= Header ======= -->
 	<header id="header" class="fixed-top">
 		<div class="container d-flex align-items-center justify-content-between" style="height: 50px;">
 			<h1 class="logoAdmin">
-				<a th:href="@{/administrador/home}">
+				<a th:href="@{/administrador}">
 					<img th:src="@{/assets/img/logo.jpg}" style="width: 15%;">
 				</a>
 			</h1>
 			<nav>
-				<a th:href="@{/administrador/email}" class="me-4 h6 mail-link">Usa nuestro Mail</a>
-				<a th:href="@{/administrador/perfil}" class="get-started-btn scrollto titulos botones">
-					<i class="bi bi-person-square"></i>
+				<a th:href="@{/administrador/email}" class="get-started-btn scrollto titulos botones">
+					<i class="bi bi-envelope-arrow-up-fill"></i>
 				</a>
+
+				<a class="get-started-btn drop-list-menu">
+					<i class="bi bi-list drop-start-btn"></i>
+				</a>
+
+				<ul class="homeList">
+					<li th:href="@{/administrador/perfil}">Perfil</li>
+					<li>hola</li>
+				</ul>
+
+
+
 			</nav>
 		</div>
 	</header><!-- End Header -->
 </div>
+
 
 
 <div th:fragment="footer">
@@ -95,9 +108,8 @@
 
 	<!-- Template Main JS File -->
 	<script th:src="@{assets/js/main.js}"></script>
+	<script th:src="@{assets/js/home.js}"></script>
+	<script th:src="@{assets/js/checklist.js}"></script>
 
 
 </div>
-
-
-</html>
