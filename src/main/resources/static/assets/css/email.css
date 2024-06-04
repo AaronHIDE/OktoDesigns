@@ -1,0 +1,47 @@
+.php-email-form {
+    width: 100%;
+    background: #fff;
+}
+
+.php-email-form .form-group {
+    padding-bottom: 8px;
+}
+
+.php-email-form input,
+.php-email-form textarea {
+    border: 1px solid #352e2e;
+    border-radius: 0;
+    box-shadow: none;
+    font-size: 14px;
+    border-radius: 4px;
+}
+
+.php-email-form input:focus,
+.php-email-form textarea:focus {
+    border-color: #be1ba3;
+}
+
+.php-email-form input {
+    height: 44px;
+}
+
+.php-email-form textarea {
+    padding: 10px 12px;
+}
+
+.php-email-form button[type=submit] {
+    background: #bb22c9;
+    border: 0;
+    padding: 10px 24px;
+    color: #151515;
+    transition: 0.4s;
+    border-radius: 4px;
+}
+
+.php-email-form button[type=submit]:hover {
+    background: #bb22c9;
+}
+
+.move-right {
+    margin-left: 110px; /* Ajusta el valor para mover el h2 a la derecha */
+}
