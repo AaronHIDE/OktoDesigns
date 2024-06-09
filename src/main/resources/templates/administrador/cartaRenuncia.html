@@ -1,0 +1,94 @@
+<head th:insert="~{administrador/template_admin.html::head}"></head>
+
+<div th:insert="~{administrador/template_admin.html::header}"></div>
+
+<section></section>
+
+<main>
+
+  <section>
+    <div class="container flex d-flex renunceContainer-Styles">
+      <div>
+        <h1 class="title-Styles">Carta de Renuncia</h1>
+        <h6 class="h6RenunceLetter-Styles">Ingrese su Nombre:</h6>
+        <input class="RenunceLetterName-Styles" type="text" name="" id="">
+        <h3 class="h6RenunceLetter-Styles">Carta de Renuncia</h3>
+        <br><br><br>
+        <h6 class="h6RenunceLetter-Styles">Ingrese el nombre de la persona a la que va dirijida la carta:</h6>
+        <input class="RenunceLetterNameBoss-Styles" type="text" name="" id="">
+        <h6 class="h6RenunceLetter-Styles">Ingrese el cargo de la persona a la que va dirijida la carta:</h6>
+        <input class="RenunceLetterBoss-Styles" type="text" name="" id="">
+        <h6 class="h6RenunceLetter-Styles">Ingrese el nombre de la empresa a la que va dirijida la carta:</h6>
+        <input class="RenunceLetterBoss-Styles" type="text" name="" id="">
+        <h6 class="h6RenunceLetter-Styles">Ingrese la direccion de la empresa a la que va dirijida la carta:</h6>
+        <input class="RenunceLetterBoss-Styles" type="text" name="" id="">
+        <h6 class="h6RenunceLetter-Styles">Ingrese el numero telefonico de la persona a la que va dirijida la carta:
+        </h6>
+        <input class="RenunceLetterBoss-Styles" type="number" name="" id="">
+
+        <div style="margin: 40px;">
+
+          <select>
+            <option value="señor">señor</option>
+            <option value="señora">señora</option>
+          </select>
+
+          <input class="RenunceLetterBoss-Subtitle-Styles" type="text" name="" id="" placeholder="Remitente">
+
+          <p>
+            Le solicito amablemente acepte mi renuncia formal como miembro del personal de <input
+              class="RenunceLetterBoss-Subtitle-Styles" type="text" name="" id="" placeholder="Empresa"> Mi último día
+            laboral será el ..., dentro de <input class="RenunceLetterBoss-Subtitle-Styles" type="text" name="" id=""
+              placeholder="Semanas"> semanas, a partir de hoy.
+          </p>
+
+          <p>
+            Estoy muy <select>
+              <option value="agradecido">agradecido</option>
+              <option value="agradecida">agradecida</option>
+            </select> por las oportunidades que se me brindaron en este puesto. Valoro los conocimientos que aprendí y
+            espero contar con ellos en mis tareas futuras. También me gustaría agradecerles por apoyar mi crecimiento
+            profesional. Disfruté mi tiempo de trabajo en la empresa con ustedes y con el resto del equipo.
+          </p>
+
+          <p>
+
+            Quedo a disposición para ayudar a que la transición de responsabilidades sea lo más ordenada posible para
+            todos los involucrados. Gracias.
+          </p>
+
+          <br>
+
+          <p>Saludos cordiales.</p>
+
+
+          <div class=""></div><!--cambiar para firma-->
+
+          <input type="text" class="RenunceLetterBoss-Styles" id="" placeholder="Ingrese su nombre" name="" required>
+
+          <input type="text" class="RenunceLetterBoss-Styles" id="" placeholder="Ingrese su cédula" name="" required>
+
+          <input type="text" class="RenunceLetterBoss-Styles" id="" placeholder="Ingrese su télefono" name="" required>
+
+        </div>
+
+
+        <div class="d-flex justify-content-center my-4">
+          <button type="button" class="btn btn-danger mx-2" onclick="imprimir()">Descargar
+            <i class="bi bi-filetype-pdf"></i></button>
+          <button type="button" class="btn btn-info mx-2">Enviar
+            <i class="bi bi-send-plus"></i></button>
+            <script>
+              function imprimir() {
+                window.print();
+              }
+            </script>
+        </div>
+
+      </div>
+  </section><!-- End Contact Section -->
+</main>
+
+<div th:insert="~{administrador/template_admin.html::footer}"></div>
+
+<div th:insert="~{administrador/template_admin.html::scripts_js}"></div>

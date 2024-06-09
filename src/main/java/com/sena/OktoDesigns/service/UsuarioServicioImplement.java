@@ -1,6 +1,7 @@
 package com.sena.OktoDesigns.service;
 
 import java.util.List;
+import java.util.Collections;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.User;
@@ -37,7 +38,7 @@ public class UsuarioServicioImplement implements UsuarioServicio {
         if (usuario == null) {
             throw new UsernameNotFoundException("Usuario/Password inválidos");
         }
-        return new User(usuario.getEmail(), usuario.getPassword(), null);
+        return new User(usuario.getEmail(), usuario.getPassword(), Collections.emptyList());
     }
 
     @Override
