@@ -19,4 +19,10 @@ public class RegistroControlador {
 		return "usuario/login";
 	}
 	
+    @GetMapping("/home")
+    public String verPaginaDeInicio(Model modelo) {
+        modelo.addAttribute("usuarios", servicio.listarUsuarios());
+        return "usuario/home"; // Asegúrate de que esta ruta coincide con tu archivo HTML
+    }
+	
 }

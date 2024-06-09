@@ -3,12 +3,12 @@
 /*    background-color: #f4f4f4;*/
 /*}*/
 
-/*.container {*/
-/*    display: flex;*/
-/*    justify-content: center;*/
-/*    align-items: center;*/
-/*    height: 100vh;*/
-/*}*/
+.lcontainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+}
 
 .login-container {
     width: 300px;
