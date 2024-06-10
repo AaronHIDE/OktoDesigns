@@ -3,17 +3,22 @@ package com.sena.OktoDesigns.service;
 import java.util.List;
 import java.util.Optional;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.sena.OktoDesigns.model.Formato;
+import com.sena.OktoDesigns.repository.FormatoRepository;
 
 @Service
 public class FormatoImplement implements IFormatoService{
+	
+	@Autowired
+	private FormatoRepository formatoRepository;
 
 	@Override
 	public Formato save(Formato hojaVida) {
 		// TODO Auto-generated method stub
-		return null;
+		return formatoRepository.save(hojaVida);
 	}
 	
 	@Override
@@ -28,16 +33,10 @@ public class FormatoImplement implements IFormatoService{
 	
 	}
 	
-	@Override
-	public void delete(Integer Id) {
-		// TODO Auto-generated method stub
-		
-	}
 
 	@Override
 	public List<Formato> findAll(){
-		// TODO Auto-generated method stub
-		return null;
+		return formatoRepository.findAll();
 	}
 	
 }

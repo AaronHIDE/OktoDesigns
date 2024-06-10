@@ -16,7 +16,7 @@ public interface IFormatoService {
 	
 	public Optional<Formato> get(Integer Id);
 	public void update(Formato hojaVida);
-	public void delete(Integer Id);
+	
 	
 // lists - tables
 	public List<Formato> findAll();
