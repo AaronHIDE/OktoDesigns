@@ -34,9 +34,9 @@ public class HomeUserController {
 		return "usuario/formatosCartas";
 	}
 	
-	@GetMapping("/formatosColegios")
-	public String formatosColegios(Model model) {
-		return "usuario/formatosColegios";
+	@GetMapping("/formatosInvitaciones")
+	public String formatosInvitaciones(Model model) {
+		return "usuario/formatosInvitaciones";
 	}
 	
 	@GetMapping("/formatosUniversidades")
@@ -58,4 +58,10 @@ public class HomeUserController {
 	public String infoRefPersonal(Model model) {
 		return "usuario/infoRefPersonal";
 	}
+	
+	@GetMapping("/infoCartaRenuncia")
+	public String infoCartaRenuncia(Model model) {
+		return "usuario/infoCartaRenuncia";
+	}
+	
 }

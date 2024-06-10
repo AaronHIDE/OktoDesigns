@@ -15,8 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import com.sena.OktoDesigns.controller.FormatoSenaController;
 import com.sena.OktoDesigns.model.FormatoSena;
 import com.sena.OktoDesigns.service.IFormatoSenaService;
-//import com.sena.OktoDesigns.model.Usuario;
-//import com.sena.OktoDesigns.service.UsuarioServicio;
+import com.sena.OktoDesigns.service.UsuarioServicio;
 
 import ch.qos.logback.classic.Logger;
 import jakarta.servlet.http.HttpSession;
@@ -29,6 +28,8 @@ public class FormatoSenaController {
 	
 	@Autowired
 	private IFormatoSenaService formatoSenaService;
+	@Autowired
+	private UsuarioServicio usuarioService;
 	
 	@GetMapping("")
 	public String show(Model model) {

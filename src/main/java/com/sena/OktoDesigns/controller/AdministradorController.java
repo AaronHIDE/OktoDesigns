@@ -39,7 +39,12 @@ public class AdministradorController {
 	public String cartaRefPersonal(Model model) {
 		return "administrador/cartaRefPersonal";
 	}
-	
+
+	@GetMapping("/invitacionFormal")
+	public String invitacionFormal(Model model) {
+		return "administrador/invitacionFormal";
+	}
+
 	@GetMapping("/cartaRenuncia")
 	public String cartaRenuncia(Model model) {
 		return "administrador/cartaRenuncia";
