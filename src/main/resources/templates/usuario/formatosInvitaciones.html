@@ -9,18 +9,22 @@
 
 	<main id="main" class="main">
 		<!-- ======= Hero Section ======= -->
-		<section id="home" class="d-flex justify-content-center">
+		<section id="home" class="d-flex justify-content-center sectionXA">
 			<div class="parent-container">
 				<div class="container">
 					<div class="box">
-						<img src="assets/img/imgFE.PNG" class="img-fluid" alt="formatoEstandar">
-						<span class="title">Invitación Evento Empresarial</span>
+						<a th:href="@{/infoInvitacionFormal}">
+							<img src="assets/img/invitaciones/invitacionFormal.png" class="img-fluid" alt="invitacionFormal">
+							<span class="title">Invitación Formal</span>
+						</a>
 					</div>
 				</div>
 				<div class="container">
 					<div class="box">
-						<img src="assets/img/imgFS.PNG" class="img-fluid" alt="formatoEstandar">
-						<span class="title">_________</span>
+						<a th:href="@{/infoInvitacionInformal}">
+						<img src="assets/img/invitaciones/invitacionInformal.png" class="img-fluid" alt="invitacionInformal">
+						<span class="title">Invitación Informal</span>
+						</a>
 					</div>
 				</div>
 			</div>

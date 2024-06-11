@@ -2,34 +2,53 @@
 
 <div th:insert="~{administrador/template_admin.html::header}"></div>
 
-<section></section>
+<section class="sectionXA"></section>
 
-  <main>
-    <h1 class="flex d-flex justify-content-center">OktoMail</h1>
-      <h4 class="move-Right">Aquí puedes enviar tus formatos a quien necesites, usando nuestro Mail</h4>
-    <section id="contact" class="contact">
-      <div class="container flex d-flex justify-content-center align-items-center">
-        <form method="post" role="form" class="php-email-form">
-          <div class="row">
-            <h6>Destinatario:</h6>
-            <div class="col-md-6 form-group">
-              <input type="text" name="name" class="form-control" id="name" placeholder="Ingresa el destinatario al que le quieras enviar el correo" required>
-            </div>
-          </div>
-          <div class="form-group mt-3">
-            <h6>Asunto:</h6>
-            <input type="text" class="form-control" name="subject" id="subject" placeholder="Ingrese el asunto del correo" required>
-          </div>
-          <div class="form-group mt-3">
-            <h6>Contenido:</h6>
-            <textarea class="form-control" name="message" rows="5" placeholder="Ingrese el contenido del correo" required></textarea>
-          </div>
-          <div class="text-center"><button type="submit">Enviar</button></div>
-        </form>
-      </div>
-    </section><!-- End Contact Section -->
-  </main>
+<section class="sectionXA">
+	<div class="row col-md-3 offset-md-1">
+		<a th:href="@{/admin}">
+			<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="black"
+				class="bi bi-arrow-left-circle-fill" viewBox="0 0 16 16">
+				<path
+					d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0m3.5 7.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1.708.708L5.707 7.5z" />
+			</svg>
+		</a>
+	</div>
+</section>
 
-  <div th:insert="~{administrador/template_admin.html::footer}"></div>
+<main>
+	<h1 class="flex d-flex justify-content-center" style="text-align: center;">OktoMail</h1>
+	<h4 class="move-Right" style="text-align: center;">Aquí puedes enviar tus formatos a quien necesites, usando nuestro
+		Mail</h4>
+	<section id="contact" class="contact sectionXA">
+		<div class="container flex d-flex justify-content-center align-items-center">
+			<form method="post" role="form" class="php-email-form">
+				<div class="row">
+					<h6>Destinatario:</h6>
+					<div class="col-md-6 form-group">
+						<input type="text" name="name" class="form-control" id="name"
+							placeholder="Ingresa el destinatario al que le quieras enviar el correo" required>
+					</div>
+				</div>
+				<div class="form-group mt-3">
+					<h6>Asunto:</h6>
+					<input type="text" class="form-control" name="subject" id="subject"
+						placeholder="Ingrese el asunto del correo" required>
+				</div>
+				<div class="form-group mt-3">
+					<h6>Contenido:</h6>
+					<textarea class="form-control" name="message" rows="5" placeholder="Ingrese el contenido del correo"
+						required></textarea>
+				</div>
+				<div class="text-center"><button type="submit">Enviar</button></div>
+			</form>
+		</div>
+	</section><!-- End Contact Section -->
+</main>
 
-  <div th:insert="~{administrador/template_admin.html::scripts_js}"></div>
+
+<section class="sectionXA"></section>
+
+<div th:insert="~{administrador/template_admin.html::footer}"></div>
+
+<div th:insert="~{administrador/template_admin.html::scripts_js}"></div>
