@@ -1,6 +1,7 @@
 /*Estilos para la descripcion de administracion en la section de administrador*/
 
 .welcome {
+	padding: 50px;
 	background-color: #9f05ff69;
 	text-align: center;
 	width: 100%;
@@ -33,19 +34,38 @@
 	font-family: "Raleway", sans-serif;
 }
 
+.save{
+
+	margin-top: 100px;
+
+}
 
 /*Estilos para las cards de la plantilla admin*/
-
 
 /*Tamaño de las imagenes de las cards*/
 
 .bi-file-earmark-person {
-	font-size: 100px;
+	font-size: 80px;
 	/* Ajusta el tamaño del icono según tu preferencia */
 }
 
-.bi-file-text {
-	font-size: 100px;
+.bi-file-earmark-ruled {
+	font-size: 80px;
+	/* Ajusta el tamaño del icono según tu preferencia */
+}
+
+.bi-file-earmark-text {
+	font-size: 80px;
+	/* Ajusta el tamaño del icono según tu preferencia */
+}
+
+.bi-file-earmark-x{
+	font-size: 80px;
+	/* Ajusta el tamaño del icono según tu preferencia */
+}
+
+.bi-envelope-paper{
+	font-size: 80px;
 	/* Ajusta el tamaño del icono según tu preferencia */
 }
 
@@ -68,6 +88,44 @@
     position: absolute;
     top: 20px;
     left: 40px;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    z-index: 10; /* Asegura que esté por encima de otros elementos */
+}
+
+.card-Letters-TitleR {
+
+		
+	backface-visibility: hidden;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    z-index: 10; /* Asegura que esté por encima de otros elementos */
+}
+
+.card-Letters-TitleRe {
+
+		
+	backface-visibility: hidden;
+    position: absolute;
+    top: 20px;
+    left: 25px;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    z-index: 10; /* Asegura que esté por encima de otros elementos */
+}
+
+.card-Invitation-Title{
+
+	backface-visibility: hidden;
+    position: absolute;
+    top: 20px;
+	left: 55px;
     color: white;
     font-size: 18px;
     font-weight: bold;
@@ -130,15 +188,16 @@
 }
 
 .card .front img {
-
-  object-fit: cover;
-  overflow: hidden;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+	object-fit: cover;
+	width: 100%; /* Ajusta el tamaño de la imagen */
+	height: 100%; /* Ajusta el tamaño de la imagen */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: auto; /* Centra la imagen en el contenedor */
+	padding: 15px;
+  }
+  
 
 /*Centrado de la section del perfil*/
 

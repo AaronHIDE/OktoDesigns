@@ -4,48 +4,49 @@
 
 <section></section>
 
-<main>
+<main class="renunce">
 
   <section>
     <div class="container flex d-flex renunceContainer-Styles">
       <div>
         <h1 class="title-Styles">Carta de Renuncia</h1>
         <h6 class="h6RenunceLetter-Styles">Ingrese su Nombre:</h6>
-        <input class="RenunceLetterName-Styles" type="text" name="" id="">
+        <input class="RenunceLetterName-Styles" type="text" name="letterName" id="letterName">
         <h3 class="h6RenunceLetter-Styles">Carta de Renuncia</h3>
         <br><br><br>
         <h6 class="h6RenunceLetter-Styles">Ingrese el nombre de la persona a la que va dirijida la carta:</h6>
-        <input class="RenunceLetterNameBoss-Styles" type="text" name="" id="">
+        <input class="RenunceLetterNameBoss-Styles" type="text" name="nameBoss" id="nameBoss">
         <h6 class="h6RenunceLetter-Styles">Ingrese el cargo de la persona a la que va dirijida la carta:</h6>
-        <input class="RenunceLetterBoss-Styles" type="text" name="" id="">
+        <input class="RenunceLetterBoss-Styles" type="text" name="cargueBoss" id="cargueBoss">
         <h6 class="h6RenunceLetter-Styles">Ingrese el nombre de la empresa a la que va dirijida la carta:</h6>
-        <input class="RenunceLetterBoss-Styles" type="text" name="" id="">
+        <input class="RenunceLetterBoss-Styles" type="text" name="companyBoss" id="companyBoss">
         <h6 class="h6RenunceLetter-Styles">Ingrese la direccion de la empresa a la que va dirijida la carta:</h6>
-        <input class="RenunceLetterBoss-Styles" type="text" name="" id="">
+        <input class="RenunceLetterBoss-Styles" type="text" name="companyAddress" id="companyAddress">
         <h6 class="h6RenunceLetter-Styles">Ingrese el numero telefonico de la persona a la que va dirijida la carta:
         </h6>
-        <input class="RenunceLetterBoss-Styles" type="number" name="" id="">
+        <input class="RenunceLetterBoss-Styles" type="number" name="numberBoss" id="numberBoss">
 
         <div style="margin: 40px;">
 
           <select>
-            <option value="señor">señor</option>
-            <option value="señora">señora</option>
+            <option value="señor" id="señor">señor</option>
+            <option value="señora" id="señora">señora</option>
           </select>
 
-          <input class="RenunceLetterBoss-Subtitle-Styles" type="text" name="" id="" placeholder="Remitente">
+          <input class="RenunceLetterBoss-Subtitle-Styles" type="text" name="destinatary" id="destinatary" placeholder="DestinatarioS">
 
           <p>
             Le solicito amablemente acepte mi renuncia formal como miembro del personal de <input
-              class="RenunceLetterBoss-Subtitle-Styles" type="text" name="" id="" placeholder="Empresa"> Mi último día
-            laboral será el ..., dentro de <input class="RenunceLetterBoss-Subtitle-Styles" type="text" name="" id=""
+              class="RenunceLetterBoss-Subtitle-Styles" type="text" name="company" id="company" placeholder="Empresa"> Mi último día
+            laboral será el <input class="RenunceLetterBoss-Subtitle-Styles" type="date" name="renunceDate" id="renunceDate"
+            placeholder="fecha de renuncia">, dentro de <input class="RenunceLetterBoss-Subtitle-Styles" type="text" name="weeks" id="weeks"
               placeholder="Semanas"> semanas, a partir de hoy.
           </p>
 
           <p>
             Estoy muy <select>
-              <option value="agradecido">agradecido</option>
-              <option value="agradecida">agradecida</option>
+              <option value="agradecido" id="agradecido">agradecido</option>
+              <option value="agradecida" id="agradecida">agradecida</option>
             </select> por las oportunidades que se me brindaron en este puesto. Valoro los conocimientos que aprendí y
             espero contar con ellos en mis tareas futuras. También me gustaría agradecerles por apoyar mi crecimiento
             profesional. Disfruté mi tiempo de trabajo en la empresa con ustedes y con el resto del equipo.
@@ -64,11 +65,11 @@
 
           <div class=""></div><!--cambiar para firma-->
 
-          <input type="text" class="RenunceLetterBoss-Styles" id="" placeholder="Ingrese su nombre" name="" required>
+          <input type="text" class="RenunceLetterBoss-Styles" id="yourName" placeholder="Ingrese su nombre" name="yourName" required>
 
-          <input type="text" class="RenunceLetterBoss-Styles" id="" placeholder="Ingrese su cédula" name="" required>
+          <input type="text" class="RenunceLetterBoss-Styles" id="yourId" placeholder="Ingrese su cédula" name="yourId" required>
 
-          <input type="text" class="RenunceLetterBoss-Styles" id="" placeholder="Ingrese su télefono" name="" required>
+          <input type="number" class="RenunceLetterBoss-Styles" id="yourPhone" placeholder="Ingrese su télefono" name="yourPhone" required>
 
         </div>
 

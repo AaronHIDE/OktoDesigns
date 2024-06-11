@@ -4,8 +4,6 @@
 
 	<div th:insert="~{administrador/template_admin.html::header}"></div>
 
-
-	<br><br><br>
 	<section>
 		<div class="row col-md-3 offset-md-1 btnback">
 			<a th:href="@{/admin}">
@@ -21,11 +19,11 @@
 			<div class="headerf">
 				<h1 class="marcoh2">HOJA DE VIDA</h1>
 				<div class="containerf nombre-containerf needs-validation rounded-3">
-					<form action="" method="POST" id="formato">
+					<form th:action="@{/formato/save}" method="POST" id="formato">
 						<div class="inputboxf mt-3">
 							<FONT SIZE="6 " FACE="Montserrat" COLOR="black" class="h6">Nombre Completo</FONT>
 							<ion-icon name="person"></ion-icon>
-							<input type="text" class="form-control" id="nombre" name="nombre" required>
+							<input type="text" class="form-control" id="nombre" name="nombre_completo" required>
 							<label for="nombre" class="form-label"></label>
 						</div>
 
@@ -70,28 +68,28 @@
 						<div class="inputboxf mt-3">
 							<FONT SIZE="6 " FACE="Montserrat" COLOR="black" class="h6">Habilidad 1</FONT>
 							<ion-icon name="barbell"></ion-icon>
-							<input type="text" class="form-control" id="habilidades1" name="habilidades1" required>
+							<input type="text" class="form-control" id="habilidades1" name="habilidad1" required>
 							<label for="habilidades1" class="form-label"></label>
 						</div>
 
 						<div class="inputboxf mt-3">
 							<FONT SIZE="6 " FACE="Montserrat" COLOR="black" class="h6">Habilidad 2</FONT>
 							<ion-icon name="barbell"></ion-icon>
-							<input type="text" class="form-control" id="habilidades2" name="habilidades2" required>
+							<input type="text" class="form-control" id="habilidades2" name="habilidad2" required>
 							<label for="habilidades2" class="form-label"></label>
 						</div>
 
 						<div class="inputboxf mt-3">
 							<FONT SIZE="6 " FACE="Montserrat" COLOR="black" class="h6">Habilidad 3</FONT>
 							<ion-icon name="barbell"></ion-icon>
-							<input type="text" class="form-control" id="habilidades3" name="habilidades3" required>
+							<input type="text" class="form-control" id="habilidades3" name="habilidad3" required>
 							<label for="habilidades3" class="form-label"></label>
 						</div>
 
 						<div class="inputboxf mt-3">
 							<FONT SIZE="6 " FACE="Montserrat" COLOR="black" class="h6">Habilidad 4</FONT>
 							<ion-icon name="barbell"></ion-icon>
-							<input type="text" class="form-control" id="habilidades3" name="habilidades4" required>
+							<input type="text" class="form-control" id="habilidades3" name="habilidad4" required>
 							<label for="habilidades4" class="form-label"></label>
 						</div>
 
@@ -100,28 +98,28 @@
 						<div class="inputboxf mt-3">
 							<FONT SIZE="6 " FACE="Montserrat" COLOR="black" class="h6">Referencia 1</FONT>
 							<ion-icon name="people"></ion-icon>
-							<input type="text" class="form-control" id="referencias1" name="referencias1" required>
+							<input type="text" class="form-control" id="referencias1" name="referencia1" required>
 							<label for="referencias1" class="form-label"></label>
 						</div>
 
 						<div class="inputboxf mt-3">
 							<FONT SIZE="6 " FACE="Montserrat" COLOR="black" class="h6">Referencia 2</FONT>
 							<ion-icon name="people"></ion-icon>
-							<input type="text" class="form-control" id="referencias2" name="referencias2" required>
+							<input type="text" class="form-control" id="referencias2" name="referencia2" required>
 							<label for="referencias2" class="form-label"></label>
 						</div>
 
 						<div class="inputboxf mt-3">
 							<FONT SIZE="6 " FACE="Montserrat" COLOR="black" class="h6">Referencia 3</FONT>
 							<ion-icon name="people"></ion-icon>
-							<input type="text" class="form-control" id="referencias3" name="referencias3" required>
+							<input type="text" class="form-control" id="referencias3" name="referencia3" required>
 							<label for="referencias3" class="form-label"></label>
 						</div>
 
 						<div class="inputboxf mt-3">
 							<FONT SIZE="6 " FACE="Montserrat" COLOR="black" class="h6">Referencia 4</FONT>
 							<ion-icon name="people"></ion-icon>
-							<input type="text" class="form-control" id="referencias3" name="referencias4" required>
+							<input type="text" class="form-control" id="referencias3" name="referencia4" required>
 							<label for="referencias4" class="form-label"></label>
 						</div><br><br>
 
@@ -174,28 +172,28 @@
 						<div class="inputboxf mt-3">
 							<FONT SIZE="6 " FACE="Montserrat" COLOR="black" class="h6">Estudio 1</FONT>
 							<ion-icon name="library"></ion-icon>
-							<input type="text" class="form-control" id="estudios1" name="estudios1" required>
+							<input type="text" class="form-control" id="estudios1" name="educacion1" required>
 							<label for="estudios1" class="form-label"></label>
 						</div>
 
 						<div class="inputboxf mt-3">
 							<FONT SIZE="6 " FACE="Montserrat" COLOR="black" class="h6">Estudio 2</FONT>
 							<ion-icon name="library"></ion-icon>
-							<input type="text" class="form-control" id="estudios2" name="estudios2" required>
+							<input type="text" class="form-control" id="estudios2" name="educacion2" required>
 							<label for="estudios2" class="form-label"></label>
 						</div>
 
 						<div class="inputboxf mt-3">
 							<FONT SIZE="6 " FACE="Montserrat" COLOR="black" class="h6">Estudio 3</FONT>
 							<ion-icon name="library"></ion-icon>
-							<input type="text" class="form-control" id="estudios3" name="estudios3" required>
+							<input type="text" class="form-control" id="estudios3" name="educacion3" required>
 							<label for="estudios3" class="form-label"></label>
 						</div>
 
 						<div class="inputboxf mt-3">
 							<FONT SIZE="6 " FACE="Montserrat" COLOR="black" class="h6">Estudio 4</FONT>
 							<ion-icon name="library"></ion-icon>
-							<input type="text" class="form-control" id="estudios4" name="estudios4" required>
+							<input type="text" class="form-control" id="estudios4" name="educacion4" required>
 							<label for="estudios4" class="form-label"></label>
 						</div>
 
@@ -205,7 +203,7 @@
 						<div class="inputboxf mt-3">
 							<FONT SIZE="6 " FACE="Montserrat" COLOR="black" class="h6">Telefono</FONT>
 							<ion-icon name="call"></ion-icon>
-							<input type="text" class="form-control" id="telefonoReferencia1" name="telefonoReferencia1"
+							<input type="text" class="form-control" id="telefonoReferencia1" name="telefono_referencia1"
 								required>
 							<label for="telefonoReferencia1" class="form-label"></label>
 						</div>
@@ -213,7 +211,7 @@
 						<div class="inputboxf mt-3">
 							<FONT SIZE="6 " FACE="Montserrat" COLOR="black" class="h6">Telefono</FONT>
 							<ion-icon name="call"></ion-icon>
-							<input type="text" class="form-control" id="telefonoReferencia2" name="telefonoReferencia2"
+							<input type="text" class="form-control" id="telefonoReferencia2" name="telefono_referencia2"
 								required>
 							<label for="telefonoReferencia2" class="form-label"></label>
 						</div>
@@ -221,7 +219,7 @@
 						<div class="inputboxf mt-3">
 							<FONT SIZE="6 " FACE="Montserrat" COLOR="black" class="h6">Telefono</FONT>
 							<ion-icon name="call"></ion-icon>
-							<input type="text" class="form-control" id="telefonoReferencia3" name="telefonoReferencia3"
+							<input type="text" class="form-control" id="telefonoReferencia3" name="telefono_referencia3"
 								required>
 							<label for="telefonoReferencia3" class="form-label"></label>
 						</div>
@@ -229,16 +227,16 @@
 						<div class="inputboxf mt-3">
 							<FONT SIZE="6 " FACE="Montserrat" COLOR="black" class="h6">Telefono</FONT>
 							<ion-icon name="call"></ion-icon>
-							<input type="text" class="form-control" id="telefonoReferencia4" name="telefonoReferencia4"
+							<input type="text" class="form-control" id="telefonoReferencia4" name="telefono_referencia4"
 								required>
 							<label for="telefonoReferencia4" class="form-label"></label>
 						</div>
-						</form><br><br>
 
-						<div class="col-md-2 offset-md-4" id="transferir">
-							<button type="button" class="btn btn-info">Enviar
+						<div class="col-md-2 offset-md-4" id="enviar">
+							<button type="submit" class="btn btn-info">Enviar
 								<i class="bi bi-send-plus"></i></button>
 						</div>
+						</form><br><br>
 
 					</div>
 				</div>
