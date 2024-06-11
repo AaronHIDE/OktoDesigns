@@ -58,7 +58,7 @@ public class HomeUserController {
 	public String infoRefPersonal(Model model) {
 		return "usuario/infoRefPersonal";
 	}
-	
+
 	@GetMapping("/infoCartaRenuncia")
 	public String infoCartaRenuncia(Model model) {
 		return "usuario/infoCartaRenuncia";

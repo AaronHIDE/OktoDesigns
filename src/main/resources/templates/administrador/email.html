@@ -4,32 +4,32 @@
 
 <section></section>
 
-  <main>
-    <h1 class="flex d-flex justify-content-center">OktoMail</h1>
-      <h4 class="move-Right">Aquí puedes enviar tus formatos a quien necesites, usando nuestro Mail</h4>
-    <section id="contact" class="contact">
-      <div class="container flex d-flex justify-content-center align-items-center">
-        <form method="post" role="form" class="php-email-form">
-          <div class="row">
-            <h6>Destinatario:</h6>
-            <div class="col-md-6 form-group">
-              <input type="text" name="name" class="form-control" id="name" placeholder="Ingresa el destinatario al que le quieras enviar el correo" required>
-            </div>
-          </div>
-          <div class="form-group mt-3">
-            <h6>Asunto:</h6>
-            <input type="text" class="form-control" name="subject" id="subject" placeholder="Ingrese el asunto del correo" required>
-          </div>
-          <div class="form-group mt-3">
-            <h6>Contenido:</h6>
-            <textarea class="form-control" name="message" rows="5" placeholder="Ingrese el contenido del correo" required></textarea>
-          </div>
-          <div class="text-center"><button type="submit">Enviar</button></div>
-        </form>
-      </div>
-    </section><!-- End Contact Section -->
-  </main>
+<main>
+	<div class="emailcontainer">
+		<h1>¡Envía tu Email!</h1>
+		<div id="message"></div> <!-- Div para mensajes de éxito o error -->
+		<form id="emailForm" action="#" th:action="@{/send-email}" method="post" enctype="multipart/form-data">
+			<div class="form-group">
+				<label for="to">Para:</label>
+				<input type="email" class="form-control" id="to" name="to" required>
+			</div>
+			<div class="form-group">
+				<label for="subject">Asunto:</label>
+				<input type="text" class="form-control" id="subject" name="subject" required>
+			</div>
+			<div class="form-group">
+				<label for="text">Contenido:</label>
+				<textarea class="form-control" id="text" name="text" rows="5" required></textarea>
+			</div>
+			<div class="form-group">
+				<label for="file">Adjuntar PDF:</label>
+				<input type="file" class="form-control mb-3" id="file" name="file" accept="application/pdf">
+			</div>
+			<button type="submit" class="emailbtn">Enviar</button>
+		</form>
+	</div>
+</main>
 
-  <div th:insert="~{administrador/template_admin.html::footer}"></div>
+<!--  <div th:insert="~{administrador/template_admin.html::footer}"></div>-->
 
-  <div th:insert="~{administrador/template_admin.html::scripts_js}"></div>
+<div th:insert="~{administrador/template_admin.html::scripts_js}"></div>
