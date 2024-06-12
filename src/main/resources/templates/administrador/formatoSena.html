@@ -37,7 +37,7 @@
 					<div class="row">
 						<div class="col-md-11" style="margin:auto">
 							<br><br>
-							<form th:action="@{/formatoSena/save}">
+							<form th:action="@{/formatoSena/save}" method="POST" id="formatoSena">
 								<div class="section-content">
 									<table class="data-table">
 										<tr>
@@ -713,72 +713,35 @@
 
 
 											<!-- SECCION DE IMPRIMIR-->
-
-											<style>
-												@media print {
-													body {
-
-														/* Elimina los márgenes del cuerpo */
-
-														display: inline-block;
-														/* Cambia el comportamiento de la columna para permitir cambios de ancho */
-														margin-top: 12px;
-														/* Ajusta el margen superior para todas las páginas */
-
-													}
-
-													/* Estilos para el formato de impresión */
-													.row {
-														width: 172%;
-														/* Ajusta el ancho de la fila */
-
-													}
-
-													.container {
-														width: 100%;
-
-													}
-
-													@page {
-
-														/* Elimina los márgenes predeterminados de la página al imprimir */
-														page-break-before: always;
-														margin-top: 12px;
-														/* Ajusta el margen superior para todas las páginas */
-
-													}
-
-													br {
-														display: none;
-														/* Oculta los elementos <br> al imprimir */
-													}
-												}
-											</style>
-
-											<div class="row">
-												<div class="col-md-2 offset-md-8">
-													<button type="button" class="btn btn-danger"
-														onclick="imprimir()">Descargar
-														<i class="bi bi-filetype-pdf"></i></button>
-													<script>
-														function imprimir() {
-															window.print();
-														}
-													</script>
-												</div>
-
-												<div class="col-md-2" id="guardarFS">
-													<button type="submit" class="btn btn-info">Guardar
-														<i class=" bi bi-save"></i>
+											<div class="container">
+												<div class="row">
+													<div class="col-md-2"> <!-- Columna para el primer botón -->
+														<button type="button" class="btn btn-danger"
+															onclick="imprimir()">
+															Descargar <i class="bi bi-filetype-pdf"></i>
+														</button>
+														<script>
+															function imprimir() {
+																window.print();
+															}
+														</script>
+													</div>
+													<div class="col-md-6"> <!-- Columna para el segundo botón -->
+														<button type="submit" class="btn btn-info">Enviar <i
+																class="bi bi-send-plus"></i></button>
+													</div>
 												</div>
 											</div>
+
+
 										</div>
 									</div>
 								</div>
-							</form>
 						</div>
+						</form>
 					</div>
 				</div>
+			</div>
 			</div>
 		</section>
 	</main><!-- End #main -->
@@ -792,6 +755,7 @@
 			class="bi bi-arrow-up-short"></i></a>
 
 	<div th:insert="~{administrador/template_admin.html::scripts_js}"></div>
+	<script th:src="@{/assets/js/formato.js}"></script>
 
 
 </body>

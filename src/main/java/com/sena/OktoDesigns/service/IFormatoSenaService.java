@@ -14,4 +14,5 @@ public interface IFormatoSenaService {
 	public void delete(Integer Id);	
 	// lists - tables
 	public List<FormatoSena> findAll();
+
 }

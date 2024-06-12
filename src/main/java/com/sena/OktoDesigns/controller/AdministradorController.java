@@ -49,5 +49,9 @@ public class AdministradorController {
 	public String cartaRenuncia(Model model) {
 		return "administrador/cartaRenuncia";
 	}
+	@GetMapping("/signature")
+	public String firma(Model model) {
+		return "administrador/signature";
+	}
 
 }
