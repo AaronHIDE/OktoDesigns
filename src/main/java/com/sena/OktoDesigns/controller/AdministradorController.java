@@ -29,11 +29,6 @@ public class AdministradorController {
 	public String formato(Model model) {
 		return "administrador/formato";
 	}
-	
-	@GetMapping("/perfil")
-	public String perfil(Model model) {
-		return "administrador/perfil";
-	}
 
 	@GetMapping("/cartaRefPersonal")
 	public String cartaRefPersonal(Model model) {
@@ -47,6 +42,11 @@ public class AdministradorController {
 	@GetMapping("/signature")
 	public String firma(Model model) {
 		return "administrador/signature";
+	}
+	
+	@GetMapping("/profile")
+	public String userProfile(Model model) {
+		return "administrador/profile";
 	}
 
 }

@@ -33,6 +33,7 @@
 	<link th:href="@{/assets/css/email.css}" rel="stylesheet">
 	<link th:href="@{/assets/css/signature.css}" rel="stylesheet">
 	<link th:href="@{/assets/css/cartaRenuncia.css}" rel="stylesheet">
+	<link th:href="@{/assets/css/profile.css}" rel="stylesheet">
 
 	<!-- =======================================================
   * Template Name: Gp
@@ -58,24 +59,21 @@
 				</a>
 				
 				<a th:href="@{/administrador/email}" class="get-started-btn scrollto titulos botones">
-					<i class="bi bi-envelope"></i>				</a>
-
-				<a class="get-started-btn drop-list-menu">
-					<i class="bi bi-list drop-start-btn"></i>
+					<i class="bi bi-envelope"></i>				
 				</a>
 
-				<ul class="homeList">
-					<li th:href="@{/administrador/perfil}">Perfil</li>
-					<li>hola</li>
-				</ul>
-
-
+				<a th:href="@{/administrador/profile}" class="get-started-btn scrollto titulos botones">
+					<i class="bi bi-envelope"></i>				
+				</a>
+				
+				<a class="get-started-btn drop-list-menu" th:href="@{/logout}" sec:authorize="isAuthenticated()">
+					<i class="bi bi-person-fill-x"></i>
+				</a>
 
 			</nav>
 		</div>
 	</header><!-- End Header -->
 </div>
-
 
 
 <div th:fragment="footer">
