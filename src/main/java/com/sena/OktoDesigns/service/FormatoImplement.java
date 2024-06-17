@@ -16,9 +16,9 @@ public class FormatoImplement implements IFormatoService{
 	private FormatoRepository formatoRepository;
 
 	@Override
-	public Formato save(Formato hojaVida) {
+	public Formato save(Formato hojaVidaSENA) {
 		// TODO Auto-generated method stub
-		return formatoRepository.save(hojaVida);
+		return formatoRepository.save(hojaVidaSENA);
 	}
 	
 	@Override

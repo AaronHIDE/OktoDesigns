@@ -16,9 +16,9 @@ public class FormatoSenaImplement implements IFormatoSenaService{
 	private FormatoSenaRepository formatoSenaRepository;
 
 	@Override
-	public FormatoSena save(FormatoSena hojaSena) {
+	public FormatoSena save(FormatoSena hojavidaSENA) {
 		// TODO Auto-generated method stub
-		return null;
+		return formatoSenaRepository.save(hojavidaSENA);
 	}
 
 	@Override

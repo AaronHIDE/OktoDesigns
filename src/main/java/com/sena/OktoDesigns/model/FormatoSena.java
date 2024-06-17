@@ -1,13 +1,11 @@
 package com.sena.OktoDesigns.model;
 
-import java.sql.Date;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.ManyToOne;
-//import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
 @Entity
@@ -19,7 +17,7 @@ public class FormatoSena {
 	private Integer id;
 	private String nombre_completo;
 	private String documento;
-	private Date fecha_nacimiento;
+	private String fecha_nacimiento;
 	private String edad;
 	private String telefono_aprendiz;
 	private String email_soysena;
@@ -29,7 +27,7 @@ public class FormatoSena {
 	private String ciudad;
 	private String titulo_obtenido;
 	private String institucion_educativa;
-	private Date fecha_grado;
+	private String fecha_grado;
 	private String nivel;
 	private String nombre_estudios;
 	private String institucion_educativa2;
@@ -40,13 +38,13 @@ public class FormatoSena {
 	private String ocupaciones;
 	private String centro_formacion;
 	private String ciudad_formacion;
-	private Date fecha_inicio;
-	private Date fecha_final;
+	private String fecha_inicio;
+	private String fecha_final;
 	private String etapa;
 	private String coordinador_academico;
 	private String telefono_coordinador;
 	private String email_coordinador;
-	private Date fecha_diligenciamiento;
+	private String fecha_diligenciamiento;
 	private String firma_aprendiz;
 	private String funcionario;
 	private String telefono_funcionario;
@@ -70,17 +68,17 @@ public class FormatoSena {
 		// TODO Auto-generated constructor stub
 	}
 
-	public FormatoSena(Integer id, String nombre_completo, String documento, Date fecha_nacimiento, String edad,
+	public FormatoSena(Integer id, String nombre_completo, String documento, String fecha_nacimiento, String edad,
 			String telefono_aprendiz, String email_soysena, String libreta_militar, String direccion, String estrato,
-			String ciudad, String titulo_obtenido, String institucion_educativa, Date fecha_grado, String nivel,
+			String ciudad, String titulo_obtenido, String institucion_educativa, String fecha_grado, String nivel,
 			String nombre_estudios, String institucion_educativa2, String semestres_aprobados, String nombre_programa,
 			String ficha, String perfil, String ocupaciones, String centro_formacion, String ciudad_formacion,
-			Date fecha_inicio, Date fecha_final, String etapa, String coordinador_academico,
-			String telefono_coordinador, String email_coordinador, Date fecha_diligenciamiento, String firma_aprendiz,
+			String fecha_inicio, String fecha_final, String etapa, String coordinador_academico,
+			String telefono_coordinador, String email_coordinador, String fecha_diligenciamiento, String firma_aprendiz,
 			String funcionario, String telefono_funcionario, String email_funcionario, String nit,
 			String centro_formacion1, String representante_legal, String email_representante,
 			String telefono_representante, String empresa, String telefono_empresa, String funcionario_empresa,
-			String observaciones, String fecha_diligenciamiento1, String firma) {
+			String observaciones, String fecha_diligenciamiento1, String firma, Usuario usuario) {
 		super();
 		this.id = id;
 		this.nombre_completo = nombre_completo;
@@ -128,6 +126,7 @@ public class FormatoSena {
 		this.observaciones = observaciones;
 		this.fecha_diligenciamiento1 = fecha_diligenciamiento1;
 		this.firma = firma;
+		this.usuario = usuario;
 	}
 
 	public Integer getId() {
@@ -154,11 +153,11 @@ public class FormatoSena {
 		this.documento = documento;
 	}
 
-	public Date getFecha_nacimiento() {
+	public String getFecha_nacimiento() {
 		return fecha_nacimiento;
 	}
 
-	public void setFecha_nacimiento(Date fecha_nacimiento) {
+	public void setFecha_nacimiento(String fecha_nacimiento) {
 		this.fecha_nacimiento = fecha_nacimiento;
 	}
 
@@ -234,11 +233,11 @@ public class FormatoSena {
 		this.institucion_educativa = institucion_educativa;
 	}
 
-	public Date getFecha_grado() {
+	public String getFecha_grado() {
 		return fecha_grado;
 	}
 
-	public void setFecha_grado(Date fecha_grado) {
+	public void setFecha_grado(String fecha_grado) {
 		this.fecha_grado = fecha_grado;
 	}
 
@@ -322,19 +321,19 @@ public class FormatoSena {
 		this.ciudad_formacion = ciudad_formacion;
 	}
 
-	public Date getFecha_inicio() {
+	public String getFecha_inicio() {
 		return fecha_inicio;
 	}
 
-	public void setFecha_inicio(Date fecha_inicio) {
+	public void setFecha_inicio(String fecha_inicio) {
 		this.fecha_inicio = fecha_inicio;
 	}
 
-	public Date getFecha_final() {
+	public String getFecha_final() {
 		return fecha_final;
 	}
 
-	public void setFecha_final(Date fecha_final) {
+	public void setFecha_final(String fecha_final) {
 		this.fecha_final = fecha_final;
 	}
 
@@ -370,11 +369,11 @@ public class FormatoSena {
 		this.email_coordinador = email_coordinador;
 	}
 
-	public Date getFecha_diligenciamiento() {
+	public String getFecha_diligenciamiento() {
 		return fecha_diligenciamiento;
 	}
 
-	public void setFecha_diligenciamiento(Date fecha_diligenciamiento) {
+	public void setFecha_diligenciamiento(String fecha_diligenciamiento) {
 		this.fecha_diligenciamiento = fecha_diligenciamiento;
 	}
 
@@ -498,6 +497,14 @@ public class FormatoSena {
 		this.firma = firma;
 	}
 
+	public Usuario getUsuario() {
+		return usuario;
+	}
+
+	public void setUsuario(Usuario usuario) {
+		this.usuario = usuario;
+	}
+
 	@Override
 	public String toString() {
 		return "FormatoSena [id=" + id + ", nombre_completo=" + nombre_completo + ", documento=" + documento
@@ -518,7 +525,8 @@ public class FormatoSena {
 				+ ", email_representante=" + email_representante + ", telefono_representante=" + telefono_representante
 				+ ", empresa=" + empresa + ", telefono_empresa=" + telefono_empresa + ", funcionario_empresa="
 				+ funcionario_empresa + ", observaciones=" + observaciones + ", fecha_diligenciamiento1="
-				+ fecha_diligenciamiento1 + ", firma=" + firma + "]";
+				+ fecha_diligenciamiento1 + ", firma=" + firma + ", usuario=" + usuario + "]";
 	}
-
+	
+	
 }

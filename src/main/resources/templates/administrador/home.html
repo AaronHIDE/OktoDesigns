@@ -2,6 +2,9 @@
 <html lang="en" xmlsn:th="http://thymeLeaf.org">
 
 <head th:insert="~{administrador/template_admin.html::head}"></head>
+<script src="https://buy.stripe.com/test_7sI2aqaOO0pygXC000"></script>
+<script src="https://cdn.botpress.cloud/webchat/v2/inject.js"></script>
+<script src="https://mediafiles.botpress.cloud/a8ef7b89-d65f-48c1-ac21-097a9a9fbe2a/webchat/v2/config.js"></script>
 
 <body>
 
@@ -14,6 +17,14 @@
 			<div class="overlay">
 				<h1>CATEGORIAS</h1>
 				<h3>Selecciona tu plantilla favorita para editar</h3>
+				<br>
+				<script async src="https://js.stripe.com/v3/buy-button.js">
+				</script>
+				<stripe-buy-button buy-button-id="buy_btn_1PSdwYH989qx2v1okQl83edS"
+					publishable-key="pk_test_51PSdQsH989qx2v1oTdPuXXP2Lfz6nyXNduhbAfWHds4YJzVT7CEMTYDOYQn7K49VNAqfVCtv5rXoz7qRAKjVjl9200fxKcv2Gr">
+				</stripe-buy-button>
+				<h3>Recuerda que nuestros formatos son de paga, el unico de uso gratuito es el formato SENA</h3>
+				<h4>Puedes comprar los formatos en general a traves del botón de compra</hh4>
 			</div>
 		</section>
 
@@ -260,9 +271,9 @@
 							<h3>Hojas de Vida</h3>
 						</div>
 
-							<div id="containerSave1" class="container" usuario="<?php echo $usuario; ?>">
+						<div id="containerSave1" class="container" usuario="<?php echo $usuario; ?>">
 
-							</div>
+						</div>
 
 					</div><!-- End Starter Menu Content -->
 
@@ -273,7 +284,7 @@
 							<h3>Cartas de Referencia</h3>
 						</div>
 
-	
+
 						<div id="containerSave2" class="container" usuario="<?php echo $usuario; ?>">
 
 						</div>

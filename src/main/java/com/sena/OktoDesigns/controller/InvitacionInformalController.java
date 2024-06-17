@@ -9,31 +9,30 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.sena.OktoDesigns.model.FormatoSena;
-import com.sena.OktoDesigns.service.IFormatoSenaService;
+import com.sena.OktoDesigns.model.InvitacionInformal;
+import com.sena.OktoDesigns.service.IinvitacionInformalService;
 
 import ch.qos.logback.classic.Logger;
 
 @Controller
-@RequestMapping("/cartaRefPersonal")
-public class CartaRefPersonalController {
-
-	private final Logger LOGGER = (Logger) LoggerFactory.getLogger(CartaRefPersonalController.class);
+@RequestMapping("/invitacionInformal")
+public class InvitacionInformalController {
 	
+private final Logger LOGGER = (Logger) LoggerFactory.getLogger(InvitacionInformalController.class);
 	
 	@Autowired
-	private IFormatoSenaService formatoSenaService;
+	private IinvitacionInformalService invitacionInformalService;
 	
 	@GetMapping("")
 	public String show(Model model) {
-		model.addAttribute("formatoSena", formatoSenaService.findAll());
-		return "formatoSena/show";
+		model.addAttribute("invitacionInformal", invitacionInformalService.findAll());
+		return "invitacionInformal/show";
 	}
 	
 	@PostMapping("/save")    
-    public String save(FormatoSena formatoSena) {
-		LOGGER.info("Formato Sena a guardar en la db {}", formatoSena);
-		formatoSenaService.save(formatoSena);
+    public String save(InvitacionInformal invitacionInformal) {
+		LOGGER.info("Invitacion a guardar en la db {}", invitacionInformal);
+		invitacionInformalService.save(invitacionInformal);
 		return "redirect:/administrador";
 	}
 	
@@ -41,14 +40,15 @@ public class CartaRefPersonalController {
 	public String edit(@PathVariable Integer id, Model model) {
 //		FormatoSena formatoSena = new FormatoSena();
 //			Optional<FormatoSena> optionalFormatoSena = formatoSenaService.get(id);
-//			formatoSena = optionalFormatoSena.get();
-//			LOGGER.info("Busqueda de formato sena: {}", formatoSena);
-//			model.addAttribute("formatoSena", formatoSena);
+//			invitacionFormal = optionalFormatoSena.get();
+//			LOGGER.info("Busqueda de formato sena: {}", invitacionFormal);
+//			model.addAttribute("invitacionFormal", invitacionFormal);
 		return "";
 	}
 	
 	@GetMapping("/delete/{id}")
 	public String delete(@PathVariable Integer id) {
-		return "redirect:/formatoSena";
+		return "redirect:/invitacionInformal";
 	}
+	
 }

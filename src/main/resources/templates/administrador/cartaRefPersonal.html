@@ -33,7 +33,7 @@
 
 			<br><br>
 
-			<form th:action="@{/formatoSena/save}" method="POST" id="cartaRefPersonal" class="aggCartaRefPersonal">
+			<form th:action="@{/cartaRefPersonal/save}" method="POST" id="cartaRefPersonal" class="aggCartaRefPersonal">
 				<div class="container containerCRP" style="background-color: rgb(255, 255, 255); border: 1px solid rgb(0, 0, 0);">
 					<div class="row">
 						<div class="col-md-11" style="margin:auto">
@@ -50,7 +50,7 @@
 									</label>
 									<span class="comma">,</span>
 									<label>
-										<input type="text" class="form-control" id="fecha" placeholder="Fecha"
+										<input type="date" class="form-control" id="fecha" placeholder="Fecha"
 											name="fecha" style="width: 320px; height: 30px; margin-bottom: 10px;"
 											required>
 										</imput>
@@ -72,7 +72,7 @@
 
 									identificado(a) con cédula de ciudadanía No.
 
-									<label><input type="text" class="form-control" id="cedula1"
+									<label><input type="number" class="form-control" id="cedula1"
 											placeholder="Ingrese su cédula" name="cedula1"
 											style="width: 200px; height: 30px; margin-bottom: 10px;" required>
 										</imput></label>
@@ -139,12 +139,12 @@
 									name="nombre3" style="width: 350px; height: 30px; margin-bottom: 10px;" required>
 								</imput></label>
 							</p>
-							<p>C.C. <label><input type="text" class="form-control" id="cedula3"
+							<p>C.C. <label><input type="number" class="form-control" id="cedula3"
 										placeholder="Ingrese su cédula" name="cedula3"
 										style="width: 200px; height: 30px; margin-bottom: 10px;" required>
 									</imput></label>
 								<br>
-								Tel.<label><input type="text" class="form-control" id="telefono3"
+								Tel.<label><input type="number" class="form-control" id="telefono3"
 										placeholder="Ingrese su télefono" name="telefono3"
 										style="width: 200px; height: 30px; margin-bottom: 10px;" required>
 									</imput></label>

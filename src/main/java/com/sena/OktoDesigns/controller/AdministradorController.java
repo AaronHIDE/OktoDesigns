@@ -53,5 +53,10 @@ public class AdministradorController {
 	public String firma(Model model) {
 		return "administrador/signature";
 	}
+	
+	@GetMapping("/invitacionInformal")
+	public String invitacionInformal(Model model) {
+		return "administrador/invitacionInformal";
+	}
 
 }
