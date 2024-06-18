@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" xmlsn:th="http://thymeLeaf.org">
+
+<head th:insert="~{administrador/template_admin.html::head}"></head>
+
+<div th:insert="~{administrador/template_admin.html::header}"></div>
+
+<body>
+
+	<main id="main" class="main" style="display: flex; justify-content: center;">
+
+		<div class="profileContainer mt-5">
+			<form class="profileForm">
+				<h2>Cambiar Nombre de la Cuenta</h2>
+				<div class="input-group">
+					<label for="account-name">Nombre de la Cuenta</label>
+					<input type="text" id="account-name" name="account-name" placeholder="Nuevo nombre">
+				</div>
+				<button type="submit" class="btn btn-success">Guardar <i class="bi bi-floppy2"></i></button>
+			</form>
+
+			<form class="profileForm">
+				<h2>Cambiar Contraseña</h2>
+				<div class="input-group">
+					<label for="current-password">Contraseña Actual</label>
+					<input type="password" id="current-password" name="current-password"
+						placeholder="Contraseña actual">
+				</div>
+				<div class="input-group">
+					<label for="new-password">Nueva Contraseña</label>
+					<input type="password" id="new-password" name="new-password" placeholder="Nueva contraseña">
+				</div>
+				<div class="input-group">
+					<label for="confirm-password">Confirmar Nueva Contraseña</label>
+					<input type="password" id="confirm-password" name="confirm-password"
+						placeholder="Confirmar nueva contraseña">
+				</div>
+				<button type="submit" class="btn btn-success">Guardar <i class="bi bi-floppy2"></i></button>
+				<hr>
+				<button class="btn btn-danger">Eliminar Cuenta <i class="bi bi-trash"></i></button>
+			</form>
+		</div>
+
+	</main><!-- End #main -->
+
+	<div th:insert="~{administrador/template_admin.html::footer}"></div>
+
+	<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+			class="bi bi-arrow-up-short"></i></a>
+
+	<div th:insert="~{administrador/template_admin.html::scripts_js}"></div>
+
+</body>
+
+</html>
