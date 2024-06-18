@@ -54,6 +54,7 @@
 				</a>
 			</h1>
 			<nav>
+				
 				<a th:href="@{/administrador/signature}" class="get-started-btn scrollto titulos botones">
 					<i class="bi bi-vector-pen"></i>
 				</a>
@@ -63,7 +64,7 @@
 				</a>
 
 				<a th:href="@{/administrador/profile}" class="get-started-btn scrollto titulos botones">
-					<i class="bi bi-envelope"></i>				
+					<i class="bi bi-person-fill-lock"></i>			
 				</a>
 				
 				<a class="get-started-btn drop-list-menu" th:href="@{/logout}" sec:authorize="isAuthenticated()">
@@ -114,6 +115,8 @@
 	<script th:src="@{/assets/js/checklist.js}"></script>
 	<script th:src="@{/assets/js/signature.js}"></script>
 	<script th:src="@{/assets/js/email.js}"></script>
+	<script th:src="@{/assets/js/profile.js}"></script>
+
 
 
 
