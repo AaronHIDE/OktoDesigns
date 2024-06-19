@@ -6,9 +6,12 @@ document.addEventListener('DOMContentLoaded', (event) => {
         event.preventDefault(); // Evitar el envío normal del formulario
 
         const formData = new FormData(form);
-        const data = new URLSearchParams(formData);
+        const data = new URLSearchParams();
+        for (const pair of formData) {
+            data.append(pair[0], pair[1]);
+        }
 
-        fetch(form.getAttribute('action'), {
+        fetch('/cambiar-nombre', {
             method: 'POST',
             body: data,
             headers: {
@@ -18,6 +21,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
         .then(response => response.text())
         .then(text => {
             mensaje.textContent = text;
+            mensaje.className = 'alert alert-success';
             mensaje.style.display = 'block';
             setTimeout(() => {
                 mensaje.style.display = 'none';
@@ -26,6 +30,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
         .catch(error => {
             console.error('Error:', error);
             mensaje.textContent = 'Error al actualizar el nombre de usuario.';
+            mensaje.className = 'alert alert-danger';
             mensaje.style.display = 'block';
             setTimeout(() => {
                 mensaje.style.display = 'none';

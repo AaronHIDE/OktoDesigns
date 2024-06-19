@@ -58,4 +58,11 @@ public class UsuarioServicioImplement implements UsuarioServicio {
         }
         throw new UsernameNotFoundException("Usuario no encontrado");
     }
+    
+    @Override
+    public Usuario findByEmail(String email) {
+        return usuarioRepositorio.findByEmail(email);
+    }
+
+    
 }

@@ -9,6 +9,8 @@ import com.sena.OktoDesigns.controller.dto.UsuarioRegistroDTO;
 import com.sena.OktoDesigns.model.Usuario;
 
 public interface UsuarioServicio extends UserDetailsService {
+	
+	Usuario findByEmail(String email);
 
 	public Usuario guardar(UsuarioRegistroDTO registroDTO);
 	
