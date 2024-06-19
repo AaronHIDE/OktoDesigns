@@ -4,11 +4,10 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-//import jakarta.persistence.ManyToOne;
-import jakarta.persistence.Table;
+import jakarta.persistence.ManyToOne;
 
 @Entity
-@Table(name = "cartaRefPersonal")
+
 public class cartaRefPersonal {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -27,8 +26,8 @@ public class cartaRefPersonal {
 	private String cedula3;
 	private String telefono;
 
-//	@ManyToOne
-//	private Usuario usuario;
+	@ManyToOne
+	private Usuario usuario;
 
 	public cartaRefPersonal() {
 		// TODO Auto-generated constructor stub
@@ -174,4 +173,8 @@ public class cartaRefPersonal {
 				+ ", nombre3=" + nombre3 + ", cedula3=" + cedula3 + ", telefono=" + telefono + "]";
 	}
 
+	public void setUsuario(Usuario u) {
+		// TODO Auto-generated method stub
+		
+	}
 }

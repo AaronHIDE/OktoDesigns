@@ -1,6 +1,7 @@
 package com.sena.OktoDesigns.service;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.Collections;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -45,4 +46,10 @@ public class UsuarioServicioImplement implements UsuarioServicio {
     public List<Usuario> listarUsuarios() {
         return usuarioRepositorio.findAll();
     }
+    
+	@Override
+	public Optional<Usuario>findById(Integer id) {
+		// TODO Auto-generated method stub
+		return usuarioRepositorio.findById(id);
+	}
 }

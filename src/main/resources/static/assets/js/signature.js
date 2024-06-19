@@ -6,19 +6,19 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
     let drawing = false;
 
-    // Función para iniciar el dibujo
+    // esta funcion inicializa el dibujo :D
     const startDrawing = (event) => {
         drawing = true;
         draw(event);
     };
 
-    // Función para detener el dibujo
+    // esta lo detiene
     const stopDrawing = () => {
         drawing = false;
         ctx.beginPath();
     };
 
-    // Función para dibujar en el canvas
+    // para dibujar en el canvas
     const draw = (event) => {
         if (!drawing) return;
 
@@ -31,17 +31,17 @@ document.addEventListener('DOMContentLoaded', (event) => {
         ctx.moveTo(event.clientX - canvas.offsetLeft, event.clientY - canvas.offsetTop);
     };
 
-    // Eventos del mouse
+    // interpretar lo que hace el mouse
     canvas.addEventListener('mousedown', startDrawing);
     canvas.addEventListener('mouseup', stopDrawing);
     canvas.addEventListener('mousemove', draw);
 
-    // Botón para borrar el canvas
+    // click para el botón para borrar el canvas
     clearButton.addEventListener('click', () => {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
     });
 
-    // Botón para descargar la imagen del canvas
+    // click psra el botón para descargar la imagen del canvas
     downloadButton.addEventListener('click', () => {
         const link = document.createElement('a');
         link.download = 'firma.png';

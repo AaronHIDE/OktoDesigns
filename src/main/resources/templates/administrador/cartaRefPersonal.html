@@ -15,12 +15,12 @@
 
 	<div th:insert="~{administrador/template_admin.html::header}"></div>
 
-	<section></section>
+	<section class="sectionXA"></section>
 
 	<main id="main" class="main">
 
 		<!-- ======= Menu Section ======= -->
-		<section id="menu" class="menu">
+		<section id="menu" class="menu sectionXA">
 			<div class="row col-md-3 offset-md-1">
 				<a th:href="@{/admin}">
 					<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="black"
@@ -44,7 +44,7 @@
 								<td class="input-cell">
 									<label>
 										<input type="text" class="form-control" id="ciudad1" placeholder="Ciudad"
-											name="ciudad1" style="width: 120px; height: 30px; margin-bottom: 10px;"
+											name="ciudad" style="width: 120px; height: 30px; margin-bottom: 10px;"
 											required>
 										</imput>
 									</label>
@@ -144,8 +144,8 @@
 										style="width: 200px; height: 30px; margin-bottom: 10px;" required>
 									</imput></label>
 								<br>
-								Tel.<label><input type="text" class="form-control" id="telefono3"
-										placeholder="Ingrese su télefono" name="telefono3"
+								Tel.<label><input type="text" class="form-control" id="telefono"
+										placeholder="Ingrese su télefono" name="telefono"
 										style="width: 200px; height: 30px; margin-bottom: 10px;" required>
 									</imput></label>
 							</p>

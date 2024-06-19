@@ -13,27 +13,37 @@ import com.sena.OktoDesigns.repository.CartaRefPersonalRepository;
 public class cartaRefPersonalImplement implements ICartaRefPersonalService{
 	
 	
-	@Autowired
-	private CartaRefPersonalRepository cartaRefPersonalRepository;
-	public cartaRefPersonal save(cartaRefPersonal cartaRefPersonal) {
-		// TODO Auto-generated method stub
-		return cartaRefPersonalRepository.save(cartaRefPersonal);
-	}
+	  
+    @Autowired
+    private CartaRefPersonalRepository cartaRefPersonalRepository;
 
-	@Override
-	public Optional<cartaRefPersonal> get(Integer Id) {
-		// TODO Auto-generated method stub
-		return Optional.empty();
-	}
+    @Override
+    public cartaRefPersonal save(cartaRefPersonal cartaRefPersonal) {
+        return cartaRefPersonalRepository.save(cartaRefPersonal);
+    }
 
-	@Override
-	public void update(cartaRefPersonal cartaRefPersonal) {
-		// TODO Auto-generated method stub
-		
-	}
+    @Override
+    public Optional<cartaRefPersonal> get(Integer id) {
+        return cartaRefPersonalRepository.findById(id);
+    }
 
-	@Override
-	public List<cartaRefPersonal> findAll(){
-		return cartaRefPersonalRepository.findAll();
-	}
+    @Override
+    public cartaRefPersonal update(cartaRefPersonal cartaRefPersonal) {
+
+        if(cartaRefPersonalRepository.existsById(cartaRefPersonal.getId())) {
+            return cartaRefPersonalRepository.save(cartaRefPersonal);
+        } else {
+            throw new RuntimeException("Formato no encontrado");
+        }
+    }
+
+    @Override
+    public List<cartaRefPersonal> findAll() {
+        return cartaRefPersonalRepository.findAll();
+    }
+
+    @Override
+    public Optional<cartaRefPersonal> findById(Integer id) {
+        return cartaRefPersonalRepository.findById(id);
+    }
 }

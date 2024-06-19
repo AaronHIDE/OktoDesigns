@@ -1,6 +1,8 @@
 package com.sena.OktoDesigns.model;
 
 import java.util.List;
+
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -21,6 +23,8 @@ public class Usuario {
 	private String email;
 	private String password;
 
+	@OneToMany(mappedBy = "usuario")
+	private List<Formato> productos;
 
 	public Usuario() {
 
@@ -36,7 +40,7 @@ public class Usuario {
 		this.password = password;
 
 	}
-
+	
 	public Integer getId() {
 		return id;
 	}

@@ -1,10 +1,10 @@
-crearCardsRef() //evento click chatcito
-function crearCardsRef(){
+crearCardsRenunce() //evento click chatcito
+function crearCardsRenunce(){
 
 	var objData = new FormData();
 	objData.append("verificacion","si")
 
-	fetch('/cartaRefPersonal/cardsRef',{
+	fetch('/cartaRenuncia/cards',{
 		method:"POST",
 		body:objData
 	}).then(response => response.json()).catch(error => {
@@ -13,13 +13,15 @@ function crearCardsRef(){
 		if (response["codigo"] == "200") {
 
 		var cardContainer2 = document.getElementById("cardContainer2")
-
-		response["informacion"].forEach(function(item,index){	
+		
+		response["informacion"].forEach(function(item,index){
+			
+			
 			
 			var card = document.createElement("a")
 			console.log(item);
-			card.href = "http://localhost:8080/cartaRefPersonal/" + item.id 
-			card.textContent = item.nombre1;
+			card.href = "http://localhost:8080/cartaRenuncia/" + item.id 
+			card.textContent = item.letterName;
 
 
 			cardContainer2.appendChild(card)

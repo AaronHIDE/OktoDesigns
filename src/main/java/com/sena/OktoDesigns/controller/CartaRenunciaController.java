@@ -21,35 +21,34 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.sena.OktoDesigns.model.cartaRefPersonal;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.sena.OktoDesigns.service.ICartaRefPersonalService;
-
+import com.sena.OktoDesigns.model.cartaRenuncia;
+import com.sena.OktoDesigns.service.ICartaRenunciaService;
 
 import ch.qos.logback.classic.Logger;
 
-@Controller
-@RequestMapping("/cartaRefPersonal")
-public class CartaRefPersonalController {
 
-	private final Logger LOGGER = (Logger) LoggerFactory.getLogger(CartaRefPersonalController.class);
-	
-	@Autowired
-    private ICartaRefPersonalService cartaRefPersonalService;
-	
-    private static final ObjectMapper objectMapper = new ObjectMapper();
-    
-	 @GetMapping("")
+@Controller
+@RequestMapping("/cartaRenuncia")
+public class CartaRenunciaController {
+	 private final Logger LOGGER = (Logger) LoggerFactory.getLogger(CartaRenunciaController.class);
+	    
+	    @Autowired
+	    private ICartaRenunciaService cartaRenunciaService;
+	  
+	    private static final ObjectMapper objectMapper = new ObjectMapper();
+	    
+	    @GetMapping("")
 	    public String show(Model model) {
-	        model.addAttribute("cartaRefPersonal", cartaRefPersonalService.findAll());
-	        return "cartaRefPersonal/show";
+	        model.addAttribute("cartaRenuncia", cartaRenunciaService.findAll());
+	        return "cartaRenuncia/show";
 	    }
 	    
 	    @PostMapping("/save")
-	    public String save(cartaRefPersonal cartaRefPersonal) {
-	        LOGGER.info("Formato a guardar en la db {}", cartaRefPersonal);
+	    public String save(cartaRenuncia cartaRenuncia) {
+	        LOGGER.info("Formato a guardar en la db {}", cartaRenuncia);
 
-	        cartaRefPersonalService.save(cartaRefPersonal);
+	        cartaRenunciaService.save(cartaRenuncia);
 	        return "redirect:/administrador";
 	    }
 	    
@@ -60,17 +59,17 @@ public class CartaRefPersonalController {
 	    }
 	    
 	    @GetMapping("/list")
-	    public List<cartaRefPersonal> getAllFormatos() {
-	        return cartaRefPersonalService.findAll();
+	    public List<cartaRenuncia> getAllFormatos() {
+	        return cartaRenunciaService.findAll();
 	    }
 	    
 	    @GetMapping("/{id}")
 	    public ModelAndView getFormatoById(@PathVariable Integer id) {
-	        ModelAndView modelAndView = new ModelAndView("administrador/cartaRefPersonalSave");
-	        Optional<cartaRefPersonal> optionalCartaRefPersonal = cartaRefPersonalService.get(id);
-	        if (optionalCartaRefPersonal.isPresent()) {
-	        	cartaRefPersonal cartaRefPersonal = optionalCartaRefPersonal.get();
-	            modelAndView.addObject("cartaRefPersonal", cartaRefPersonal);
+	        ModelAndView modelAndView = new ModelAndView("administrador/cartaRenunciaSave");
+	        Optional<cartaRenuncia> optionalCartaRenuncia = cartaRenunciaService.get(id);
+	        if (optionalCartaRenuncia.isPresent()) {
+	        	cartaRenuncia cartaRenuncia = optionalCartaRenuncia.get();
+	            modelAndView.addObject("cartaRenuncia", cartaRenuncia);
 	        } else {
 	            // Manejar el caso cuando el formato no se encuentra
 	            // Por ejemplo, redirigir a una página de error o mostrar un mensaje
@@ -80,22 +79,21 @@ public class CartaRefPersonalController {
 	    }
 	    
 	    @PostMapping("/update")
-	    public String update(@ModelAttribute("cartaRefPersonal") cartaRefPersonal cartaRefPersonal) {
-	        LOGGER.info("Formato a actualizar en la db {}", cartaRefPersonal);
-	        cartaRefPersonalService.update(cartaRefPersonal);
+	    public String update(@ModelAttribute("cartaRenuncia") cartaRenuncia cartaRenuncia) {
+	        LOGGER.info("Formato a actualizar en la db {}", cartaRenuncia);
+	        cartaRenunciaService.update(cartaRenuncia);
 	        return "redirect:/administrador";
 	    }
 
 	    
-	    @PostMapping("/cardsRef")
+	    @PostMapping("/cards")
 	    @ResponseBody
-	    public String cardsRef(@RequestParam("verificacion") String verificacion) throws JsonProcessingException{
+	    public String cards(@RequestParam("verificacion") String verificacion) throws JsonProcessingException{
 	    	Map<String,Object> mensaje = new HashMap<>();
-	    	List<cartaRefPersonal> datos = new ArrayList<>();
+	    	List<cartaRenuncia> datos = new ArrayList<>();
 	    	
 	    	try {
-	    		datos = cartaRefPersonalService.findAll();
-	    		LOGGER.info("prueba {}", datos);
+	    		datos = cartaRenunciaService.findAll();
 	    		mensaje.put("codigo", "200");
 	    		mensaje.put("informacion", datos);
 	    		String jsonMessage = objectMapper.writeValueAsString(mensaje);

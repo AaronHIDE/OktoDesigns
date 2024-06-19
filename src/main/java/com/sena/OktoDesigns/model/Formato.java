@@ -4,6 +4,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
 
 @Entity
 public class Formato {
@@ -44,6 +45,9 @@ public class Formato {
 	private String telefono_referencia3;
 	private String telefono_referencia4;
 
+	@ManyToOne
+	private Usuario usuario;
+	
 	public Formato() {
 		// TODO Auto-generated constructor stub
 	}
@@ -312,6 +316,11 @@ public class Formato {
 				+ ", referencia4=" + referencia4 + ", telefono_referencia1=" + telefono_referencia1
 				+ ", telefono_referencia2=" + telefono_referencia2 + ", telefono_referencia3=" + telefono_referencia3
 				+ ", telefono_referencia4=" + telefono_referencia4 + "]";
+	}
+
+	public void setUsuario(Usuario u) {
+		// TODO Auto-generated method stub
+		
 	}
 
 	
