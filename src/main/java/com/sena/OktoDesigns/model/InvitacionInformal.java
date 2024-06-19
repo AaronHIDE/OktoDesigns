@@ -4,6 +4,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
 
 @Entity
 public class InvitacionInformal {
@@ -17,6 +18,9 @@ public class InvitacionInformal {
 	private String cierre;
 	private String despedida;
 	private String firma;
+	
+	@ManyToOne
+	private Usuario usuario;
 	
 	public InvitacionInformal() {
 		// TODO Auto-generated constructor stub

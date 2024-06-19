@@ -4,6 +4,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
 //import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
@@ -27,8 +28,8 @@ public class cartaRefPersonal {
 	private String cedula3;
 	private String telefono;
 
-//	@ManyToOne
-//	private Usuario usuario;
+	@ManyToOne
+	private Usuario usuario;
 
 	public cartaRefPersonal() {
 		// TODO Auto-generated constructor stub
