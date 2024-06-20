@@ -3,249 +3,49 @@
 
 <head th:insert="~{administrador/template_admin.html::head}"></head>
 
+<div th:insert="~{administrador/template_admin.html::header}"></div>
+
 <body>
-
-
-
-	<!-- ======= Header ======= -->
-	<header id="header" class="fixed-top">
-
-		<div class="container d-flex align-items-center justify-content-lg-between">
-
-			<a class="logo me-auto me-lg-0" th:href="@{/administrador}">
-				<img th:src="@{/assets/img/logo.jpg}">
-			</a>
-			<!-- Uncomment below if you prefer to use an image logo -->
-			<!-- <a href="index.html" class="logo me-auto me-lg-0"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
-
-			<nav id="navbar" class="navbar order-last order-lg-0">
-
-			</nav><!-- .navbar -->
-
-			<a class="bi bi-box-arrow-right get-started-btn scrollto" th:href="@{/administrador/perfil}"> </a>
-
-		</div>
-
-
-	</header><!-- End Header -->
 
 	<main id="main" class="main" style="display: flex; justify-content: center;">
 
-		<section>
-			<div class="card-container">
-				<div class="cardPerfil">
-					<div class="cardPerfil__img"><svg xmlns="http://www.w3.org/2000/svg" width="100%">
-							<rect fill="#ffffff" width="540" height="450"></rect>
-							<defs>
-								<linearGradient id="a" gradientUnits="userSpaceOnUse" x1="0" x2="0" y1="0" y2="100%"
-									gradientTransform="rotate(222,648,379)">
-									<stop offset="0" stop-color="#ffffff"></stop>
-									<stop offset="1" stop-color="#7F2AA7"></stop>
-								</linearGradient>
-								<pattern patternUnits="userSpaceOnUse" id="b" width="300" height="250" x="0" y="0"
-									viewBox="0 0 1080 900">
-									<g fill-opacity="0.5">
-										<polygon fill="#444" points="90 150 0 300 180 300"></polygon>
-										<polygon points="90 150 180 0 0 0"></polygon>
-										<polygon fill="#AAA" points="270 150 360 0 180 0"></polygon>
-										<polygon fill="#DDD" points="450 150 360 300 540 300"></polygon>
-										<polygon fill="#999" points="450 150 540 0 360 0"></polygon>
-										<polygon points="630 150 540 300 720 300"></polygon>
-										<polygon fill="#DDD" points="630 150 720 0 540 0"></polygon>
-										<polygon fill="#444" points="810 150 720 300 900 300"></polygon>
-										<polygon fill="#FFF" points="810 150 900 0 720 0"></polygon>
-										<polygon fill="#DDD" points="990 150 900 300 1080 300"></polygon>
-										<polygon fill="#444" points="990 150 1080 0 900 0"></polygon>
-										<polygon fill="#DDD" points="90 450 0 600 180 600"></polygon>
-										<polygon points="90 450 180 300 0 300"></polygon>
-										<polygon fill="#666" points="270 450 180 600 360 600"></polygon>
-										<polygon fill="#AAA" points="270 450 360 300 180 300"></polygon>
-										<polygon fill="#DDD" points="450 450 360 600 540 600"></polygon>
-										<polygon fill="#999" points="450 450 540 300 360 300"></polygon>
-										<polygon fill="#999" points="630 450 540 600 720 600"></polygon>
-										<polygon fill="#FFF" points="630 450 720 300 540 300"></polygon>
-										<polygon points="810 450 720 600 900 600"></polygon>
-										<polygon fill="#DDD" points="810 450 900 300 720 300"></polygon>
-										<polygon fill="#AAA" points="990 450 900 600 1080 600"></polygon>
-										<polygon fill="#444" points="990 450 1080 300 900 300"></polygon>
-										<polygon fill="#222" points="90 750 0 900 180 900"></polygon>
-										<polygon points="270 750 180 900 360 900"></polygon>
-										<polygon fill="#DDD" points="270 750 360 600 180 600"></polygon>
-										<polygon points="450 750 540 600 360 600"></polygon>
-										<polygon points="630 750 540 900 720 900"></polygon>
-										<polygon fill="#444" points="630 750 720 600 540 600"></polygon>
-										<polygon fill="#AAA" points="810 750 720 900 900 900"></polygon>
-										<polygon fill="#666" points="810 750 900 600 720 600"></polygon>
-										<polygon fill="#999" points="990 750 900 900 1080 900"></polygon>
-										<polygon fill="#999" points="180 0 90 150 270 150"></polygon>
-										<polygon fill="#444" points="360 0 270 150 450 150"></polygon>
-										<polygon fill="#FFF" points="540 0 450 150 630 150"></polygon>
-										<polygon points="900 0 810 150 990 150"></polygon>
-										<polygon fill="#222" points="0 300 -90 450 90 450"></polygon>
-										<polygon fill="#FFF" points="0 300 90 150 -90 150"></polygon>
-										<polygon fill="#FFF" points="180 300 90 450 270 450"></polygon>
-										<polygon fill="#666" points="180 300 270 150 90 150"></polygon>
-										<polygon fill="#222" points="360 300 270 450 450 450"></polygon>
-										<polygon fill="#FFF" points="360 300 450 150 270 150"></polygon>
-										<polygon fill="#444" points="540 300 450 450 630 450"></polygon>
-										<polygon fill="#222" points="540 300 630 150 450 150"></polygon>
-										<polygon fill="#AAA" points="720 300 630 450 810 450"></polygon>
-										<polygon fill="#666" points="720 300 810 150 630 150"></polygon>
-										<polygon fill="#FFF" points="900 300 810 450 990 450"></polygon>
-										<polygon fill="#999" points="900 300 990 150 810 150"></polygon>
-										<polygon points="0 600 -90 750 90 750"></polygon>
-										<polygon fill="#666" points="0 600 90 450 -90 450"></polygon>
-										<polygon fill="#AAA" points="180 600 90 750 270 750"></polygon>
-										<polygon fill="#444" points="180 600 270 450 90 450"></polygon>
-										<polygon fill="#444" points="360 600 270 750 450 750"></polygon>
-										<polygon fill="#999" points="360 600 450 450 270 450"></polygon>
-										<polygon fill="#666" points="540 600 630 450 450 450"></polygon>
-										<polygon fill="#222" points="720 600 630 750 810 750"></polygon>
-										<polygon fill="#FFF" points="900 600 810 750 990 750"></polygon>
-										<polygon fill="#222" points="900 600 990 450 810 450"></polygon>
-										<polygon fill="#DDD" points="0 900 90 750 -90 750"></polygon>
-										<polygon fill="#444" points="180 900 270 750 90 750"></polygon>
-										<polygon fill="#FFF" points="360 900 450 750 270 750"></polygon>
-										<polygon fill="#AAA" points="540 900 630 750 450 750"></polygon>
-										<polygon fill="#FFF" points="720 900 810 750 630 750"></polygon>
-										<polygon fill="#222" points="900 900 990 750 810 750"></polygon>
-										<polygon fill="#222" points="1080 300 990 450 1170 450"></polygon>
-										<polygon fill="#FFF" points="1080 300 1170 150 990 150"></polygon>
-										<polygon points="1080 600 990 750 1170 750"></polygon>
-										<polygon fill="#666" points="1080 600 1170 450 990 450"></polygon>
-										<polygon fill="#DDD" points="1080 900 1170 750 990 750"></polygon>
-									</g>
-								</pattern>
-							</defs>
-							<rect x="0" y="0" fill="url(#a)" width="100%" height="100%"></rect>
-							<rect x="0" y="0" fill="url(#b)" width="100%" height="100%"></rect>
-						</svg></div>
-					<div class="cardPerfil__avatar"><svg viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
-							<circle cx="64" cy="64" fill="#ff8475" r="60"></circle>
-							<circle cx="64" cy="64" fill="#f85565" opacity=".4" r="48"></circle>
-							<path
-								d="m64 14a32 32 0 0 1 32 32v41a6 6 0 0 1 -6 6h-52a6 6 0 0 1 -6-6v-41a32 32 0 0 1 32-32z"
-								fill="#7f3838"></path>
-							<path
-								d="m62.73 22h2.54a23.73 23.73 0 0 1 23.73 23.73v42.82a4.45 4.45 0 0 1 -4.45 4.45h-41.1a4.45 4.45 0 0 1 -4.45-4.45v-42.82a23.73 23.73 0 0 1 23.73-23.73z"
-								fill="#393c54" opacity=".4"></path>
-							<circle cx="89" cy="65" fill="#fbc0aa" r="7"></circle>
-							<path
-								d="m64 124a59.67 59.67 0 0 0 34.69-11.06l-3.32-9.3a10 10 0 0 0 -9.37-6.64h-43.95a10 10 0 0 0 -9.42 6.64l-3.32 9.3a59.67 59.67 0 0 0 34.69 11.06z"
-								fill="#4bc190"></path>
-							<path
-								d="m45 110 5.55 2.92-2.55 8.92a60.14 60.14 0 0 0 9 1.74v-27.08l-12.38 10.25a2 2 0 0 0 .38 3.25z"
-								fill="#356cb6" opacity=".3"></path>
-							<path d="m71 96.5v27.09a60.14 60.14 0 0 0 9-1.74l-2.54-8.93 5.54-2.92a2 2 0 0 0 .41-3.25z"
-								fill="#356cb6" opacity=".3"></path>
-							<path d="m57 123.68a58.54 58.54 0 0 0 14 0v-25.68h-14z" fill="#fff"></path>
-							<path d="m64 88.75v9.75" fill="none" stroke="#fbc0aa" stroke-linecap="round"
-								stroke-linejoin="round" stroke-width="14"></path>
-							<circle cx="39" cy="65" fill="#fbc0aa" r="7"></circle>
-							<path d="m64 91a25 25 0 0 1 -25-25v-16.48a25 25 0 1 1 50 0v16.48a25 25 0 0 1 -25 25z"
-								fill="#ffd8c9"></path>
-							<path
-								d="m91.49 51.12v-4.72c0-14.95-11.71-27.61-26.66-28a27.51 27.51 0 0 0 -28.32 27.42v5.33a2 2 0 0 0 2 2h6.81a8 8 0 0 0 6.5-3.33l4.94-6.88a18.45 18.45 0 0 1 1.37 1.63 22.84 22.84 0 0 0 17.87 8.58h13.45a2 2 0 0 0 2.04-2.03z"
-								fill="#bc5b57"></path>
-							<path d="m62.76 36.94c4.24 8.74 10.71 10.21 16.09 10.21h5"
-								style="fill:none;stroke-linecap:round;stroke:#fff;stroke-miterlimit:10;stroke-width:2;opacity:.1">
-							</path>
-							<path d="m71 35c2.52 5.22 6.39 6.09 9.6 6.09h3"
-								style="fill:none;stroke-linecap:round;stroke:#fff;stroke-miterlimit:10;stroke-width:2;opacity:.1">
-							</path>
-							<circle cx="76" cy="62.28" fill="#515570" r="3"></circle>
-							<circle cx="52" cy="62.28" fill="#515570" r="3"></circle>
-							<ellipse cx="50.42" cy="69.67" fill="#f85565" opacity=".1" rx="4.58" ry="2.98"></ellipse>
-							<ellipse cx="77.58" cy="69.67" fill="#f85565" opacity=".1" rx="4.58" ry="2.98"></ellipse>
-							<g fill="none" stroke-linecap="round" stroke-linejoin="round">
-								<path d="m64 67v4" stroke="#fbc0aa" stroke-width="4"></path>
-								<path d="m55 56h-9.25" opacity=".2" stroke="#515570" stroke-width="2"></path>
-								<path d="m82 56h-9.25" opacity=".2" stroke="#515570" stroke-width="2"></path>
-							</g>
-							<path d="m64 84c5 0 7-3 7-3h-14s2 3 7 3z" fill="#f85565" opacity=".4"></path>
-							<path
-								d="m65.07 78.93-.55.55a.73.73 0 0 1 -1 0l-.55-.55c-1.14-1.14-2.93-.93-4.27.47l-1.7 1.6h14l-1.66-1.6c-1.34-1.4-3.13-1.61-4.27-.47z"
-								fill="#f85565"></path>
-						</svg></div>
-					<div input="emailUsuario" id="emailUsuario" name="emailUsuario" class="cardPerfil__title"> <i
-							class="bi bi-at"></i>Web
-						Development </div>
-
-					<div input="emailUsuario" id="emailUsuario" name="emailUsuario" class="cardPerfil__sub title">
-						<i class="bi bi-lock"></i>Web
-						Development
-					</div>
-					<div class="cardPerfil__wrapper">
-
-						<!-- Button to Open the Modal -->
-						<button type="button" class="cardPerfil__btn" data-bs-toggle="modal"
-							data-bs-target="#myModal">Editar</button>
-
-					</div>
+		<div class="profileContainer mt-5">
+	 	<div id="mensaje" class="alert" style="display:none;"></div> <!-- Contenedor de mensaje -->
+			<form class="profileForm" id="nombreForm" th:action="@{/cambiar-nombre}" method="post">
+				<h2>Cambiar Nombre de Usuario</h2>
+				<div class="input-group">
+					<label for="account-name">Nuevo Nombre de Usuario</label>
+					<input type="text" id="nuevoNombre" name="nuevoNombre" placeholder="Nuevo nombre">
 				</div>
-			</div>
-		</section>
+				<input type="hidden" id="id" name="id" value="1"> <!-- Asegúrate de establecer el ID del usuario -->
+				<button type="submit" class="btn btn-success">Guardar <i class="bi bi-floppy2"></i></button>
+				<div id="mensaje" style="display: none;"></div>
+			</form>
 
+			<form class="profileForm">
+				<h2>Cambiar Contraseña</h2>
 
-
-
-		<!-- ----------MODAL----------	-->
-
-
-
-		<!-- The Modal -->
-		<div class="modal" id="myModal">
-			<div class="modal-dialog">
-				<div class="modal-content">
-
-					<!-- Modal body -->
-					<div class="modal-body d-flex align-items-center justify-content-center">
-
-						<div class="cardModal">
-							<button type="button" class="btn-close d-flex flex justify-content-right"
-								data-bs-dismiss="modal" aria-label="Close"></button>
-
-							<h4 class="titleModal">Perfil</h4>
-							<form>
-
-								<div class="profile-container flex d-flex flex-row">
-									<div class="profile-image ms-2">
-										<img src="placeholder.jpg" alt="Profile Picture">
-									</div>
-									<div class="ms-4 mt-4">
-										<button class="change-btn">Cambiar</button>
-									</div>
-
-								</div>
-
-								<div class="fieldModal">
-									<svg class="inputModal-icon" viewBox="0 0 500 500"
-										xmlns="http://www.w3.org/2000/svg">
-										<path
-											d="M207.8 20.73c-93.45 18.32-168.7 93.66-187 187.1c-27.64 140.9 68.65 266.2 199.1 285.1c19.01 2.888 36.17-12.26 36.17-31.49l.0001-.6631c0-15.74-11.44-28.88-26.84-31.24c-84.35-12.98-149.2-86.13-149.2-174.2c0-102.9 88.61-185.5 193.4-175.4c91.54 8.869 158.6 91.25 158.6 183.2l0 16.16c0 22.09-17.94 40.05-40 40.05s-40.01-17.96-40.01-40.05v-120.1c0-8.847-7.161-16.02-16.01-16.02l-31.98 .0036c-7.299 0-13.2 4.992-15.12 11.68c-24.85-12.15-54.24-16.38-86.06-5.106c-38.75 13.73-68.12 48.91-73.72 89.64c-9.483 69.01 43.81 128 110.9 128c26.44 0 50.43-9.544 69.59-24.88c24 31.3 65.23 48.69 109.4 37.49C465.2 369.3 496 324.1 495.1 277.2V256.3C495.1 107.1 361.2-9.332 207.8 20.73zM239.1 304.3c-26.47 0-48-21.56-48-48.05s21.53-48.05 48-48.05s48 21.56 48 48.05S266.5 304.3 239.1 304.3z">
-										</path>
-									</svg>
-									<input autocomplete="off" id="logemail" placeholder="Email" class="inputModal-field"
-										name="logemail" type="email">
-								</div>
-								<div class="fieldModal">
-									<svg class="inputModal-icon" viewBox="0 0 500 500"
-										xmlns="http://www.w3.org/2000/svg">
-										<path
-											d="M80 192V144C80 64.47 144.5 0 224 0C303.5 0 368 64.47 368 144V192H384C419.3 192 448 220.7 448 256V448C448 483.3 419.3 512 384 512H64C28.65 512 0 483.3 0 448V256C0 220.7 28.65 192 64 192H80zM144 192H304V144C304 99.82 268.2 64 224 64C179.8 64 144 99.82 144 144V192z">
-										</path>
-									</svg>
-									<input autocomplete="off" id="logpass" placeholder="Contraseña"
-										class="inputModal-field" name="logpass" type="password">
-								</div>
-								<button class="btnModal" type="submit">Actualizar</button>
-							</form>
-						</div>
-
-					</div>
-
+				<div class="input-group">
+					<label for="current-password">Contraseña Actual</label>
+					<input type="password" id="current-password" name="current-password"
+						placeholder="Contraseña actual">
 				</div>
-			</div>
+
+				<div class="input-group">
+					<label for="new-password">Nueva Contraseña</label>
+					<input type="password" id="new-password" name="new-password" placeholder="Nueva contraseña">
+				</div>
+
+				<div class="input-group">
+					<label for="confirm-password">Confirmar Nueva Contraseña</label>
+					<input type="password" id="confirm-password" name="confirm-password"
+						placeholder="Confirmar nueva contraseña">
+				</div>
+
+				<button type="submit" class="btn btn-success">Guardar <i class="bi bi-floppy2"></i></button>
+				<hr>
+				<button class="btn btn-danger">Eliminar Cuenta <i class="bi bi-trash"></i></button>
+			</form>
 		</div>
 
 	</main><!-- End #main -->

@@ -1,7 +1,8 @@
 package com.sena.OktoDesigns.service;
 
+import java.util.ArrayList;
 import java.util.List;
-import java.util.Collections;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.User;
@@ -12,6 +13,7 @@ import org.springframework.stereotype.Service;
 
 import com.sena.OktoDesigns.repository.UsuarioRepositorio;
 import com.sena.OktoDesigns.controller.dto.UsuarioRegistroDTO;
+import com.sena.OktoDesigns.controller.dto.UsuarioNombreCambioDTO;
 import com.sena.OktoDesigns.model.Usuario;
 
 @Service
@@ -38,11 +40,29 @@ public class UsuarioServicioImplement implements UsuarioServicio {
         if (usuario == null) {
             throw new UsernameNotFoundException("Usuario/Password inválidos");
         }
-        return new User(usuario.getEmail(), usuario.getPassword(), Collections.emptyList());
+        return new User(usuario.getEmail(), usuario.getPassword(), new ArrayList<>());
     }
 
     @Override
     public List<Usuario> listarUsuarios() {
         return usuarioRepositorio.findAll();
     }
+
+    @Override
+    public Usuario actualizarNombreUsuario(Integer id, UsuarioNombreCambioDTO nombreCambioDTO){
+        Optional<Usuario> usuarioOptional = usuarioRepositorio.findById(id);
+        if (usuarioOptional.isPresent()) {
+            Usuario usuario = usuarioOptional.get();
+            usuario.setNombre(nombreCambioDTO.getNuevoNombre());
+            return usuarioRepositorio.save(usuario);
+        }
+        throw new UsernameNotFoundException("Usuario no encontrado");
+    }
+    
+    @Override
+    public Usuario findByEmail(String email) {
+        return usuarioRepositorio.findByEmail(email);
+    }
+
+    
 }
