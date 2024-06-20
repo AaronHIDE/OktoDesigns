@@ -5,6 +5,17 @@
 <script src="https://buy.stripe.com/test_7sI2aqaOO0pygXC000"></script>
 <script src="https://cdn.botpress.cloud/webchat/v2/inject.js"></script>
 <script src="https://mediafiles.botpress.cloud/a8ef7b89-d65f-48c1-ac21-097a9a9fbe2a/webchat/v2/config.js"></script>
+<script async src="https://js.stripe.com/v3/buy-button.js"></script>
+
+<style>
+	.card-blocked {
+		pointer-events: none;
+		opacity: 0.5;
+	}
+	.formatos {
+		opacity: 1;
+	}
+</style>
 
 <body>
 
@@ -18,13 +29,10 @@
 				<h1>CATEGORIAS</h1>
 				<h3>Selecciona tu plantilla favorita para editar</h3>
 				<br>
-				<script async src="https://js.stripe.com/v3/buy-button.js">
-				</script>
-				<a th:href="@{/administrador}">
-					<stripe-buy-button buy-button-id="buy_btn_1PSdwYH989qx2v1okQl83edS"
-						publishable-key="pk_test_51PSdQsH989qx2v1oTdPuXXP2Lfz6nyXNduhbAfWHds4YJzVT7CEMTYDOYQn7K49VNAqfVCtv5rXoz7qRAKjVjl9200fxKcv2Gr">
-					</stripe-buy-button>
-				</a>
+				<stripe-buy-button buy-button-id="buy_btn_1PSdwYH989qx2v1okQl83edS"
+					publishable-key="pk_test_51PSdQsH989qx2v1oTdPuXXP2Lfz6nyXNduhbAfWHds4YJzVT7CEMTYDOYQn7K49VNAqfVCtv5rXoz7qRAKjVjl9200fxKcv2Gr"
+					id="buy-button">
+				</stripe-buy-button>				
 				<h3>Recuerda que nuestros formatos son de paga, el único de uso gratuito es el formato SENA</h3>
 				<h4>Puedes comprar los formatos en general a través del botón de compra</h4>
 			</div>
@@ -64,9 +72,9 @@
 							<h3>Hojas de Vida</h3>
 						</div>
 						<div class="d-flex">
-							<div class="card-container">
+							<div class="card-container card-blocked formatos" id="miCard">
 								<a th:href="@{/administrador/formato}">
-									<div class="card">
+									<div class="card card-blocked">
 										<div class="content">
 											<div class="card-titleF">
 												<h6>Formato Estandar</h6>
@@ -119,7 +127,7 @@
 							<h3>Cartas de Referencia</h3>
 						</div>
 						<div class="d-flex">
-							<div class="card-container">
+							<div class="card-container card-blocked" id="miCard">
 								<a th:href="@{/administrador/cartaRefPersonal}">
 									<div class="card">
 										<div class="content">
@@ -142,9 +150,9 @@
 								</a>
 							</div>
 
-							<div class="card-container">
+							<div class="card-container card-blocked formatos" id="miCard">
 								<a th:href="@{/administrador/cartaRenuncia}">
-									<div class="card">
+									<div class="card card-blocked">
 										<div class="content">
 											<div class="card-Letters-TitleRe">
 												<h6>Carta de Renuncia</h6>
@@ -175,9 +183,9 @@
 						</div>
 
 						<div class="d-flex">
-							<div class="card-container">
+							<div class="card-container card-blocked formatos" id="miCard">
 								<a th:href="@{/administrador/formato}">
-									<div class="card">
+									<div class="card card-blocked">
 										<div class="content">
 											<div class="card-Invitation-Title">
 												<h6>Invitacion</h6>
@@ -198,9 +206,9 @@
 								</a>
 							</div>
 
-							<div class="card-container">
+							<div class="card-container card-blocked formatos" id="miCard">
 								<a th:href="@{/administrador/formatoSena}">
-									<div class="card">
+									<div class="card card-blocked">
 										<div class="content">
 											<div class="card-titleFS">
 												<h6>Formato SENA</h6>
@@ -320,6 +328,7 @@
 			class="bi bi-arrow-up-short"></i></a>
 
 	<div th:insert="~{administrador/template_admin.html::scripts_js}"></div>
+	<script th:src="@{assets/js/pago.js}"></script>
 
 </body>
 
