@@ -107,4 +107,11 @@ public class CartaRefPersonalController {
 			}
 	    	
 	    }
+	    
+		@GetMapping("/delete/{id}")
+		public String delete(@PathVariable Integer id) {
+			LOGGER.info("datos borrados{}", id);
+			cartaRefPersonalService.delete(id);
+			return "redirect:/administrador";
+		}
 	}

@@ -22,19 +22,21 @@
 				<h1 class="marcoh2">HOJA DE VIDA</h1>
 				<div class="containerf nombre-containerf needs-validation rounded-3">
 					<form th:action="@{/formato/update}" method="POST" id="formato">
-						
 						<input type="hidden" name="id" th:value="${formato.id}">
+
 						<div class="inputboxf mt-3">
 							<FONT SIZE="6 " FACE="Montserrat" COLOR="black" class="h6">Nombre Completo</FONT>
 							<ion-icon name="person"></ion-icon>
-							<input type="text" class="form-control" id="nombre" name="nombre_completo" required th:value="${formato.nombre_completo}">
+							<input type="text" class="form-control" id="nombre" name="nombre_completo" required
+								th:value="${formato.nombre_completo}">
 							<label for="nombre" class="form-label"></label>
 						</div>
 
 						<div class="inputboxf mt-3">
 							<FONT SIZE="6 " FACE="Montserrat" COLOR="black" class="h6">Cargo</FONT>
 							<ion-icon name="document-text"></ion-icon>
-							<input type="text" class="form-control" id="cargo" name="cargo" required th:value="${formato.cargo}">
+							<input type="text" class="form-control" id="cargo" name="cargo" required
+								th:value="${formato.cargo}">
 							<label for="cargo" class="form-label"></label>
 						</div>
 				</div>
@@ -45,25 +47,29 @@
 						<div class="inputboxf mt-3">
 							<FONT SIZE="6 " FACE="Montserrat" COLOR="black" class="h6">Documento</FONT>
 							<ion-icon name="id-card"></ion-icon>
-							<input type="number" class="form-control" id="documento" name="documento" required th:value="${formato.documento}">
+							<input type="number" class="form-control" id="documento" name="documento" required
+								th:value="${formato.documento}">
 							<label for="documento" class="form-label"></label>
 						</div>
 						<div class="inputboxf mt-3">
 							<FONT SIZE="6 " FACE="Montserrat" COLOR="black" class="h6">Telefono</FONT>
 							<ion-icon name="call"></ion-icon>
-							<input type="number" class="form-control" id="telefono" name="telefono" required th:value="${formato.telefono}">
+							<input type="number" class="form-control" id="telefono" name="telefono" required
+								th:value="${formato.telefono}">
 							<label for="telefono" class="form-label"></label>
 						</div>
 						<div class="inputboxf mt-3">
 							<FONT SIZE="6 " FACE="Montserrat" COLOR="black" class="h6">Email</FONT>
 							<ion-icon name="mail"></ion-icon>
-							<input type="email" class="form-control" id="email" name="email" required th:value="${formato.email}">
+							<input type="email" class="form-control" id="email" name="email" required
+								th:value="${formato.email}">
 							<label for="email" class="form-label"></label>
 						</div>
 						<div class="inputboxf mt-3">
 							<FONT SIZE="6 " FACE="Montserrat" COLOR="black" class="h6">Direccion</FONT>
 							<ion-icon name="compass"></ion-icon>
-							<input type="text" class="form-control" id="direccion" name="direccion" required th:value="${formato.direccion}">
+							<input type="text" class="form-control" id="direccion" name="direccion" required
+								th:value="${formato.direccion}">
 							<label for="direccion" class="form-label"></label>
 						</div>
 
@@ -72,28 +78,32 @@
 						<div class="inputboxf mt-3">
 							<FONT SIZE="6 " FACE="Montserrat" COLOR="black" class="h6">Habilidad 1</FONT>
 							<ion-icon name="barbell"></ion-icon>
-							<input type="text" class="form-control" id="habilidades1" name="habilidad1" required th:value="${formato.habilidad1}">
+							<input type="text" class="form-control" id="habilidades1" name="habilidad1" required
+								th:value="${formato.habilidad1}">
 							<label for="habilidades1" class="form-label"></label>
 						</div>
 
 						<div class="inputboxf mt-3">
 							<FONT SIZE="6 " FACE="Montserrat" COLOR="black" class="h6">Habilidad 2</FONT>
 							<ion-icon name="barbell"></ion-icon>
-							<input type="text" class="form-control" id="habilidades2" name="habilidad2" required th:value="${formato.habilidad2}">
+							<input type="text" class="form-control" id="habilidades2" name="habilidad2" required
+								th:value="${formato.habilidad2}">
 							<label for="habilidades2" class="form-label"></label>
 						</div>
 
 						<div class="inputboxf mt-3">
 							<FONT SIZE="6 " FACE="Montserrat" COLOR="black" class="h6">Habilidad 3</FONT>
 							<ion-icon name="barbell"></ion-icon>
-							<input type="text" class="form-control" id="habilidades3" name="habilidad3" required th:value="${formato.habilidad3}">
+							<input type="text" class="form-control" id="habilidades3" name="habilidad3" required
+								th:value="${formato.habilidad3}">
 							<label for="habilidades3" class="form-label"></label>
 						</div>
 
 						<div class="inputboxf mt-3">
 							<FONT SIZE="6 " FACE="Montserrat" COLOR="black" class="h6">Habilidad 4</FONT>
 							<ion-icon name="barbell"></ion-icon>
-							<input type="text" class="form-control" id="habilidades3" name="habilidad4" required th:value="${formato.habilidad4}">
+							<input type="text" class="form-control" id="habilidades3" name="habilidad4" required
+								th:value="${formato.habilidad4}">
 							<label for="habilidades4" class="form-label"></label>
 						</div>
 
@@ -102,30 +112,34 @@
 						<div class="inputboxf mt-3">
 							<FONT SIZE="6 " FACE="Montserrat" COLOR="black" class="h6">Referencia 1</FONT>
 							<ion-icon name="people"></ion-icon>
-							<input type="text" class="form-control" id="referencias1" name="referencia1" required th:value="${formato.referencia1}">
+							<input type="text" class="form-control" id="referencias1" name="referencia1" required
+								th:value="${formato.referencia1}">
 							<label for="referencias1" class="form-label"></label>
 						</div>
 
 						<div class="inputboxf mt-3">
 							<FONT SIZE="6 " FACE="Montserrat" COLOR="black" class="h6">Referencia 2</FONT>
 							<ion-icon name="people"></ion-icon>
-							<input type="text" class="form-control" id="referencias2" name="referencia2" required th:value="${formato.referencia2}">
+							<input type="text" class="form-control" id="referencias2" name="referencia2" required
+								th:value="${formato.referencia2}">
 							<label for="referencias2" class="form-label"></label>
 						</div>
 
 						<div class="inputboxf mt-3">
 							<FONT SIZE="6 " FACE="Montserrat" COLOR="black" class="h6">Referencia 3</FONT>
 							<ion-icon name="people"></ion-icon>
-							<input type="text" class="form-control" id="referencias3" name="referencia3" required th:value="${formato.referencia3}">
+							<input type="text" class="form-control" id="referencias3" name="referencia3" required
+								th:value="${formato.referencia3}">
 							<label for="referencias3" class="form-label"></label>
 						</div>
 
 						<div class="inputboxf mt-3">
 							<FONT SIZE="6 " FACE="Montserrat" COLOR="black" class="h6">Referencia 4</FONT>
 							<ion-icon name="people"></ion-icon>
-							<input type="text" class="form-control" id="referencias3" name="referencia4" required th:value="${formato.referencia4}">
+							<input type="text" class="form-control" id="referencias3" name="referencia4" required
+								th:value="${formato.referencia4}">
 							<label for="referencias4" class="form-label"></label>
-						</div><br><br>
+						</div>
 
 						<div class="col-md-2 offset-md-4">
 							<button type="button" class="btn btn-danger" onclick="imprimir()">Descargar
@@ -146,28 +160,32 @@
 						<div class="inputboxf mt-3">
 							<FONT SIZE="6 " FACE="Montserrat" COLOR="black" class="h6">Experiencia 1</FONT>
 							<ion-icon name="ribbon"></ion-icon>
-							<input type="text" class="form-control" id="experiencia1" name="experiencia1" required th:value="${formato.experiencia1}">
+							<input type="text" class="form-control" id="experiencia1" name="experiencia1" required
+								th:value="${formato.experiencia1}">
 							<label for="experiencia1" class="form-label"></label>
 						</div>
 
 						<div class="inputboxf mt-3">
 							<FONT SIZE="6 " FACE="Montserrat" COLOR="black" class="h6">Experiencia 2</FONT>
 							<ion-icon name="ribbon"></ion-icon>
-							<input type="text" class="form-control" id="experiencia2" name="experiencia2" required th:value="${formato.experiencia2}">
+							<input type="text" class="form-control" id="experiencia2" name="experiencia2" required
+								th:value="${formato.experiencia2}">
 							<label for="experiencia2" class="form-label"></label>
 						</div>
 
 						<div class="inputboxf mt-3">
 							<FONT SIZE="6 " FACE="Montserrat" COLOR="black" class="h6">Experiencia 3</FONT>
 							<ion-icon name="ribbon"></ion-icon>
-							<input type="text" class="form-control" id="experiencia3" name="experiencia3" required th:value="${formato.experiencia3}">
+							<input type="text" class="form-control" id="experiencia3" name="experiencia3" required
+								th:value="${formato.experiencia3}">
 							<label for="experiencia3" class="form-label"></label>
 						</div>
 
 						<div class="inputboxf mt-3">
 							<FONT SIZE="6 " FACE="Montserrat" COLOR="black" class="h6">Experiencia 4</FONT>
 							<ion-icon name="ribbon"></ion-icon>
-							<input type="text" class="form-control" id="experiencia3" name="experiencia4" required th:value="${formato.experiencia4}">
+							<input type="text" class="form-control" id="experiencia3" name="experiencia4" required
+								th:value="${formato.experiencia4}">
 							<label for="experiencia4" class="form-label"></label>
 						</div>
 
@@ -176,28 +194,32 @@
 						<div class="inputboxf mt-3">
 							<FONT SIZE="6 " FACE="Montserrat" COLOR="black" class="h6">Estudio 1</FONT>
 							<ion-icon name="library"></ion-icon>
-							<input type="text" class="form-control" id="estudios1" name="educacion1" required th:value="${formato.educacion1}">
+							<input type="text" class="form-control" id="estudios1" name="educacion1" required
+								th:value="${formato.educacion1}">
 							<label for="estudios1" class="form-label"></label>
 						</div>
 
 						<div class="inputboxf mt-3">
 							<FONT SIZE="6 " FACE="Montserrat" COLOR="black" class="h6">Estudio 2</FONT>
 							<ion-icon name="library"></ion-icon>
-							<input type="text" class="form-control" id="estudios2" name="educacion2" required th:value="${formato.educacion2}">
+							<input type="text" class="form-control" id="estudios2" name="educacion2" required
+								th:value="${formato.educacion2}">
 							<label for="estudios2" class="form-label"></label>
 						</div>
 
 						<div class="inputboxf mt-3">
 							<FONT SIZE="6 " FACE="Montserrat" COLOR="black" class="h6">Estudio 3</FONT>
 							<ion-icon name="library"></ion-icon>
-							<input type="text" class="form-control" id="estudios3" name="educacion3" required th:value="${formato.educacion3}">
+							<input type="text" class="form-control" id="estudios3" name="educacion3" required
+								th:value="${formato.educacion3}">
 							<label for="estudios3" class="form-label"></label>
 						</div>
 
 						<div class="inputboxf mt-3">
 							<FONT SIZE="6 " FACE="Montserrat" COLOR="black" class="h6">Estudio 4</FONT>
 							<ion-icon name="library"></ion-icon>
-							<input type="text" class="form-control" id="estudios4" name="educacion4" required th:value="${formato.educacion4}">
+							<input type="text" class="form-control" id="estudios4" name="educacion4" required
+								th:value="${formato.educacion4}">
 							<label for="estudios4" class="form-label"></label>
 						</div>
 
@@ -237,14 +259,23 @@
 						</div>
 
 						<div class="col-md-2 offset-md-4" id="enviar">
-							<button type="submit" class="btn btn-info">Editar
+							<button type="submit" class="btn btn-info">Guardar
 								<i class="bi bi-send-plus"></i></button>
 						</div>
-						</form><br><br>
 
 					</div>
+
+
+							<div>
+								<a type="button" th:href="@{/formato/delete/{id} (id=${formato.id})}"
+									class="btn btn-danger deleteBtn">
+									<i class="bi bi-trash"></i></a>
+							</div>
+					</form>
+
 				</div>
 			</div>
+		</div>
 		</div>
 	</section>
 

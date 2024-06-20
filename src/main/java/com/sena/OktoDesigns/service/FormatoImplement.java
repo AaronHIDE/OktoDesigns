@@ -44,4 +44,11 @@ public class FormatoImplement implements IFormatoService {
     public Optional<Formato> findById(Integer id) {
         return formatoRepository.findById(id);
     }
+
+	@Override
+	public void delete(Integer id) {
+		// TODO Auto-generated method stub
+		formatoRepository.deleteById(id);
+	}
+
 }

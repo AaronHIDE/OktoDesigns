@@ -34,33 +34,45 @@
 
 			<br><br>
 
-			<form th:action="@{/invitacionInformal/update}" method="POST" id="letter-container" class="letter-container">
+			<form th:action="@{/invitacionInformal/update}" method="POST" id="letter-container"
+				class="letter-container">
 				<input type="hidden" name="id" th:value="${invitacionInformal.id}">
+				<div>
+					<a style="margin-left: 15px;" type="button"
+						th:href="@{/invitacionInformal/delete/{id} (id=${invitacionInformal.id})}"
+						class="btn btn-danger deleteBtn">
+						<i class="bi bi-trash"></i></a>
+				</div><br>
 				<div class="container">
 					<div class="body">
 						<h1 class="header-title" style="text-align: center;">¡Estás Invitado!</h1>
 
 						<label for="saludo" class="form-label">Saludo:</label>
-						<input type="text" id="saludo" name="saludo" class="form-input" placeholder="Hola [Nombre]" th:value="${invitacionInformal.saludo}">
+						<input type="text" id="saludo" name="saludo" class="form-input" placeholder="Hola [Nombre]"
+							th:value="${invitacionInformal.saludo}">
 
 						<label for="introduccion" class="form-label">Introducción:</label>
 						<textarea id="introduccion" name="introduccion" class="form-textarea" rows="4"
-							placeholder="Espero que estés bien. Quería invitarte..." th:value="${invitacionInformal.introduccion}"></textarea>
+							placeholder="Espero que estés bien. Quería invitarte..."
+							th:value="${invitacionInformal.introduccion}"></textarea>
 
 						<label for="detalles" class="form-label">Detalles del Evento:</label>
 						<textarea id="detalles" name="detalles" class="form-textarea" rows="4"
-							placeholder="La cena comenzará a las 7 de la tarde..." th:value="${invitacionInformal.detalles}"></textarea>
+							placeholder="La cena comenzará a las 7 de la tarde..."
+							th:value="${invitacionInformal.detalles}"></textarea>
 
 						<label for="cierre" class="form-label">Cierre:</label>
 						<textarea id="cierre" name="cierre" class="form-textarea" rows="2"
-							placeholder="Déjame saber si puedes venir..." th:value="${invitacionInformal.cierre}"></textarea>
+							placeholder="Déjame saber si puedes venir..."
+							th:value="${invitacionInformal.cierre}"></textarea>
 						<div class="footer">
 							<label for="despedida" class="form-label">Despedida:</label>
 							<input type="text" id="despedida" name="despedida" class="form-input"
 								placeholder="Un abrazo" th:value="${invitacionInformal.despedida}">
 
 							<label for="firma" class="form-label">Firma:</label>
-							<input type="text" id="firma" name="firma" class="form-input" placeholder="María" th:value="${invitacionInformal.firma}">
+							<input type="text" id="firma" name="firma" class="form-input" placeholder="María"
+								th:value="${invitacionInformal.firma}">
 						</div>
 					</div>
 				</div>

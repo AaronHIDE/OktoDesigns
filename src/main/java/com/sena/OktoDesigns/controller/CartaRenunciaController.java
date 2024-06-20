@@ -106,4 +106,11 @@ public class CartaRenunciaController {
 			}
 	    	
 	    }
+	    
+		@GetMapping("/delete/{id}")
+		public String delete(@PathVariable Integer id) {
+			LOGGER.info("datos borrados{}", id);
+			cartaRenunciaService.delete(id);
+			return "redirect:/administrador";
+		}
 	}

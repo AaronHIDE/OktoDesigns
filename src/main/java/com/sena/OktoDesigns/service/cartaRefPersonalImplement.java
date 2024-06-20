@@ -46,4 +46,10 @@ public class CartaRefPersonalImplement implements ICartaRefPersonalService{
     public Optional<cartaRefPersonal> findById(Integer id) {
         return cartaRefPersonalRepository.findById(id);
     }
+    
+	@Override
+	public void delete(Integer id) {
+		// TODO Auto-generated method stub
+		cartaRefPersonalRepository.deleteById(id);
+	}
 }

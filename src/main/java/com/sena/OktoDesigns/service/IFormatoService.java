@@ -22,6 +22,6 @@ public interface IFormatoService {
     // Find by ID
     public Optional<Formato> findById(Integer id);
     
-    
+	public void delete(Integer id);	
  
 }

@@ -33,9 +33,17 @@
 
 			<br><br>
 
-			<form th:action="@{/invitacionFormal/update}" method="POST" id="invitacionFormal" class="agginvitacionFormal">
+			<form th:action="@{/invitacionFormal/update}" method="POST" id="invitacionFormal"
+				class="agginvitacionFormal">
+				<input type="hidden" name="id" th:value="${invitacionFormal.id}">
+
+				<div>
+					<a style="margin-left: 150px;" type="button"
+						th:href="@{/invitacionFormal/delete/{id} (id=${invitacionFormal.id})}"
+						class="btn btn-danger deleteBtn">
+						<i class="bi bi-trash"></i></a>
+				</div><br>
 				<div class="container" style="background-color: rgb(255, 255, 255); border: 1px solid rgb(0, 0, 0);">
-					<input type="hidden" name="id" th:value="${invitacionFormal.id}">
 					<div class="row">
 						<div class="col-md-11" style="margin:auto">
 
@@ -45,17 +53,20 @@
 									<div>
 										<input type="text" class="form-control" id="nombre"
 											placeholder="Ingrese su nombre" name="nombre"
-											style="width: 350px; height: 30px; margin-bottom: 10px;" required th:value="${invitacionFormal.nombre}">
+											style="width: 350px; height: 30px; margin-bottom: 10px;" required
+											th:value="${invitacionFormal.nombre}">
 									</div>
 									<div>
 										<input type="text" class="form-control" id="rolydepartamento"
 											placeholder="Roy y Departamento del Destinatario" name="rolydepartamento"
-											style="width: 350px; height: 30px; margin-bottom: 10px;" required th:value="${invitacionFormal.rolydepartamento}">
+											style="width: 350px; height: 30px; margin-bottom: 10px;" required
+											th:value="${invitacionFormal.rolydepartamento}">
 									</div>
 									<div>
 										<input type="text" class="form-control" id="empresa"
 											placeholder="Nombre de la Empresa o Institución" name="empresa"
-											style="width: 350px; height: 30px; margin-bottom: 10px;" required th:value="${invitacionFormal.empresa}">
+											style="width: 350px; height: 30px; margin-bottom: 10px;" required
+											th:value="${invitacionFormal.empresa}">
 									</div>
 									<div>
 										<input type="text" class="form-control" id="asunto" placeholder="Asunto"
@@ -79,7 +90,8 @@
 								<p>Estimado
 									<label><input type="text" class="form-control" id="destinatario"
 											placeholder="Nombre del destinatario" name="destinatario"
-											style="width: 350px; height: 30px; margin-bottom: 10px;" required th:value="${invitacionFormal.destinatario}">
+											style="width: 350px; height: 30px; margin-bottom: 10px;" required
+											th:value="${invitacionFormal.destinatario}">
 										</imput></label>
 								</p>
 
@@ -94,21 +106,24 @@
 
 									<label><input type="text" class="form-control" id="fecha_evento"
 											placeholder="Fecha del evento" name="fecha_evento"
-											style="width: 200px; height: 30px; margin-bottom: 10px;" required th:value="${invitacionFormal.fecha_evento}">
+											style="width: 200px; height: 30px; margin-bottom: 10px;" required
+											th:value="${invitacionFormal.fecha_evento}">
 										</imput></label>
 
 									en
 
 									<label><input type="text" class="form-control" id="ubicacion"
 											placeholder="Ubicación del evento" name="ubicacion"
-											style="width: 200px; height: 30px; margin-bottom: 10px;" required th:value="${invitacionFormal.ubicacion}">
+											style="width: 200px; height: 30px; margin-bottom: 10px;" required
+											th:value="${invitacionFormal.ubicacion}">
 										</imput></label>
 
 									. Su presencia y experiencia en el área de
 
 									<label><input type="text" class="form-control" id="area"
 											placeholder="Campo o área del evento" name="area"
-											style="width: 350px; height: 30px; margin-bottom: 10px;" required th:value="${invitacionFormal.area}">
+											style="width: 350px; height: 30px; margin-bottom: 10px;" required
+											th:value="${invitacionFormal.area}">
 										</imput></label>
 
 									Sería de gran enriquecimiento para todos los participantes.
@@ -125,7 +140,8 @@
 									Le agradecemos confirmar su asistencia antes del día
 									<label><input type="text" class="form-control" id="fecha_limite"
 											placeholder="Ingresar fecha" name="fecha_limite"
-											style="width: 200px; height: 30px; margin-bottom: 10px;" required th:value="${invitacionFormal.fecha_limite}">
+											style="width: 200px; height: 30px; margin-bottom: 10px;" required
+											th:value="${invitacionFormal.fecha_limite}">
 										</imput></label>
 
 									. Para más información o para coordinar detalles adicionales, no dude en contactarme
@@ -140,17 +156,20 @@
 							<p>
 							<div class="line"></div><!--cambiar para firma-->
 							<label><input type="text" class="form-control" id="nombre2" placeholder="Ingrese su nombre"
-									name="nombre2" style="width: 350px; height: 30px;" required th:value="${invitacionFormal.nombre2}">
+									name="nombre2" style="width: 350px; height: 30px;" required
+									th:value="${invitacionFormal.nombre2}">
 								</imput></label>
 							</p>
 							<p>Cargo: <label><input type="text" class="form-control" id="cargo"
 										placeholder="Ingrese su cargo" name="cargo"
-										style="width: 200px; height: 30px; margin-bottom: 10px;" required th:value="${invitacionFormal.cargo}">
+										style="width: 200px; height: 30px; margin-bottom: 10px;" required
+										th:value="${invitacionFormal.cargo}">
 									</imput></label>
 								<br>
 								Info: <label><input type="text" class="form-control" id="info"
 										placeholder="Ingrese su información de contacto" name="info"
-										style="width: 300px; height: 30px; margin-bottom: 10px;" required th:value="${invitacionFormal.info}">
+										style="width: 300px; height: 30px; margin-bottom: 10px;" required
+										th:value="${invitacionFormal.info}">
 									</imput></label>
 							</p>
 							<br><br><br><br>

@@ -229,6 +229,7 @@
 	user-select: none;
 	font-weight: bolder;
 	color: black;
+	margin-bottom: 50px;
   }
   
   .cardContainer a:hover {
@@ -239,10 +240,18 @@
   .cardContainer a:active {
 	transform: scale(0.95) rotateZ(1.7deg);
   }
-  
 
 
+  .centerUl {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
+}
 
+.centerUl li {
+    margin: 0 10px; /* Ajusta el margen según sea necesario */
+}
 
 /*Centrado de la section del perfil*/
 

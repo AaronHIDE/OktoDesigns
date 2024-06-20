@@ -45,7 +45,7 @@ public class invitacionInformalImplement implements IinvitacionInformalService{
 		@Override
 		public void delete(Integer id) {
 			// TODO Auto-generated method stub
-			
+			invitacionInformalRepository.deleteById(id);
 		}
 
 		@Override

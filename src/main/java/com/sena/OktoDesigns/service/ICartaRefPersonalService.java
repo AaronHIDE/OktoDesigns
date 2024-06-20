@@ -22,5 +22,7 @@ public interface ICartaRefPersonalService {
 
     // Find by ID
     public Optional<cartaRefPersonal> findById(Integer id);
+    
+	public void delete(Integer id);	
 
 }

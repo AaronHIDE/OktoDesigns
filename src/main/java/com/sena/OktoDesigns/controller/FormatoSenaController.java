@@ -63,7 +63,9 @@ public class FormatoSenaController {
 
 	@GetMapping("/delete/{id}")
 	public String delete(@PathVariable Integer id) {
-		return "redirect:/formatoSena";
+		LOGGER.info("datos borrados{}", id);
+		formatoSenaService.delete(id);
+		return "redirect:/administrador";
 	}
 
 	@GetMapping("/list")

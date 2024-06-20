@@ -15,7 +15,7 @@ public interface IinvitacionFormalService {
     // Update
 	invitacionFormal update(invitacionFormal invitacionFormal);
 	
-	public void delete(Integer Id);	
+	public void delete(Integer id);	
 	
 	// lists - tables
 	

@@ -33,5 +33,17 @@ public class RegistroUsuarioControlador {
 	public String registrarCuentaDeUsuario(@ModelAttribute("usuario") UsuarioRegistroDTO registroDTO) {
 	usuarioServicio.guardar(registroDTO);
 	return "redirect:/registro?exito";
+	
 }
+	
+//	@PostMapping("/guardar")
+//	public String save(Usuario usuario) {
+//		LOGGER.info("Usuario a registrar en la db {}", usuario);
+//		usuario.setTipo("USER");
+//		// encriptado de contraseña
+//		usuario.setPassword(passEncode.encode(usuario.getPassword()));
+//		usuarioService.save(usuario);
+//		return "redirect:/";
+//	}
+	
 }

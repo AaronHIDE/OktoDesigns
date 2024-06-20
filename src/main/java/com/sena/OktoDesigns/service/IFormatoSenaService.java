@@ -14,7 +14,7 @@ public interface IFormatoSenaService {
 	
 	FormatoSena update(FormatoSena formatoSena);
 	
-	public void delete(Integer Id);	
+	public void delete(Integer id);		
 	
 	// lists - tables
 	public List<FormatoSena> findAll();

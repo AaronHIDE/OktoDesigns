@@ -22,6 +22,6 @@ public interface ICartaRenunciaService {
     // Find by ID
     public Optional<cartaRenuncia> findById(Integer id);
     
-    
+	public void delete(Integer id);	
  
 }

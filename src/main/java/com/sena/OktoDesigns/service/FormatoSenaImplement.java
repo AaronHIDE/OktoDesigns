@@ -40,7 +40,7 @@ public class FormatoSenaImplement implements IFormatoSenaService{
 	@Override
 	public void delete(Integer id) {
 		// TODO Auto-generated method stub
-		
+		formatoSenaRepository.deleteById(id);
 	}
 
 	@Override

@@ -44,4 +44,10 @@ public class CartaRenunciaImplement implements ICartaRenunciaService{
     public Optional<cartaRenuncia> findById(Integer id) {
         return cartaRenunciaRepository.findById(id);
     }
+    
+	@Override
+	public void delete(Integer id) {
+		// TODO Auto-generated method stub
+		cartaRenunciaRepository.deleteById(id);
+	}
 }

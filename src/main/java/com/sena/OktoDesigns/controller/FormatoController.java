@@ -48,15 +48,9 @@ public class FormatoController {
     @PostMapping("/save")
     public String save(Formato formato) {
         LOGGER.info("Formato a guardar en la db {}", formato);
-
+//		Usuario u = usuarioService.findById(Integer.parseInt(session.getAttribute("idUsuario").toString())).get();
         formatoService.save(formato);
         return "redirect:/administrador";
-    }
-    
-    @GetMapping("/edit/{id}")
-    public String edit(@PathVariable Integer id, Model model) {
-        // Lógica para editar el formato, si es necesario
-        return "";
     }
     
     @GetMapping("/list")
@@ -107,4 +101,12 @@ public class FormatoController {
 		}
     	
     }
+    
+	@GetMapping("/delete/{id}")
+	public String delete(@PathVariable Integer id) {
+		LOGGER.info("datos borrados{}", id);
+		formatoService.delete(id);
+		return "redirect:/administrador";
+	}
+    
 }

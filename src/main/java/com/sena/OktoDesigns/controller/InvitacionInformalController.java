@@ -63,7 +63,9 @@ private final Logger LOGGER = (Logger) LoggerFactory.getLogger(InvitacionInforma
 	
 	@GetMapping("/delete/{id}")
 	public String delete(@PathVariable Integer id) {
-		return "redirect:/invitacionInformal";
+		LOGGER.info("datos borrados{}", id);
+		invitacionInformalService.delete(id);
+		return "redirect:/administrador";
 	}
 	
 	   @GetMapping("/{id}")
