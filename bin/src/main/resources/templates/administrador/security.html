@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" xmlsn:th="http://thymeLeaf.org">
+
+<head th:insert="~{administrador/template_admin.html::head}"></head>
+
+<body>
+
+
+
+	<!-- ======= Header ======= -->
+	<header id="header" class="fixed-top">
+
+		<div class="container d-flex align-items-center justify-content-lg-between">
+
+			<a class="logo me-auto me-lg-0" th:href="@{/administrador}">
+				<img th:src="@{/assets/img/logo.jpg}">
+			</a>
+			<!-- Uncomment below if you prefer to use an image logo -->
+			<!-- <a href="index.html" class="logo me-auto me-lg-0"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+			<nav id="navbar" class="navbar order-last order-lg-0">
+
+			</nav><!-- .navbar -->
+
+			<a class="bi bi-box-arrow-right get-started-btn scrollto" th:href="@{/administrador/perfil}"> </a>
+
+		</div>
+
+
+	</header><!-- End Header -->
+
+	<main id="main" class="main" style="display: flex; justify-content: center;">
+
+	<div class="security-container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="security-card mt-5">
+                    <div class="card-body">
+                        <h2 class="card-title text-center mb-2">Actualizar Contraseña</h2>
+                        <hr>
+                        <form id="updatePasswordForm">
+                            <div class="mb-3">
+                                <label for="currentPassword" class="form-label">Contraseña Actual</label>
+                                <input type="password" class="form-control" id="currentPassword" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="newPassword" class="form-label">Contraseña Nueva</label>
+                                <input type="password" class="form-control" id="newPassword" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="confirmNewPassword" class="form-label">Verificar Contraseña Nueva</label>
+                                <input type="password" class="form-control" id="confirmNewPassword" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100">Guardar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+	</main><!-- End #main -->
+
+	<div th:insert="~{administrador/template_admin.html::footer}"></div>
+
+	<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+			class="bi bi-arrow-up-short"></i></a>
+
+	<div th:insert="~{administrador/template_admin.html::scripts_js}"></div>
+
+</body>
+
+</html>

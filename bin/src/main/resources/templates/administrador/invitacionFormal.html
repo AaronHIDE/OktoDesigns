@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en" xmlsn:th="http://thymeLeaf.org">
+
+<head th:insert="~{administrador/template_admin.html::head}"></head>
+
+<link th:href="@{/assets/css/invitacionFormal.css}" rel="stylesheet">
+
+<script src="https://cdn.botpress.cloud/webchat/v2/inject.js"></script>
+<script src="https://mediafiles.botpress.cloud/a8ef7b89-d65f-48c1-ac21-097a9a9fbe2a/webchat/v2/config.js"></script>
+
+
+</head>
+
+<body>
+
+	<div th:insert="~{administrador/template_admin.html::header}"></div>
+
+	<section class="sectionXA"></section>
+
+	<main id="main" class="main">
+
+		<!-- ======= Menu Section ======= -->
+		<section id="menu" class="menu sectionXA">
+			<div class="row col-md-3 offset-md-1">
+				<a th:href="@{/admin}">
+					<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="black"
+						class="bi bi-arrow-left-circle-fill" viewBox="0 0 16 16">
+						<path
+							d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0m3.5 7.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1.708.708L5.707 7.5z" />
+					</svg>
+				</a>
+			</div>
+
+			<br><br>
+
+			<form id="invitacionFormal" class="agginvitacionFormal">
+				<div class="container" style="background-color: rgb(255, 255, 255); border: 1px solid rgb(0, 0, 0);">
+					<div class="row">
+						<div class="col-md-11" style="margin:auto">
+
+							<br><br><br><br>
+							<tr>
+								<td class="input-cell">
+									<div>
+										<input type="text" class="form-control" id="nombre"
+											placeholder="Ingrese su nombre" name="nombre"
+											style="width: 350px; height: 30px; margin-bottom: 10px;" required>
+									</div>
+									<div>
+										<input type="text" class="form-control" id="rolydepartamento"
+											placeholder="Roy y Departamento del Destinatario" name="rolydepartamento"
+											style="width: 350px; height: 30px; margin-bottom: 10px;" required>
+									</div>
+									<div>
+										<input type="text" class="form-control" id="empresa"
+											placeholder="Nombre de la Empresa o Institución" name="empresa"
+											style="width: 350px; height: 30px; margin-bottom: 10px;" required>
+									</div>
+									<div>
+										<input type="text" class="form-control" id="asunto" placeholder="Asunto"
+											name="asunto" style="width: 350px; height: 30px; margin-bottom: 10px;"
+											required>
+									</div>
+									<div style="text-align: right;">
+										<input type="text" class="form-control" id="ciudad_fecha"
+											placeholder="Ciudad, fecha" name="ciudad_fecha"
+											style="width: 250px; height: 30px; margin-left: auto; margin-bottom: 10px; text-align: right;"
+											required>
+									</div>
+
+								</td>
+							</tr>
+
+
+							<br><br>
+
+							<div class="letter-body">
+								<p>Estimado
+									<label><input type="text" class="form-control" id="destinatario"
+											placeholder="Nombre del destinatario" name="destinatario"
+											style="width: 350px; height: 30px; margin-bottom: 10px;" required>
+										</imput></label>
+								</p>
+
+								<br><br>
+								<p>Es un honor para mi invitarle a nuestro
+									<label><input type="text" class="form-control" id="evento" placeholder="Evento"
+											name="evento" style="width: 350px; height: 30px; margin-bottom: 10px;"
+											required>
+										</imput></label>
+
+									que se celebrará el día
+
+									<label><input type="text" class="form-control" id="fecha_evento"
+											placeholder="Fecha del evento" name="fecha_evento"
+											style="width: 200px; height: 30px; margin-bottom: 10px;" required>
+										</imput></label>
+
+									en
+
+									<label><input type="text" class="form-control" id="ubicacion"
+											placeholder="Ubicación del evento" name="ubicacion"
+											style="width: 200px; height: 30px; margin-bottom: 10px;" required>
+										</imput></label>
+
+									. Su presencia y experiencia en el área de
+
+									<label><input type="text" class="form-control" id="area"
+											placeholder="Campo o área del evento" name="area"
+											style="width: 350px; height: 30px; margin-bottom: 10px;" required>
+										</imput></label>
+
+									Sería de gran enriquecimiento para todos los participantes.
+
+								</p>
+								<br>
+								<p>
+									Confiamos en que este evento será una oportunidad valiosa para intercambiar ideas y
+									fomentar la colaboración entre profesionales destacados. Esperamos contar con su
+									valiosa participación en el evento.
+								</p>
+								<br>
+								<p>
+									Le agradecemos confirmar su asistencia antes del día
+									<label><input type="text" class="form-control" id="fecha_limite"
+											placeholder="Ingresar fecha" name="fecha_limite"
+											style="width: 200px; height: 30px; margin-bottom: 10px;" required>
+										</imput></label>
+
+									. Para más información o para coordinar detalles adicionales, no dude en contactarme
+									directamente.									
+								</p>
+								<br><br><br><br><br><br>
+								<p>Atentamente,</p>
+							</div>
+							<br><br><br><br>
+
+
+							<p>
+							<div class="line"></div><!--cambiar para firma-->
+							<label><input type="text" class="form-control" id="nombre2" placeholder="Ingrese su nombre"
+									name="nombre2" style="width: 350px; height: 30px;" required>
+								</imput></label>
+							</p>
+							<p>Cargo: <label><input type="text" class="form-control" id="cargo"
+										placeholder="Ingrese su cargo" name="cargo"
+										style="width: 200px; height: 30px; margin-bottom: 10px;" required>
+									</imput></label>
+								<br>
+								Info: <label><input type="text" class="form-control" id="info"
+										placeholder="Ingrese su información de contacto" name="info"
+										style="width: 300px; height: 30px; margin-bottom: 10px;" required>
+									</imput></label>
+							</p>
+							<br><br><br><br>
+						</div>
+					</div>
+				</div>
+			</form>
+
+			<!-- SECCION DE IMPRIMIR Y PDF (Falta agregar)-->
+
+		</section><!-- End Menu Section -->
+
+	</main><!-- End #main -->
+
+	<div th:insert="~{administrador/template_admin.html::footer}"></div>
+
+	<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+			class="bi bi-arrow-up-short"></i></a>
+
+	<div th:insert="~{administrador/template_admin.html::scripts_js}"></div>
+	<script th:src="@{/assets/js/firma.js}"></script>
+
+</body>
+
+</html>

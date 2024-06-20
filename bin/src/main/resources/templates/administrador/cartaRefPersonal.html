@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en" xmlsn:th="http://thymeLeaf.org">
+
+<head th:insert="~{administrador/template_admin.html::head}"></head>
+
+<link th:href="@{/assets/css/cartaRefPersonal.css}" rel="stylesheet">
+
+<script src="https://cdn.botpress.cloud/webchat/v2/inject.js"></script>
+<script src="https://mediafiles.botpress.cloud/a8ef7b89-d65f-48c1-ac21-097a9a9fbe2a/webchat/v2/config.js"></script>
+
+
+</head>
+
+<body>
+
+	<div th:insert="~{administrador/template_admin.html::header}"></div>
+
+	<section class="sectionXA"></section>
+
+	<main id="main" class="main">
+
+		<!-- ======= Menu Section ======= -->
+		<section id="menu" class="menu sectionXA">
+			<div class="row col-md-3 offset-md-1">
+				<a th:href="@{/admin}">
+					<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="black"
+						class="bi bi-arrow-left-circle-fill" viewBox="0 0 16 16">
+						<path
+							d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0m3.5 7.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1.708.708L5.707 7.5z" />
+					</svg>
+				</a>
+			</div>
+
+			<br><br>
+
+			<form id="cartaRefPersonal" class="aggCartaRefPersonal">
+				<div class="container" style="background-color: rgb(255, 255, 255); border: 1px solid rgb(0, 0, 0);">
+					<div class="row">
+						<div class="col-md-11" style="margin:auto">
+
+							<br><br><br><br>
+
+							<tr>
+								<td class="input-cell">
+									<label>
+										<input type="text" class="form-control" id="ciudad1" placeholder="Ciudad"
+											name="ciudad1" style="width: 120px; height: 30px; margin-bottom: 10px;"
+											required>
+										</imput>
+									</label>
+									<span class="comma">,</span>
+									<label>
+										<input type="text" class="form-control" id="fecha" placeholder="Fecha"
+											name="fecha" style="width: 320px; height: 30px; margin-bottom: 10px;"
+											required>
+										</imput>
+									</label>
+								</td>
+							</tr>
+
+							<br><br><br><br><br><br><br>
+
+							<div class="title letter-header" style="text-align: center;">REFERENCIA PERSONAL</div>
+
+							<div class="letter-body">
+								<br><br>
+								<p>Yo
+									<label><input type="text" class="form-control" id="nombre1"
+											placeholder="Ingrese su nombre" name="nombre1"
+											style="width: 350px; height: 30px; margin-bottom: 10px;" required>
+										</imput></label>
+
+									identificado(a) con cédula de ciudadanía No.
+
+									<label><input type="text" class="form-control" id="cedula1"
+											placeholder="Ingrese su cédula" name="cedula1"
+											style="width: 200px; height: 30px; margin-bottom: 10px;" required>
+										</imput></label>
+
+									de
+
+									<label><input type="text" class="form-control" id="expedicion1"
+											placeholder="Lugar expedición" name="expedicion1"
+											style="width: 200px; height: 30px; margin-bottom: 10px;" required>
+										</imput></label>
+
+									, hago constar que conozco al señor(a)
+
+									<label><input type="text" class="form-control" id="nombre2"
+											placeholder="Ingrese el nombre de la persona" name="nombre2"
+											style="width: 350px; height: 30px; margin-bottom: 10px;" required>
+										</imput></label>
+
+									identificado(a) con cédula de ciudadanía No.
+
+									<label><input type="text" class="form-control" id="cedula2"
+											placeholder="Ingrese la cédula" name="cedula2"
+											style="width: 200px; height: 30px; margin-bottom: 10px;" required>
+										</imput></label>
+
+									de
+
+									<label><input type="text" class="form-control" id="expedicion2"
+											placeholder="Lugar expedición" name="expedicion2"
+											style="width: 200px; height: 30px; margin-bottom: 10px;" required>
+										</imput></label>
+
+									,
+									desde hace
+
+									<label><input type="text" class="form-control" id="tiempo"
+											placeholder="Tiempo de conocer" name="tiempo"
+											style="width: 200px; height: 30px; margin-bottom: 10px;" required>
+										</imput></label>
+
+									, en los cuales doy fe que es una persona honesta,
+									respetuosa, eficiente, responsable, puntual y en general cumplidora con todos los
+									deberes encomendados.
+								</p>
+								<br><br><br><br><br><br>
+								<p>Atentamente,</p>
+							</div>
+							<br><br><br><br>
+
+
+							<div class="grid-container">
+								<div class="image-preview">
+									<img src="" alt="Vista Previa">
+								</div>
+								<div>
+									<input type="file" id="image-input" accept="image/*">
+									<label for="image-input"></label>
+								</div>
+							</div>
+
+							<p>
+							<div class="line"></div><!--cambiar para firma-->
+							<label><input type="text" class="form-control" id="nombre3" placeholder="Ingrese su nombre"
+									name="nombre3" style="width: 350px; height: 30px; margin-bottom: 10px;" required>
+								</imput></label>
+							</p>
+							<p>C.C. <label><input type="text" class="form-control" id="cedula3"
+										placeholder="Ingrese su cédula" name="cedula3"
+										style="width: 200px; height: 30px; margin-bottom: 10px;" required>
+									</imput></label>
+								<br>
+								Tel.<label><input type="text" class="form-control" id="telefono3"
+										placeholder="Ingrese su télefono" name="telefono3"
+										style="width: 200px; height: 30px; margin-bottom: 10px;" required>
+									</imput></label>
+							</p>
+							<br><br><br><br>
+						</div>
+					</div>
+				</div>
+			</form>
+
+			<!-- SECCION DE IMPRIMIR Y PDF (Falta agregar)-->
+
+		</section><!-- End Menu Section -->
+
+	</main><!-- End #main -->
+
+	<div th:insert="~{administrador/template_admin.html::footer}"></div>
+
+	<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+			class="bi bi-arrow-up-short"></i></a>
+
+	<div th:insert="~{administrador/template_admin.html::scripts_js}"></div>
+	<script th:src="@{/assets/js/firma.js}"></script>
+
+</body>
+
+</html>

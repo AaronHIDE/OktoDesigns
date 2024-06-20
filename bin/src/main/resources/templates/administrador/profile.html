@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" xmlsn:th="http://thymeLeaf.org">
+
+<head th:insert="~{administrador/template_admin.html::head}"></head>
+
+<body>
+
+
+
+	<!-- ======= Header ======= -->
+	<header id="header" class="fixed-top">
+
+		<div class="container d-flex align-items-center justify-content-lg-between">
+
+			<a class="logo me-auto me-lg-0" th:href="@{/administrador}">
+				<img th:src="@{/assets/img/logo.jpg}">
+			</a>
+			<!-- Uncomment below if you prefer to use an image logo -->
+			<!-- <a href="index.html" class="logo me-auto me-lg-0"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+			<nav id="navbar" class="navbar order-last order-lg-0">
+
+			</nav><!-- .navbar -->
+
+			<a class="bi bi-box-arrow-right get-started-btn scrollto" th:href="@{/administrador/perfil}"> </a>
+
+		</div>
+
+
+	</header><!-- End Header -->
+
+	<main id="main" class="main" style="display: flex; justify-content: center;">
+
+		<div class="profile-card">
+        <img src="/user/otto.jpeg" alt="Foto de perfil" class="profile-image" id="profileImage">
+        <h2 class="profile-name mb-3">Nombre de la Persona</h2>
+
+        <!-- Button to Open the Modal -->
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">
+            editar
+        </button>
+    </div>
+
+    <!-- The Modal -->
+    <div class="modal" id="myModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Edita tu Perfil</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <!-- Modal body -->
+                <div class="modal-body text-center">
+                    <img src="\user\images\halfoctopus1.jpg" alt="Image 1" class="image-option" onclick="selectImage(this)">
+                    <img src="\user\images\latam1.jpg" alt="Image 2" class="image-option" onclick="selectImage(this)">
+                    <img src="\user\images\asian1.jpg" alt="Image 3" class="image-option" onclick="selectImage(this)">
+                    <img src="\user/images/american1.jpg" alt="Image 4" class="image-option" onclick="selectImage(this)">
+                    <img src="\user\images\african1.jpg" alt="Image 5" class="image-option" onclick="selectImage(this)">
+
+                    <hr>
+                    <div class="mt-3">
+                        <label for="usernameInput" class="form-label">Actualiza tu nombre:</label>
+                        <input type="text" class="form-control" id="usernameInput" placeholder="Introduce el nuevo nombre">
+                        <button type="button" class="btn btn-success"> <i class="bi bi-floppy"></i> </button>
+                    </div>
+                    <hr>
+
+                    <label for="usernameInput" class="form-label">Seguridad de la cuenta <i class="bi bi-shield-exclamation"></i></label>
+                    <a href="security.html">Seguridad y Privacidad</a>
+                </div> 
+            </div>
+        </div>
+    </div>
+
+	</main><!-- End #main -->
+
+	<div th:insert="~{administrador/template_admin.html::footer}"></div>
+
+	<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+			class="bi bi-arrow-up-short"></i></a>
+
+	<div th:insert="~{administrador/template_admin.html::scripts_js}"></div>
+
+</body>
+
+</html>
