@@ -7,11 +7,17 @@ import com.sena.OktoDesigns.model.FormatoSena;
 
 public interface IFormatoSenaService {
 	// create
-	public FormatoSena save(FormatoSena hojaSena);
+	public FormatoSena save(FormatoSena hojavidaSENA);
+	
 	// read
-	public Optional<FormatoSena> get(Integer Id);
-	public void update(FormatoSena hojaSena);
+	public Optional<FormatoSena> get(Integer id);
+	
+	FormatoSena update(FormatoSena formatoSena);
+	
 	public void delete(Integer Id);	
+	
 	// lists - tables
 	public List<FormatoSena> findAll();
+	public Optional<FormatoSena> findById(Integer id);
+
 }

@@ -10,7 +10,7 @@ import com.sena.OktoDesigns.model.cartaRefPersonal;
 import com.sena.OktoDesigns.repository.CartaRefPersonalRepository;
 
 @Service
-public class cartaRefPersonalImplement implements ICartaRefPersonalService{
+public class CartaRefPersonalImplement implements ICartaRefPersonalService{
 	
 	
 	  

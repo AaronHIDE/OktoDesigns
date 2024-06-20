@@ -1,12 +1,11 @@
 package com.sena.OktoDesigns.model;
 
-import java.sql.Date;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-//import jakarta.persistence.ManyToOne;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
 @Entity
@@ -18,18 +17,20 @@ public class FormatoSena {
 	private Integer id;
 	private String nombre_completo;
 	private String documento;
-	private Date fecha_nacimiento;
+	private String fecha_nacimiento;
 	private String edad;
 	private String telefono_aprendiz;
 	private String email_soysena;
 	private String libreta_militar;
 	private String direccion;
+	private String estrato;
 	private String ciudad;
 	private String titulo_obtenido;
 	private String institucion_educativa;
-	private Date fecha_grado;
+	private String fecha_grado;
+	private String nivel;
 	private String nombre_estudios;
-	private String  institucion_educativa2;
+	private String institucion_educativa2;
 	private String semestres_aprobados;
 	private String nombre_programa;
 	private String ficha;
@@ -37,20 +38,21 @@ public class FormatoSena {
 	private String ocupaciones;
 	private String centro_formacion;
 	private String ciudad_formacion;
-	private Date fecha_inicio;
-	private Date fecha_final;
+	private String fecha_inicio;
+	private String fecha_final;
+	private String etapa;
 	private String coordinador_academico;
 	private String telefono_coordinador;
 	private String email_coordinador;
-	private Date fecha_diligenciamiento;
+	private String fecha_diligenciamiento;
 	private String firma_aprendiz;
-	private String nombre_funcionario;
+	private String funcionario;
 	private String telefono_funcionario;
 	private String email_funcionario;
 	private String nit;
 	private String centro_formacion1;
 	private String representante_legal;
-	private String email_reprentante;
+	private String email_representante;
 	private String telefono_representante;
 	private String empresa;
 	private String telefono_empresa;
@@ -58,24 +60,25 @@ public class FormatoSena {
 	private String observaciones;
 	private String fecha_diligenciamiento1;
 	private String firma;
-	
-//	@ManyToOne
-//	private Usuario usuario;
-	
+
+	@ManyToOne
+	private Usuario usuario;
+
 	public FormatoSena() {
 		// TODO Auto-generated constructor stub
 	}
-	
-	public FormatoSena(Integer id, String nombre_completo, String documento, Date fecha_nacimiento, String edad,
-			String telefono_aprendiz, String email_soysena, String libreta_militar, String direccion, String ciudad,
-			String titulo_obtenido, String institucion_educativa, Date fecha_grado, String nombre_estudios,
-			String institucion_educativa2, String semestres_aprobados, String nombre_programa, String ficha,
-			String perfil, String ocupaciones, String centro_formacion, String ciudad_formacion, Date fecha_inicio,
-			Date fecha_final, String coordinador_academico, String telefono_coordinador, String email_coordinador,
-			Date fecha_diligenciamiento, String firma_aprendiz, String nombre_funcionario, String telefono_funcionario,
-			String email_funcionario, String nit, String centro_formacion1, String representante_legal,
-			String email_reprentante, String telefono_representante, String empresa, String telefono_empresa,
-			String funcionario_empresa, String observaciones, String fecha_diligenciamiento1, String firma) {
+
+	public FormatoSena(Integer id, String nombre_completo, String documento, String fecha_nacimiento, String edad,
+			String telefono_aprendiz, String email_soysena, String libreta_militar, String direccion, String estrato,
+			String ciudad, String titulo_obtenido, String institucion_educativa, String fecha_grado, String nivel,
+			String nombre_estudios, String institucion_educativa2, String semestres_aprobados, String nombre_programa,
+			String ficha, String perfil, String ocupaciones, String centro_formacion, String ciudad_formacion,
+			String fecha_inicio, String fecha_final, String etapa, String coordinador_academico,
+			String telefono_coordinador, String email_coordinador, String fecha_diligenciamiento, String firma_aprendiz,
+			String funcionario, String telefono_funcionario, String email_funcionario, String nit,
+			String centro_formacion1, String representante_legal, String email_representante,
+			String telefono_representante, String empresa, String telefono_empresa, String funcionario_empresa,
+			String observaciones, String fecha_diligenciamiento1, String firma, Usuario usuario) {
 		super();
 		this.id = id;
 		this.nombre_completo = nombre_completo;
@@ -86,10 +89,12 @@ public class FormatoSena {
 		this.email_soysena = email_soysena;
 		this.libreta_militar = libreta_militar;
 		this.direccion = direccion;
+		this.estrato = estrato;
 		this.ciudad = ciudad;
 		this.titulo_obtenido = titulo_obtenido;
 		this.institucion_educativa = institucion_educativa;
 		this.fecha_grado = fecha_grado;
+		this.nivel = nivel;
 		this.nombre_estudios = nombre_estudios;
 		this.institucion_educativa2 = institucion_educativa2;
 		this.semestres_aprobados = semestres_aprobados;
@@ -101,18 +106,19 @@ public class FormatoSena {
 		this.ciudad_formacion = ciudad_formacion;
 		this.fecha_inicio = fecha_inicio;
 		this.fecha_final = fecha_final;
+		this.etapa = etapa;
 		this.coordinador_academico = coordinador_academico;
 		this.telefono_coordinador = telefono_coordinador;
 		this.email_coordinador = email_coordinador;
 		this.fecha_diligenciamiento = fecha_diligenciamiento;
 		this.firma_aprendiz = firma_aprendiz;
-		this.nombre_funcionario = nombre_funcionario;
+		this.funcionario = funcionario;
 		this.telefono_funcionario = telefono_funcionario;
 		this.email_funcionario = email_funcionario;
 		this.nit = nit;
 		this.centro_formacion1 = centro_formacion1;
 		this.representante_legal = representante_legal;
-		this.email_reprentante = email_reprentante;
+		this.email_representante = email_representante;
 		this.telefono_representante = telefono_representante;
 		this.empresa = empresa;
 		this.telefono_empresa = telefono_empresa;
@@ -120,6 +126,7 @@ public class FormatoSena {
 		this.observaciones = observaciones;
 		this.fecha_diligenciamiento1 = fecha_diligenciamiento1;
 		this.firma = firma;
+		this.usuario = usuario;
 	}
 
 	public Integer getId() {
@@ -146,11 +153,11 @@ public class FormatoSena {
 		this.documento = documento;
 	}
 
-	public Date getFecha_nacimiento() {
+	public String getFecha_nacimiento() {
 		return fecha_nacimiento;
 	}
 
-	public void setFecha_nacimiento(Date fecha_nacimiento) {
+	public void setFecha_nacimiento(String fecha_nacimiento) {
 		this.fecha_nacimiento = fecha_nacimiento;
 	}
 
@@ -194,6 +201,14 @@ public class FormatoSena {
 		this.direccion = direccion;
 	}
 
+	public String getEstrato() {
+		return estrato;
+	}
+
+	public void setEstrato(String estrato) {
+		this.estrato = estrato;
+	}
+
 	public String getCiudad() {
 		return ciudad;
 	}
@@ -218,12 +233,20 @@ public class FormatoSena {
 		this.institucion_educativa = institucion_educativa;
 	}
 
-	public Date getFecha_grado() {
+	public String getFecha_grado() {
 		return fecha_grado;
 	}
 
-	public void setFecha_grado(Date fecha_grado) {
+	public void setFecha_grado(String fecha_grado) {
 		this.fecha_grado = fecha_grado;
+	}
+
+	public String getNivel() {
+		return nivel;
+	}
+
+	public void setNivel(String nivel) {
+		this.nivel = nivel;
 	}
 
 	public String getNombre_estudios() {
@@ -298,20 +321,28 @@ public class FormatoSena {
 		this.ciudad_formacion = ciudad_formacion;
 	}
 
-	public Date getFecha_inicio() {
+	public String getFecha_inicio() {
 		return fecha_inicio;
 	}
 
-	public void setFecha_inicio(Date fecha_inicio) {
+	public void setFecha_inicio(String fecha_inicio) {
 		this.fecha_inicio = fecha_inicio;
 	}
 
-	public Date getFecha_final() {
+	public String getFecha_final() {
 		return fecha_final;
 	}
 
-	public void setFecha_final(Date fecha_final) {
+	public void setFecha_final(String fecha_final) {
 		this.fecha_final = fecha_final;
+	}
+
+	public String getEtapa() {
+		return etapa;
+	}
+
+	public void setEtapa(String etapa) {
+		this.etapa = etapa;
 	}
 
 	public String getCoordinador_academico() {
@@ -338,11 +369,11 @@ public class FormatoSena {
 		this.email_coordinador = email_coordinador;
 	}
 
-	public Date getFecha_diligenciamiento() {
+	public String getFecha_diligenciamiento() {
 		return fecha_diligenciamiento;
 	}
 
-	public void setFecha_diligenciamiento(Date fecha_diligenciamiento) {
+	public void setFecha_diligenciamiento(String fecha_diligenciamiento) {
 		this.fecha_diligenciamiento = fecha_diligenciamiento;
 	}
 
@@ -354,12 +385,12 @@ public class FormatoSena {
 		this.firma_aprendiz = firma_aprendiz;
 	}
 
-	public String getNombre_funcionario() {
-		return nombre_funcionario;
+	public String getFuncionario() {
+		return funcionario;
 	}
 
-	public void setNombre_funcionario(String nombre_funcionario) {
-		this.nombre_funcionario = nombre_funcionario;
+	public void setFuncionario(String funcionario) {
+		this.funcionario = funcionario;
 	}
 
 	public String getTelefono_funcionario() {
@@ -402,12 +433,12 @@ public class FormatoSena {
 		this.representante_legal = representante_legal;
 	}
 
-	public String getEmail_reprentante() {
-		return email_reprentante;
+	public String getEmail_representante() {
+		return email_representante;
 	}
 
-	public void setEmail_reprentante(String email_reprentante) {
-		this.email_reprentante = email_reprentante;
+	public void setEmail_representante(String email_representante) {
+		this.email_representante = email_representante;
 	}
 
 	public String getTelefono_representante() {
@@ -466,33 +497,36 @@ public class FormatoSena {
 		this.firma = firma;
 	}
 
+	public Usuario getUsuario() {
+		return usuario;
+	}
+
+	public void setUsuario(Usuario usuario) {
+		this.usuario = usuario;
+	}
+
 	@Override
 	public String toString() {
-		return "HojaSena [id=" + id + ", nombre_completo=" + nombre_completo + ", documento=" + documento
+		return "FormatoSena [id=" + id + ", nombre_completo=" + nombre_completo + ", documento=" + documento
 				+ ", fecha_nacimiento=" + fecha_nacimiento + ", edad=" + edad + ", telefono_aprendiz="
 				+ telefono_aprendiz + ", email_soysena=" + email_soysena + ", libreta_militar=" + libreta_militar
-				+ ", direccion=" + direccion + ", ciudad=" + ciudad + ", titulo_obtenido=" + titulo_obtenido
-				+ ", institucion_educativa=" + institucion_educativa + ", fecha_grado=" + fecha_grado
-				+ ", nombre_estudios=" + nombre_estudios + ", institucion_educativa2=" + institucion_educativa2
-				+ ", semestres_aprobados=" + semestres_aprobados + ", nombre_programa=" + nombre_programa + ", ficha="
-				+ ficha + ", perfil=" + perfil + ", ocupaciones=" + ocupaciones + ", centro_formacion="
-				+ centro_formacion + ", ciudad_formacion=" + ciudad_formacion + ", fecha_inicio=" + fecha_inicio
-				+ ", fecha_final=" + fecha_final + ", coordinador_academico=" + coordinador_academico
-				+ ", telefono_coordinador=" + telefono_coordinador + ", email_coordinador=" + email_coordinador
-				+ ", fecha_diligenciamiento=" + fecha_diligenciamiento + ", firma_aprendiz=" + firma_aprendiz
-				+ ", nombre_funcionario=" + nombre_funcionario + ", telefono_funcionario=" + telefono_funcionario
-				+ ", email_funcionario=" + email_funcionario + ", nit=" + nit + ", centro_formacion1="
-				+ centro_formacion1 + ", representante_legal=" + representante_legal + ", email_reprentante="
-				+ email_reprentante + ", telefono_representante=" + telefono_representante + ", empresa=" + empresa
-				+ ", telefono_empresa=" + telefono_empresa + ", funcionario_empresa=" + funcionario_empresa
-				+ ", observaciones=" + observaciones + ", fecha_diligenciamiento1=" + fecha_diligenciamiento1
-				+ ", firma=" + firma + "]";
+				+ ", direccion=" + direccion + ", estrato=" + estrato + ", ciudad=" + ciudad + ", titulo_obtenido="
+				+ titulo_obtenido + ", institucion_educativa=" + institucion_educativa + ", fecha_grado=" + fecha_grado
+				+ ", nivel=" + nivel + ", nombre_estudios=" + nombre_estudios + ", institucion_educativa2="
+				+ institucion_educativa2 + ", semestres_aprobados=" + semestres_aprobados + ", nombre_programa="
+				+ nombre_programa + ", ficha=" + ficha + ", perfil=" + perfil + ", ocupaciones=" + ocupaciones
+				+ ", centro_formacion=" + centro_formacion + ", ciudad_formacion=" + ciudad_formacion
+				+ ", fecha_inicio=" + fecha_inicio + ", fecha_final=" + fecha_final + ", etapa=" + etapa
+				+ ", coordinador_academico=" + coordinador_academico + ", telefono_coordinador=" + telefono_coordinador
+				+ ", email_coordinador=" + email_coordinador + ", fecha_diligenciamiento=" + fecha_diligenciamiento
+				+ ", firma_aprendiz=" + firma_aprendiz + ", funcionario=" + funcionario + ", telefono_funcionario="
+				+ telefono_funcionario + ", email_funcionario=" + email_funcionario + ", nit=" + nit
+				+ ", centro_formacion1=" + centro_formacion1 + ", representante_legal=" + representante_legal
+				+ ", email_representante=" + email_representante + ", telefono_representante=" + telefono_representante
+				+ ", empresa=" + empresa + ", telefono_empresa=" + telefono_empresa + ", funcionario_empresa="
+				+ funcionario_empresa + ", observaciones=" + observaciones + ", fecha_diligenciamiento1="
+				+ fecha_diligenciamiento1 + ", firma=" + firma + ", usuario=" + usuario + "]";
 	}
-	
-	
-	
-	
-	
 	
 	
 }

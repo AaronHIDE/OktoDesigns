@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" xmlsn:th="http://thymeLeaf.org">
+
+<head th:insert="~{administrador/template_admin.html::head}"></head>
+
+<link th:href="@{/assets/css/letter.css}" rel="stylesheet">
+
+<script src="https://cdn.botpress.cloud/webchat/v2/inject.js"></script>
+<script src="https://mediafiles.botpress.cloud/a8ef7b89-d65f-48c1-ac21-097a9a9fbe2a/webchat/v2/config.js"></script>
+
+
+</head>
+
+<body>
+
+	<div th:insert="~{administrador/template_admin.html::header}"></div>
+
+	<section class="sectionXA"></section>
+
+	<main id="main" class="main">
+
+
+		<!-- ======= Menu Section ======= -->
+		<section id="menu" class="menu sectionXA">
+			<div class="row">
+				<a th:href="@{/admin}">
+					<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="black"
+						class="bi bi-arrow-left-circle-fill" viewBox="0 0 16 16">
+						<path
+							d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0m3.5 7.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1.708.708L5.707 7.5z" />
+					</svg>
+				</a>
+			</div>
+
+			<br><br>
+
+			<form th:action="@{/invitacionInformal/update}" method="POST" id="letter-container" class="letter-container">
+				<input type="hidden" name="id" th:value="${invitacionInformal.id}">
+				<div class="container">
+					<div class="body">
+						<h1 class="header-title" style="text-align: center;">¡Estás Invitado!</h1>
+
+						<label for="saludo" class="form-label">Saludo:</label>
+						<input type="text" id="saludo" name="saludo" class="form-input" placeholder="Hola [Nombre]" th:value="${invitacionInformal.saludo}">
+
+						<label for="introduccion" class="form-label">Introducción:</label>
+						<textarea id="introduccion" name="introduccion" class="form-textarea" rows="4"
+							placeholder="Espero que estés bien. Quería invitarte..." th:value="${invitacionInformal.introduccion}"></textarea>
+
+						<label for="detalles" class="form-label">Detalles del Evento:</label>
+						<textarea id="detalles" name="detalles" class="form-textarea" rows="4"
+							placeholder="La cena comenzará a las 7 de la tarde..." th:value="${invitacionInformal.detalles}"></textarea>
+
+						<label for="cierre" class="form-label">Cierre:</label>
+						<textarea id="cierre" name="cierre" class="form-textarea" rows="2"
+							placeholder="Déjame saber si puedes venir..." th:value="${invitacionInformal.cierre}"></textarea>
+						<div class="footer">
+							<label for="despedida" class="form-label">Despedida:</label>
+							<input type="text" id="despedida" name="despedida" class="form-input"
+								placeholder="Un abrazo" th:value="${invitacionInformal.despedida}">
+
+							<label for="firma" class="form-label">Firma:</label>
+							<input type="text" id="firma" name="firma" class="form-input" placeholder="María" th:value="${invitacionInformal.firma}">
+						</div>
+					</div>
+				</div>
+				</div>
+				<br><br>
+
+				<!-- SECCION DE IMPRIMIR-->
+				<div class="container" style="align-content: center;">
+					<div class="row">
+						<div class="col-md-3"> <!-- Columna para el primer botón -->
+							<button type="button" class="btn btn-danger" onclick="imprimir()">
+								Descargar <i class="bi bi-filetype-pdf"></i>
+							</button>
+							<script>
+								function imprimir() {
+									window.print();
+								}
+							</script>
+						</div>
+						<div class="col-md-6"> <!-- Columna para el segundo botón -->
+							<button type="submit" class="btn btn-info">Enviar <i class="bi bi-send-plus"></i></button>
+						</div>
+					</div>
+				</div>
+			</form>
+
+
+
+
+
+		</section><!-- End Menu Section -->
+
+	</main><!-- End #main -->
+
+	<div th:insert="~{administrador/template_admin.html::footer}"></div>
+
+	<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+			class="bi bi-arrow-up-short"></i></a>
+
+	<div th:insert="~{administrador/template_admin.html::scripts_js}"></div>
+
+
+</body>
+
+</html>

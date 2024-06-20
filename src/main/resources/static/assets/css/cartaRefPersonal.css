@@ -1,11 +1,11 @@
 #cartaRefPersonal {
-	.container {
+	.containerCRP {
 		width: 70%;
 		height: 90%;
 	}
 
 
-	body {
+	bodyCRP {
 		font-family: Arial, sans-serif;
 		font-size: 14pt;
 		line-height: 1.5;

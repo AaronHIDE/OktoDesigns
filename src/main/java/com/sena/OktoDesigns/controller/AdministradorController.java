@@ -62,20 +62,34 @@ public class AdministradorController {
 		return "administrador/cartaRenuncia";
 	}
 	
+
 	@GetMapping("/cartaRenunciaSave")
 	public String cartaRenunciaSave(Model model) {
 		return "administrador/cartaRenunciaSave";
 	}
+	
 	
 	@GetMapping("/signature")
 	public String firma(Model model) {
 		return "administrador/signature";
 	}
 	
+
 	@GetMapping("/cerrar")
 	public String cerrarSesion(HttpSession session) {
 		session.removeAttribute("idUsuario");
 		return "redirect:/";
+	}
+	
+	@GetMapping("/invitacionInformal")
+	public String invitacionInformal(Model model) {
+		return "administrador/invitacionInformal";
+	}
+	
+	@GetMapping("/profile")
+	public String userProfile(Model model) {
+		return "administrador/profile";
+
 	}
 
 }

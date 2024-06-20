@@ -29,7 +29,7 @@ public class SecurityConfiguration {
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         http.authorizeHttpRequests(authorize -> authorize
-                .requestMatchers("/","/registro/**","assets/js/**", "assets/css/**", "/img/**", " /templates/usuario/**", "/assets/**", "/templates/usuario/**").permitAll() // Permitir acceso público a estas rutas
+                .requestMatchers("/","/registro/**","assets/js/**", "assets/css/**", "/img/**", " /templates/usuario/**", "/assets/**", "/templates/usuario/**", "formatosCartas", "formatosInvitaciones","herramientas", "hojasDeVida", "infoFE", "infoSE", "infoCartaRenuncia", "infoInvitaciónFormal", "infoInvitacionInformal", "infoRefPersonal").permitAll() // Permitir acceso público a estas rutas
                 .anyRequest().authenticated()
             )
             .csrf(csrf -> csrf.disable())

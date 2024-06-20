@@ -37,7 +37,8 @@
 					<div class="row">
 						<div class="col-md-11" style="margin:auto">
 							<br><br>
-							<form th:action="@{/formatoSena/save}" method="POST" id="formatoSena">
+							<form th:action="@{/formatoSena/update}" method="POST" id="formatoSena">
+								<input type="hidden" name="id" th:value="${formatoSena.id}">
 								<div class="section-content">
 									<table class="data-table">
 										<tr>
@@ -77,7 +78,7 @@
 												<td class="input-cell" colspan="10">
 													<div class="inputboxfs">
 														<input type="text" class="form-control" id="nombre_completo"
-															name="nombre_completo" required>
+															name="nombre_completo" required th:value="${formatoSena.nombre_completo}">
 														</imput>
 													</div>
 												</td>
@@ -88,7 +89,7 @@
 												<td class="input-cell" colspan="10">
 													<div class="inputboxfs">
 														<input type="text" class="form-control" id="documento"
-															name="documento" required>
+															name="documento" required th:value="${formatoSena.documento}">
 													</div>
 												</td>
 											</tr>
@@ -98,7 +99,7 @@
 												<td class="input-cell" colspan="7">
 													<div class="inputboxfs">
 														<input type="date" class="form-control" id="fecha_nacimiento"
-															name="fecha_nacimiento" required>
+															name="fecha_nacimiento" required th:value="${formatoSena.fecha_nacimiento}">
 													</div>
 												</td>
 
@@ -106,7 +107,7 @@
 												<td class="input-cell" colspan="3">
 													<div class="inputboxfs">
 														<input type="number" class="form-control" id="edad" name="edad"
-															required>
+															required th:value="${formatoSena.edad}">
 													</div>
 												</td>
 											</tr>
@@ -116,7 +117,7 @@
 												<td class="input-cell" colspan="10">
 													<div class="inputboxfs">
 														<input type="number" class="form-control" id="telefono_aprendiz"
-															name="telefono_aprendiz" required>
+															name="telefono_aprendiz" required th:value="${formatoSena.telefono_aprendiz}">
 													</div>
 												</td>
 											</tr>
@@ -126,7 +127,7 @@
 												<td class="input-cell" colspan="10">
 													<div class="inputboxfs">
 														<input type="email" class="form-control" id="email_soysena"
-															name="email_soysena" required>
+															name="email_soysena" required th:value="${formatoSena.email_soysena}">
 													</div>
 												</td>
 											</tr>
@@ -136,7 +137,7 @@
 												<td class="input-cell" colspan="10">
 													<div class="inputboxfs">
 														<input type="text" class="form-control" id="libreta_militar"
-															name="libreta_militar">
+															name="libreta_militar" th:value="${formatoSena.libreta_militar}">
 													</div>
 												</td>
 											</tr>
@@ -146,7 +147,7 @@
 												<td class="input-cell" colspan="10">
 													<div class="inputboxfs">
 														<input type="point" class="form-control" id="direccion"
-															name="direccion" required>
+															name="direccion" required th:value="${formatoSena.direccion}">
 													</div>
 												</td>
 											</tr>
@@ -155,7 +156,7 @@
 												<th>ESTRATO</th>
 												<td colspan="10">
 													<select id="estrato" name="estrato"
-														class="form-control-select inputboxfs opciones" required>
+														class="form-control-select inputboxfs opciones" required th:value="${formatoSena.estrato}">
 														<option value="">Seleccione una opción</option>
 														<option value="1">Estrato 1</option>
 														<option value="2">Estrato 2</option>
@@ -172,7 +173,7 @@
 												<td colspan="10">
 													<div class="inputboxfs">
 														<input type="point" class="form-control" id="ciudad"
-															name="ciudad" required>
+															name="ciudad" required th:value="${formatoSena.ciudad}">
 													</div>
 												</td>
 											</tr>
@@ -195,7 +196,7 @@
 													<td class="input-cell" colspan="10">
 														<div class="inputboxfs">
 															<input type="text" class="form-control" id="titulo_obtenido"
-																name="titulo_obtenido" required>
+																name="titulo_obtenido" required th:value="${formatoSena.titulo_obtenido}">
 														</div>
 													</td>
 												</tr>
@@ -206,7 +207,7 @@
 														<div class="inputboxfs">
 															<input type="text" class="form-control"
 																id="institucion_educativa" name="institucion_educativa"
-																required>
+																required th:value="${formatoSena.institucion_educativa}">
 														</div>
 													</td>
 												</tr>
@@ -216,7 +217,7 @@
 													<td class="input-cell" colspan="10">
 														<div class="inputboxfs">
 															<input type="date" class="form-control" id="fecha_grado"
-																name="fecha_grado" required>
+																name="fecha_grado" required th:value="${formatoSena.fecha_grado}">
 														</div>
 													</td>
 												</tr>
@@ -239,7 +240,7 @@
 												<th>NIVEL</th>
 												<td colspan="10">
 													<select id="nivel" name="nivel"
-														class="form-control-select inputboxfs opciones required">
+														class="form-control-select inputboxfs opciones required" required th:value="${formatoSena.nivel}">
 														<option value="">Seleccione una opción:</option>
 														<option value="1">TC: Técnico</option>
 														<option value="2">TL: Tecnélogo</option>
@@ -258,7 +259,7 @@
 												<td class="input-cell" colspan="10">
 													<div class="inputboxfs">
 														<input type="text" class="form-control" id="nombre_estudios"
-															name="nombre_estudios">
+															name="nombre_estudios" th:value="${formatoSena.nombre_estudios}">
 													</div>
 												</td>
 											</tr>
@@ -268,7 +269,7 @@
 												<td class="input-cell" colspan="10">
 													<div class="inputboxfs">
 														<input type="text" class="form-control"
-															id="institucion_educativa2" name="institucion_educativa2">
+															id="institucion_educativa2" name="institucion_educativa2" th:value="${formatoSena.institucion_educativa2}">
 													</div>
 												</td>
 											</tr>
@@ -278,7 +279,7 @@
 												<td class="input-cell" colspan="10">
 													<div class="inputboxfs">
 														<input type="number" class="form-control"
-															id="semestres_aprobados" name="semestres_aprobados">
+															id="semestres_aprobados" name="semestres_aprobados" th:value="${formatoSena.semestres_aprobados}">
 													</div>
 												</td>
 											</tr>
@@ -303,7 +304,7 @@
 													<td class="input-cell" colspan="10">
 														<div class="inputboxfs">
 															<input type="text" class="form-control" id="nombre_programa"
-																name="nombre_programa" required>
+																name="nombre_programa" required th:value="${formatoSena.nombre_programa}">
 															</imput>
 														</div>
 													</td>
@@ -314,7 +315,7 @@
 													<td class="input-cell" colspan="10">
 														<div class="inputboxfs">
 															<input type="text" class="form-control" id="ficha"
-																name="ficha" required>
+																name="ficha" required th:value="${formatoSena.ficha}">
 														</div>
 													</td>
 												</tr>
@@ -324,7 +325,7 @@
 													<td class="input-cell" colspan="7">
 														<div class="inputboxfs">
 															<input type="text" class="form-control" id="perfil"
-																name="perfil" required>
+																name="perfil" required th:value="${formatoSena.perfil}">
 														</div>
 													</td>
 												</tr>
@@ -334,7 +335,7 @@
 													<td class="input-cell" colspan="10">
 														<div class="inputboxfs">
 															<input type="text" class="form-control" id="ocupaciones"
-																name="ocupaciones" required>
+																name="ocupaciones" required th:value="${formatoSena.ocupaciones}">
 														</div>
 													</td>
 												</tr>
@@ -344,7 +345,7 @@
 													<td class="input-cell" colspan="10">
 														<div class="inputboxfs">
 															<input type="text" class="form-control"
-																id="centro_formacion" name="centro_formacion" required>
+																id="centro_formacion" name="centro_formacion" required th:value="${formatoSena.centro_formacion}">
 														</div>
 													</td>
 												</tr>
@@ -354,7 +355,7 @@
 													<td class="input-cell" colspan="10">
 														<div class="inputboxfs">
 															<input type="point" class="form-control"
-																id="ciudad_formacion" name="ciudad_formacion" required>
+																id="ciudad_formacion" name="ciudad_formacion" required th:value="${formatoSena.ciudad_formacion}">
 														</div>
 													</td>
 												</tr>
@@ -364,7 +365,7 @@
 													<td class="input-cell" colspan="10">
 														<div class="inputboxfs">
 															<input type="date" class="form-control" id="fecha_inicio"
-																name="fecha_inicio" required>
+																name="fecha_inicio" required th:value="${formatoSena.fecha_inicio}">
 														</div>
 													</td>
 												</tr>
@@ -374,7 +375,7 @@
 													<td class="input-cell" colspan="10">
 														<div class="inputboxfs">
 															<input type="date" class="form-control" id="fecha_final"
-																name="fecha_final" required>
+																name="fecha_final" required th:value="${formatoSena.fecha_final}">
 														</div>
 													</td>
 												</tr>
@@ -383,7 +384,7 @@
 													<th>ETAPA</th>
 													<td colspan="10">
 														<select id="etapa" name="etapa"
-															class="form-control-select inputboxfs opciones" required>
+															class="form-control-select inputboxfs opciones" required th:value="${formatoSena.etapa}">
 															<option value="">Seleccione una opción</option>
 															<option value="1">Lectiva</option>
 															<option value="2">Práctica</option>
@@ -397,7 +398,7 @@
 														<div class="inputboxfs">
 															<input type="text" class="form-control"
 																id="coordinador_academico" name="coordinador_academico"
-																required>
+																required th:value="${formatoSena.coordinador_academico}">
 														</div>
 													</td>
 												</tr>
@@ -408,7 +409,7 @@
 														<div class="inputboxfs">
 															<input type="number" class="form-control"
 																id="telefono_coordinador" name="telefono_coordinador"
-																required>
+																required th:value="${formatoSena.telefono_coordinador}">
 														</div>
 													</td>
 												</tr>
@@ -419,7 +420,7 @@
 														<div class="inputboxfs">
 															<input type="email" class="form-control"
 																id="email_coordinador" name="email_coordinador"
-																required>
+																required th:value="${formatoSena.email_coordinador}">
 														</div>
 													</td>
 												</tr>
@@ -466,7 +467,7 @@
 															<div class="inputboxfs">
 																<input type="text" class="form-control"
 																	id="fecha_diligenciamiento"
-																	name="fecha_diligenciamiento" required>
+																	name="fecha_diligenciamiento" required th:value="${formatoSena.fecha_diligenciamiento}">
 															</div>
 														</td>
 
@@ -474,7 +475,7 @@
 														<td class="input-cell">
 															<div class="inputboxfs">
 																<input type="text" class="form-control"
-																	id="firma_aprendiz" name="firma_aprendiz">
+																	id="firma_aprendiz" name="firma_aprendiz" th:value="${formatoSena.firma_aprendiz}">
 															</div>
 														</td>
 													</tr>
@@ -500,7 +501,7 @@
 															<td colspan="10">
 																<div class="inputboxfs">
 																	<input type="text" class="form-control"
-																		id="funcionario" name="funcionario">
+																		id="funcionario" name="funcionario" th:value="${formatoSena.funcionario}">
 																</div>
 															</td>
 														</tr>
@@ -511,7 +512,7 @@
 																<div class="inputboxfs">
 																	<input type="number" class="form-control"
 																		id="telefono_funcionario"
-																		name="telefono_funcionario">
+																		name="telefono_funcionario" th:value="${formatoSena.telefono_funcionario}">
 																</div>
 															</td>
 														</tr>
@@ -521,7 +522,7 @@
 															<td colspan="10">
 																<div class="inputboxfs">
 																	<input type="email" class="form-control"
-																		id="email_funcionario" name="email_funcionario">
+																		id="email_funcionario" name="email_funcionario" th:value="${formatoSena.email_funcionario}">
 																</div>
 															</td>
 														</tr>
@@ -546,7 +547,7 @@
 																<td colspan="7">
 																	<div class="inputboxfs">
 																		<input type="text" class="form-control" id="nit"
-																			name="nit">
+																			name="nit" th:value="${formatoSena.nit}">
 																	</div>
 																</td>
 															</tr>
@@ -557,7 +558,7 @@
 																	<div class="inputboxfs">
 																		<input type="text" class="form-control"
 																			id="centro_formacion1"
-																			name="centro_formacion1">
+																			name="centro_formacion1" th:value="${formatoSena.centro_formacion1}">
 																	</div>
 																</td>
 															</tr>
@@ -568,7 +569,7 @@
 																	<div class="inputboxfs">
 																		<input type="text" class="form-control"
 																			id="representante_legal"
-																			name="representante_legal">
+																			name="representante_legal" th:value="${formatoSena.representante_legal}">
 																	</div>
 																</td>
 															</tr>
@@ -579,7 +580,7 @@
 																	<div class="inputboxfs">
 																		<input type="email" class="form-control"
 																			id="email_representante"
-																			name="email_representante">
+																			name="email_representante" th:value="${formatoSena.email_representante}">
 																	</div>
 																</td>
 															</tr>
@@ -590,7 +591,7 @@
 																	<div class="inputboxfs">
 																		<input type="number" class="form-control"
 																			id="telefono_representante"
-																			name="telefono_representante">
+																			name="telefono_representante" th:value="${formatoSena.telefono_representante}">
 																	</div>
 																</td>
 															</tr>
@@ -613,7 +614,7 @@
 																	<td colspan="10">
 																		<div class="inputboxfs">
 																			<input type="text" class="form-control"
-																				id="empresa" name="empresa">
+																				id="empresa" name="empresa" th:value="${formatoSena.empresa}">
 																		</div>
 																	</td>
 																</tr>
@@ -624,7 +625,7 @@
 																		<div class="inputboxfs">
 																			<input type="number" class="form-control"
 																				id="telefono_empresa"
-																				name="telefono_empresa">
+																				name="telefono_empresa" th:value="${formatoSena.telefono_empresa}">
 																		</div>
 																	</td>
 																</tr>
@@ -635,7 +636,7 @@
 																		<div class="inputboxfs">
 																			<input type="text" class="form-control"
 																				id="funcionario_empresa"
-																				name="funcionario_empresa">
+																				name="funcionario_empresa" th:value="${formatoSena.funcionario_empresa}">
 																		</div>
 																	</td>
 																</tr>
@@ -648,7 +649,7 @@
 																	<td colspan="10">
 																		<textarea name="observaciones"
 																			id="observaciones" rows="20"
-																			style="width: 100%; border: transparent;"></textarea>
+																			style="width: 100%; border: transparent;" th:value="${formatoSena.observaciones}"></textarea>
 																	</td>
 																</tr>
 
@@ -675,7 +676,7 @@
 																		<div class="inputboxfs">
 																			<input type="text" class="form-control"
 																				id="fecha_diligenciamiento1"
-																				name="fecha_diligenciamiento1">
+																				name="fecha_diligenciamiento1" th:value="${formatoSena.fecha_diligenciamiento1}">
 																		</div>
 																	</td>
 
@@ -683,7 +684,7 @@
 																	<td class="input-cell">
 																		<div class="inputboxfs">
 																			<input type="text" class="form-control"
-																				id="firma" name="firma">
+																				id="firma" name="firma" th:value="${formatoSena.firma}">
 																		</div>
 																	</td>
 																</tr>
