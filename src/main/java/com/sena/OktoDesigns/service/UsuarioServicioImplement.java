@@ -63,6 +63,20 @@ public class UsuarioServicioImplement implements UsuarioServicio {
     public Usuario findByEmail(String email) {
         return usuarioRepositorio.findByEmail(email);
     }
+    
+    @Override
+    public boolean actualizarContrasena(Integer id, String currentPassword, String newPassword) {
+        Optional<Usuario> usuarioOptional = usuarioRepositorio.findById(id);
+        if (usuarioOptional.isPresent()) {
+            Usuario usuario = usuarioOptional.get();
+            if (passwordEncoder.matches(currentPassword, usuario.getPassword())) {
+                usuario.setPassword(passwordEncoder.encode(newPassword));
+                usuarioRepositorio.save(usuario);
+                return true;
+            }
+        }
+        return false;
+    }
 
     
 }

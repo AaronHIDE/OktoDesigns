@@ -7,6 +7,7 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 import com.sena.OktoDesigns.service.UsuarioServicio;
 import com.sena.OktoDesigns.controller.dto.UsuarioNombreCambioDTO;
@@ -33,5 +34,29 @@ public class UsuarioControlador {
         dto.setNuevoNombre(nuevoNombre);
         usuarioServicio.actualizarNombreUsuario(usuario.getId(), dto);
         return ResponseEntity.ok("Nombre de usuario actualizado correctamente");
+    }
+
+    @PostMapping("/cambiar-contrasena")
+    @ResponseBody
+    public String cambiarContrasena(@RequestParam String currentPassword, @RequestParam String newPassword, @RequestParam String confirmPassword) {
+        if (!newPassword.equals(confirmPassword)) {
+            return "Las nuevas contraseñas no coinciden.";
+        }
+
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        UserDetails userDetails = (UserDetails) authentication.getPrincipal();
+        String email = userDetails.getUsername();
+
+        Usuario usuario = usuarioServicio.findByEmail(email);
+        if (usuario == null) {
+            return "Error: Usuario no encontrado.";
+        }
+
+        boolean result = usuarioServicio.actualizarContrasena(usuario.getId(), currentPassword, newPassword);
+        if (result) {
+            return "Contraseña actualizada correctamente.";
+        } else {
+            return "Error al actualizar la contraseña.";
+        }
     }
 }

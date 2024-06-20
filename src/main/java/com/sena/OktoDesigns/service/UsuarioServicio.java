@@ -17,4 +17,6 @@ public interface UsuarioServicio extends UserDetailsService {
 	public List<Usuario> listarUsuarios();
 	
 	Usuario actualizarNombreUsuario(Integer id, UsuarioNombreCambioDTO nombreCambioDTO);
+	
+	 boolean actualizarContrasena(Integer id, String currentPassword, String newPassword); // Añadir esta línea
 }
