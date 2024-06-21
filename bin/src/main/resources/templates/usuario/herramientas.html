@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" xmlsn:th="http://thymeLeaf.org">
+
+<head th:insert="~{usuario/template_gallery.html::head}"></head>
+
+<body>
+
+	<div th:insert="~{usuario/template_gallery.html::header}"></div>
+
+
+	<section class="sectionXA">
+	</section>
+
+	<main id="main" class="main">
+		<section class="sectionXA">
+			<div class="container container1" data-aos="fade-up">
+				<div class="row justify-content-center" data-aos="fade-up" data-aos-delay="150">
+					<h2>NUESTRAS HERRAMIENTAS</h2>
+				</div>
+			</div>
+			<br><br><br><br><br>
+			<div class="container" data-aos="zoom-in">
+				<div class="row">
+					<div class="col-lg-6">
+						<img th:src="@{/assets/img/herramientas/bot.png}"
+							style="width: 50%; border: 1px solid rgb(0, 0, 0); align-content: center;">
+					</div>
+					<div class="col-lg-6" style="text-align: center;">
+						<br><br><br><br><br><br>
+						<h3>CHATBOT</h3>
+						<br><br>
+						<p class="fst-italic" style="font-style: italic; color: rgb(0, 0, 0);">
+							Nuestro chatbot viene integrado con preguntas previamente programadas, estas estan basadas
+							en diferentes dudas que les surgen a los usuarios a la hora de llenar la informacion de
+							nuestros diferentes formatos.
+						</p>
+						<p class="fst-italic" style="font-style: italic; color: rgb(0, 0, 0);">
+							Cuenta con dos apartados, preguntas sobre los formatos como ya se mencionó y también sobre
+							las diferentes herramientas y apartados con los que cuenta la página.
+						</p>
+						<br>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="sectionXA">
+			<div class="container" data-aos="zoom-in">
+				<div class="row">
+					<div class="col-lg-6">
+						<img th:src="@{/assets/img/herramientas/firma.png}"
+							style="width: 70%; align-content: center;">
+					</div>
+					<div class="col-lg-6" style="text-align: center;">
+						<br><br><br>
+						<h3>CREADOR DE FIRMAS</h3>
+						<br><br>
+						<p class="fst-italic" style="font-style: italic; color: rgb(0, 0, 0);">
+							Nuestro apartado de creación de firma cuenta con un minitablero integrado en el cual se
+							puede rayar usando el cursor y click del mouse.
+						</p>
+						<p class="fst-italic" style="font-style: italic; color: rgb(0, 0, 0);">
+							También tiene dos opciones las cuales son para eliminar lo que se hizo en pantalla o
+							guardarlo en formato de imagen, para así poder usarla más adelante si se desea.
+						</p>
+						<br>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="sectionXA">
+			<div class="container" data-aos="zoom-in">
+				<div class="row">
+					<div class="col-lg-6">
+						<img th:src="@{/assets/img/herramientas/email.png}"
+							style="width: 100%; border: 1px solid rgb(0, 0, 0); align-content: flex-end;">
+					</div>
+					<div class="col-lg-6" style="text-align: center;">
+						<br><br>
+						<h3>OKTOMAIL</h3>
+						<br><br>
+						<p class="fst-italic" style="font-style: italic; color: rgb(0, 0, 0);">
+							Nuestro apartado de email te da la facilidad de enviar tus archivos a traves de nuestra
+							cuenta de email, usamos nuestro correo para estos envíos.
+						</p>
+						<br>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="sectionXA" style="text-align: center;">
+			<br><br>
+			<p class="fst-italic" style="color: rgb(0, 0, 0);">
+				© 2024 Todos los Derechos Reservados
+			</p>
+		</section>
+
+	</main><!-- End #main -->
+
+	<section class="sectionXA"></section>
+
+	<div th:insert="~{usuario/template_gallery.html::footer}"></div>
+
+	<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+			class="bi bi-arrow-up-short"></i></a>
+
+	<div th:insert="~{usuario/template_gallery.html::js}"></div>
+
+</body>
+
+</html>

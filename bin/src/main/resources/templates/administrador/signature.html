@@ -1,0 +1,22 @@
+<head th:insert="~{administrador/template_admin.html::head}"></head>
+<div th:insert="~{administrador/template_admin.html::header}"></div>
+
+<section></section>
+
+  <main>
+	    <div class="signature-container">
+        <div class="title">
+            <h1>Firma Digital</h1>
+        </div>
+        <canvas id="canvas" width="400" height="200"></canvas>
+        <br>
+        
+            <button type="button" id="clear" class="btn mt-3 signabtn"><i class="bi bi-trash"></i></button>
+            <button type="button" id="download" class="btn mt-3 signabtn"><i class="bi bi-download"></i> Descargar</button>
+        
+    </div>
+  </main>
+
+  <div th:insert="~{administrador/template_admin.html::footer}"></div>
+
+  <div th:insert="~{administrador/template_admin.html::scripts_js}"></div>

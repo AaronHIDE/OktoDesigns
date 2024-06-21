@@ -1,4 +1,5 @@
 <html lang="en" xmlsn:th="http://thymeLeaf.org">
+
 <head th:fragment="head">
 	<meta charset="utf-8">
 	<meta content="width=device-width, initial-scale=1.0" name="viewport">
@@ -34,6 +35,7 @@
 	<link th:href="@{/assets/css/email.css}" rel="stylesheet">
 	<link th:href="@{/assets/css/signature.css}" rel="stylesheet">
 	<link th:href="@{/assets/css/cartaRenuncia.css}" rel="stylesheet">
+	<link th:href="@{/assets/css/profile.css}" rel="stylesheet">
 
 	<!-- =======================================================
   * Template Name: Gp
@@ -42,8 +44,8 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
-  
-  	<script src="https://cdn.botpress.cloud/webchat/v2/inject.js"></script>
+
+	<script src="https://cdn.botpress.cloud/webchat/v2/inject.js"></script>
 	<script src="https://mediafiles.botpress.cloud/a8ef7b89-d65f-48c1-ac21-097a9a9fbe2a/webchat/v2/config.js"></script>
 
 </head>
@@ -58,22 +60,23 @@
 				</a>
 			</h1>
 			<nav>
+
 				<a th:href="@{/administrador/signature}" class="get-started-btn scrollto titulos botones">
 					<i class="bi bi-vector-pen"></i>
 				</a>
-				
-				<a th:href="@{/administrador/email}" class="get-started-btn scrollto titulos botones">
-					<i class="bi bi-envelope"></i>				</a>
 
-				<a class="get-started-btn drop-list-menu">
-					<i class="bi bi-list drop-start-btn"></i>
+				<a th:href="@{/administrador/email}" class="get-started-btn scrollto titulos botones">
+					<i class="bi bi-envelope"></i>
 				</a>
 
-				<ul class="homeList">
-					<li th:href="@{/administrador/perfil}">Perfil</li>
-					<li>hola</li>
-				</ul>
 
+				<a th:href="@{/administrador/profile}" class="get-started-btn scrollto titulos botones">
+					<i class="bi bi-person-fill-lock"></i>
+				</a>
+
+				<a class="get-started-btn drop-list-menu" th:href="@{/logout}" sec:authorize="isAuthenticated()">
+					<i class="bi bi-person-fill-x"></i>
+				</a>
 
 
 			</nav>
@@ -129,6 +132,9 @@
 	<script th:src="@{/assets/js/checklist.js}"></script>
 	<script th:src="@{/assets/js/signature.js}"></script>
 	<script th:src="@{/assets/js/email.js}"></script>
+	<script th:src="@{/assets/js/profile.js}"></script>
+
 
 </div>
+
 </html>

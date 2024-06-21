@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" xmlsn:th="http://thymeLeaf.org">
+
+<head th:insert="~{usuario/template_gallery.html::head}"></head>
+
+<body>
+
+	<div th:insert="~{usuario/template_gallery.html::header}"></div>
+
+	<section class="sectionXA">
+	</section>
+
+	<main id="main" class="main">
+		<!-- ======= Hero Section ======= -->
+		<section id="infoFS" class="d-flex sectionXA">
+
+			<div class="container container1" data-aos="fade-up">
+				<div class="row justify-content-center" data-aos="fade-up" data-aos-delay="150">
+					<h2>FORMATO DE INVITACION FORMAL</h2>
+				</div>
+			</div>
+		</section><!-- End Hero -->
+		<div class="container container1" data-aos="fade-up">
+			<div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left" data-aos-delay="100">
+				<img th:src="@{/assets/img/invitaciones/invitacionFormal.png}"
+					style="width: 100%; border: 1px solid rgb(0, 0, 0);">
+			</div>
+		</div>
+		<section class="sectionXA">
+			<!--informacion-->
+			<div class="container" data-aos="zoom-in" style="text-align: center; max-width: 800px;">
+				<p class="fst-italic" style="font-style: italic; color: rgb(0, 0, 0);">
+					Si tienes tu empresa o alguna entidad y quieres hacer un evento formal, te tenemos un formato de
+					invitación para enviar a tus invitados.
+				</p>
+				<p class="fst-italic" style="font-style: italic; color: rgb(0, 0, 0);">
+					Recuerda poner la información de manera directa.
+				</p>
+				<br><br>
+				<p class="fst-italic" style="color: rgb(0, 0, 0);">
+					© 2024 Todos los Derechos Reservados
+				</p>
+				<br>
+			</div>
+		</section>
+
+	</main><!-- End #main -->
+
+	<div th:insert="~{usuario/template_gallery.html::footer}"></div>
+
+	<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+			class="bi bi-arrow-up-short"></i></a>
+
+	<div th:insert="~{usuario/template_gallery.html::js}"></div>
+
+</body>
+
+</html>

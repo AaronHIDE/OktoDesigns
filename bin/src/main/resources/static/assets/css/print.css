@@ -1,0 +1,31 @@
+@media print {
+	/* Contenido bloqueado al imprimir */
+
+	/*Formato Estandar*/
+	header, .navbar, footer, button, .btn.btn-danger, .btn.btn-info, .btnback, .bi-arrow-up-short{
+		display: none;
+	}
+
+	.containerf, .renunceContainer-Styles{
+		box-shadow: none;
+	}
+
+	.containerf{
+		margin: 0;
+		padding: 0;
+	}
+
+	.left, .right {
+		padding-top: 0;
+	}
+	
+	.marcoh2 {
+			color: black;
+	}
+
+	/*Carta renuncia*/
+
+	.renunce{
+		margin-top: -18rem;
+	}
+}

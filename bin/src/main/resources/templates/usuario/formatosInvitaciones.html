@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlsn:th="http://thymeLeaf.org">
+
+<head th:insert="~{usuario/template_gallery.html::head}"></head>
+
+<body>
+
+	<div th:insert="~{usuario/template_gallery.html::header}"></div>
+
+	<main id="main" class="main">
+		<!-- ======= Hero Section ======= -->
+		<section id="home" class="d-flex justify-content-center sectionXA">
+			<div class="parent-container">
+				<div class="container">
+					<div class="box">
+						<a th:href="@{/infoInvitacionFormal}">
+							<img src="assets/img/invitaciones/invitacionFormal.png" class="img-fluid" alt="invitacionFormal">
+							<span class="title">Invitación Formal</span>
+						</a>
+					</div>
+				</div>
+				<div class="container">
+					<div class="box">
+						<a th:href="@{/infoInvitacionInformal}">
+						<img src="assets/img/invitaciones/invitacionInformal.png" class="img-fluid" alt="invitacionInformal">
+						<span class="title">Invitación Informal</span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</section><!-- End Hero -->
+
+	</main><!-- End #main -->
+
+	<div th:insert="~{usuario/template_gallery.html::footer}"></div>
+
+	<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+			class="bi bi-arrow-up-short"></i></a>
+
+	<div th:insert="~{usuario/template_gallery.html::js}"></div>
+
+</body>
+
+</html>

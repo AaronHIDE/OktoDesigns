@@ -6,39 +6,40 @@
 <div th:insert="~{administrador/template_admin.html::header}"></div>
 
 <body>
-
 	<main id="main" class="main" style="display: flex; justify-content: center;">
 
 		<div class="profileContainer mt-5">
-			<form class="profileForm">
-				<h2>Cambiar Nombre de la Cuenta</h2>
+	 	<div id="mensaje" class="alert" style="display:none;"></div> <!-- Contenedor de mensaje -->
+			<form class="profileForm" id="nombreForm" th:action="@{/cambiar-nombre}" method="post">
+				<h2>Cambiar Nombre de Usuario</h2>
 				<div class="input-group">
-					<label for="account-name">Nombre de la Cuenta</label>
-					<input type="text" id="account-name" name="account-name" placeholder="Nuevo nombre">
+					<label for="account-name">Nuevo Nombre de Usuario</label>
+					<input type="text" id="nuevoNombre" name="nuevoNombre" placeholder="Nuevo nombre" required>
 				</div>
+				<input type="hidden" id="id" name="id" value="1"> <!-- Asegúrate de establecer el ID del usuario -->
 				<button type="submit" class="btn btn-success">Guardar <i class="bi bi-floppy2"></i></button>
+				<div id="mensaje" style="display: none;"></div>
 			</form>
+			<hr>
 
-			<form class="profileForm">
-				<h2>Cambiar Contraseña</h2>
-				<div class="input-group">
-					<label for="current-password">Contraseña Actual</label>
-					<input type="password" id="current-password" name="current-password"
-						placeholder="Contraseña actual">
-				</div>
-				<div class="input-group">
-					<label for="new-password">Nueva Contraseña</label>
-					<input type="password" id="new-password" name="new-password" placeholder="Nueva contraseña">
-				</div>
-				<div class="input-group">
-					<label for="confirm-password">Confirmar Nueva Contraseña</label>
-					<input type="password" id="confirm-password" name="confirm-password"
-						placeholder="Confirmar nueva contraseña">
-				</div>
-				<button type="submit" class="btn btn-success">Guardar <i class="bi bi-floppy2"></i></button>
-				<hr>
-				<button class="btn btn-danger">Eliminar Cuenta <i class="bi bi-trash"></i></button>
-			</form>
+		<form action="/cambiar-contrasena" method="post" id="passwordForm" class="mb-2 profileForm">
+			<div id="mensaje" class="alert" style="display:none;"></div>
+			<h2>Actualizar contraseña</h2>
+		    <div class="input-group">
+		        <label for="currentPassword">Contraseña Actual:</label>
+		        <input type="password" id="currentPassword" name="currentPassword" required placeholder="Ingresar Contraseña Actual">
+		    </div>
+		    <div class="input-group">
+		        <label for="newPassword">Nueva Contraseña:</label>
+		        <input type="password" id="newPassword" name="newPassword" required placeholder="Ingrese su Nueva Contraseña">
+		    </div>
+		    <div class="input-group">
+		        <label for="confirmPassword">Confirmar Nueva Contraseña:</label>
+		        <input type="password" id="confirmPassword" name="confirmPassword" required placeholder="Confirma la Contraseña Antigua">
+		    </div>
+		    <button type="submit" class="btn btn-success">Guardar <i class="bi bi-floppy2"></i></button>
+		</form>
+		<span>Puedes <a th:href="@{/logout}" class="text-danger">Cerrar Sesion</a> para continuar</span>
 		</div>
 
 	</main><!-- End #main -->

@@ -1,0 +1,73 @@
+/* Estilos CSS para la tabla de datos */
+
+#formatoSenaCss {
+	.data-table {
+		width: 100%;
+		border-collapse: collapse;
+		justify-content: center;
+	}
+
+	.data-table th,
+	.data-table td {
+		border: 1px solid #000000;
+		padding: 8px;
+		text-align: left;
+		justify-content: center
+	}
+
+	.data-table th {
+		background-color: #ffffff;
+		font-weight: bold;
+		justify-content: center
+	}
+
+
+	.bubble {
+		display: inline-block;
+		padding: 8px 12px;
+		border-radius: 20px;
+		background-color: black;
+		margin-left: 10px;
+		/* Espacio entre las burbujas */
+	}
+
+	.bubble-number {
+		display: inline-block;
+		padding: 8px 12px;
+		border-radius: 20px;
+		background-color: rgb(0, 0, 0);
+	}
+
+
+
+	/* Estilos para el contenedor principal */
+	.inputboxfs {
+		position: relative;
+		display: inline-block;
+		width: 100%;
+	}
+
+
+
+	/* Estilos para el select */
+	.opciones {
+		width: calc(100% - 0px);
+		/* Ajusta el ancho según necesites */
+		padding: 8px;
+		font-size: 16px;
+		border: 0.5px solid #ccc;
+		border-radius: 5px;
+	}
+
+	/* Estilos para el select cuando está enfocado */
+	#estrato-select:focus {
+		outline: none;
+	}
+
+	.contenedorfs {
+		background-color: rgb(255, 255, 255);
+		/* Color de fondo del contenedor */
+		display: flex;
+	}
+
+}

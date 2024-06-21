@@ -1,0 +1,78 @@
+.renunceContainer-Styles{
+
+    background: #f5f5f5;
+	max-width: 1000px;
+	margin: 20px auto;
+	height: auto;
+	padding: 20px;
+	box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+}
+
+.title-Styles{
+
+	padding: 10px;
+	color: #000000;
+	margin: 50px 0;
+	font-size: 40px;
+    text-align: center; /* Centra el texto del título */
+    width: 100%; /* Asegura que el título ocupe todo el ancho del contenedor */
+}
+
+.RenunceLetterName-Styles {
+
+    margin-left: 30px; /* Estilos para mover a la izquierda el input del nombre de la persona */
+
+    font-size: 30px; /* Cambiar el tamaño de la fuente */
+    font-weight: bold; /* Grosor del texto */
+    background: none; /* Sin fondo para un aspecto más limpio */
+    border: 1px solid #000000; /* Borde del input */
+    border-radius: 10px;
+    width: 30%; /* Ancho del input */
+    
+}
+
+.h3RenunceLetter-Styles {
+
+    margin-left: 30px; /* Estilos para mover a la izquierda el input del nombre de la persona */
+    font-weight: bold; /* Grosor del texto */
+
+}
+
+.h6RenunceLetter-Styles {
+
+    margin-left: 30px; /* Estilos para mover a la izquierda el input del nombre de la persona */
+
+}
+
+.RenunceLetterNameBoss-Styles {
+
+    margin-left: 30px; /* Estilos para mover a la izquierda el input del nombre de la persona */
+
+    font-size: 20px; /* Cambiar el tamaño de la fuente */
+    font-weight: bold; /* Grosor del texto */
+    background: none; /* Sin fondo para un aspecto más limpio */
+    border: 1px solid #000000; /* Borde del input */
+    border-radius: 10px;
+    width: 25%; /* Ancho del input */
+    
+}
+
+.RenunceLetterBoss-Styles {
+
+    margin-left: 30px; /* Estilos para mover a la izquierda el input del nombre de la persona */
+
+    font-size: 15px; /* Cambiar el tamaño de la fuente */
+    background: none; /* Sin fondo para un aspecto más limpio */
+    border: 1px solid #000000; /* Borde del input */
+    border-radius: 10px;
+    width: 20%; /* Ancho del input */
+    
+}
+
+.RenunceLetterBoss-Subtitle-Styles{
+    font-size: 15px; /* Cambiar el tamaño de la fuente */
+    background: none; /* Sin fondo para un aspecto más limpio */
+    border: 1px solid #000000; /* Borde del input */
+    border-radius: 10px;
+    width: 15%; /* Ancho del input */
+}
